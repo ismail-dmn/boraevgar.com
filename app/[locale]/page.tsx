@@ -78,9 +78,9 @@ export default async function Home({ params }: HomeProps) {
             />
             <figcaption className="hero-visual-caption">
               <span className="hero-visual-caption-main">
-                <span className="hero-index">01 / 04</span>
+                <span className="hero-index">01 / {String(projects.length).padStart(2, "0")}</span>
                 <span>
-                  {featuredProject.title} · {featuredProject.location}
+                  {featuredProject.title} · {featuredProject.category}
                 </span>
               </span>
               <Link className="hero-visual-link" href={`/${locale}/projects/${featuredProject.slug}`}>
@@ -100,9 +100,9 @@ export default async function Home({ params }: HomeProps) {
             </span>
           </div>
           <div className="studio-copy">
-            <h2 id="studio-title">
-              {copy.studio.first} <em>{copy.studio.emphasis}</em>
-            </h2>
+<h2 aria-label={`${copy.studio.first} ${copy.studio.emphasis}`} id="studio-title">
+          {copy.studio.first}{" "}<em>{copy.studio.emphasis}</em>
+        </h2>
             <p>{copy.studio.description}</p>
             <ul className="studio-details" aria-label={locale === "tr" ? "Stüdyo bilgileri" : "Studio details"}>
               {copy.studio.details.map((detail) => (

@@ -809,7 +809,7 @@ h2 em {
 
 .project-facts {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 35px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);

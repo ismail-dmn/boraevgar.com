@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -55,7 +56,15 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   };
 }
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
+export default function ProjectPage({ params }: ProjectPageProps) {
+  return (
+    <Suspense fallback={<div className="container project-loading" role="status">Loading…</div>}>
+      <ProjectPageContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ProjectPageContent({ params }: ProjectPageProps) {
   const { locale: localeParam, slug } = await params;
 
   if (!isLocale(localeParam)) {
@@ -92,9 +101,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
           <div className="project-heading-row">
             <div>
-              <p className="eyebrow">
-                {project.category} · {project.location} · {project.year}
-              </p>
+              <p className="eyebrow">{project.category}</p>
               <h1>{project.title}</h1>
             </div>
             <p className="project-summary">{project.summary}</p>
@@ -107,16 +114,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <dd>{project.category}</dd>
           </div>
           <div>
-            <dt>{copy.project.location}</dt>
-            <dd>{project.location}</dd>
-          </div>
-          <div>
-            <dt>{copy.project.services}</dt>
-            <dd>{project.services.join(" · ")}</dd>
-          </div>
-          <div>
-            <dt>{copy.project.year}</dt>
-            <dd>{project.year}</dd>
+            <dt>{copy.project.frames}</dt>
+            <dd>{`${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}`}</dd>
           </div>
         </dl>
 
@@ -142,9 +141,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               />
               <figcaption className="gallery-caption">
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <span>
-                  {project.title} · {project.location}
-                </span>
+                <span>{project.title}</span>
               </figcaption>
             </figure>
           ))}
