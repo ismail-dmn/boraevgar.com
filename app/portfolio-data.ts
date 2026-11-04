@@ -1,242 +1,332 @@
-import type { Locale } from "./i18n";
+import { messages, type Locale } from "./i18n";
 
 export const projectCategoryKeys = ["residential", "hospitality", "commercial"] as const;
 
 export type ProjectCategoryKey = (typeof projectCategoryKeys)[number];
+
+type LocalizedText = Record<Locale, string>;
+
+type ProjectImageRecord = {
+  src: string;
+  alt: LocalizedText;
+};
+
+type ProjectRecord = {
+  slug: string;
+  categoryKey: ProjectCategoryKey;
+  title: LocalizedText;
+  summary: LocalizedText;
+  narrative: LocalizedText;
+  images: readonly ProjectImageRecord[];
+};
 
 type ProjectImage = {
   src: string;
   alt: string;
 };
 
-type ProjectContent = {
-  title: string;
+export type PortfolioProject = {
+  slug: string;
+  categoryKey: ProjectCategoryKey;
   category: string;
-  location: string;
+  title: string;
   summary: string;
   narrative: string;
-  services: readonly string[];
   images: readonly ProjectImage[];
 };
 
-type ProjectRecord = {
-  slug: string;
-  year: string;
-  categoryKey: ProjectCategoryKey;
-  content: Record<Locale, ProjectContent>;
-};
-
-export type PortfolioProject = Omit<ProjectRecord, "content"> & ProjectContent;
+function photo(projectSlug: string, imageNumber: number, altTr: string, altEn: string): ProjectImageRecord {
+  return {
+    src: `/images/projects/${projectSlug}/${String(imageNumber).padStart(2, "0")}.webp`,
+    alt: { tr: altTr, en: altEn },
+  };
+}
 
 const projectRecords: readonly ProjectRecord[] = [
   {
-    slug: "quiet-luxury",
-    year: "2024",
+    slug: "dark-residence",
     categoryKey: "residential",
-    content: {
-      tr: {
-        title: "Quiet Luxury",
-        category: "Konut",
-        location: "İstanbul",
-        summary:
-          "Doğal ışık, yalın geometri ve taş ile meşenin dokusuyla şekillenen özel bir konut.",
-        narrative:
-          "Görsel dil, mimariyle yarışmak yerine onu takip ediyor. Yumuşak gün ışığı, doğal malzemeler ve ölçülü kamera kullanımı her karede sakin bir karşılama hissi yaratıyor.",
-        services: ["İç mekân görselleştirme", "Dış mekân görselleştirme", "Sanat yönetimi"],
-        images: [
-          {
-            src: "/images/quiet-luxury-01.png",
-            alt: "Yansıma havuzu ve ağaçlarla çevrili avluya açılan çağdaş taş konut",
-          },
-          {
-            src: "/images/quiet-luxury-02.png",
-            alt: "Traverten yüzeyler ve yumuşak gün ışığıyla tasarlanmış sıcak salon",
-          },
-        ],
-      },
-      en: {
-        title: "Quiet Luxury",
-        category: "Residential",
-        location: "Istanbul",
-        summary:
-          "A private residence shaped by natural light, quiet geometry and a tactile palette of stone and oak.",
-        narrative:
-          "The visual language follows the architecture rather than competing with it. Soft daylight, grounded materials and a measured camera create a calm sense of arrival across every frame.",
-        services: ["Interior imagery", "Exterior imagery", "Art direction"],
-        images: [
-          {
-            src: "/images/quiet-luxury-01.png",
-            alt: "Contemporary stone residence opening onto a reflecting pool and tree-lined courtyard",
-          },
-          {
-            src: "/images/quiet-luxury-02.png",
-            alt: "Warm, minimal living room with travertine surfaces and soft daylight",
-          },
-        ],
-      },
+    title: { tr: "Koyu Dokular", en: "Dark Tones" },
+    summary: {
+      tr: "Koyu ahşap, taş ve keskin çizgilerle kurgulanan çağdaş bir konut.",
+      en: "A contemporary residence shaped by dark timber, stone and precise lines.",
     },
+    narrative: {
+      tr: "Dış cepheden banyoya uzanan kareler, aynı malzeme dilini farklı ölçeklerde bir araya getiriyor. Koyu yüzeyler ve çizgisel ışık mekâna sakin bir derinlik katıyor.",
+      en: "From the facade to the bathroom, each frame carries the same material language across different scales. Dark surfaces and linear light give the home a quiet depth.",
+    },
+    images: [
+      photo("dark-residence", 1, "Koyu ahşap kaplamalı çağdaş villa ve giriş bahçesi.", "Contemporary villa with dark timber cladding and an entry garden."),
+      photo("dark-residence", 2, "Gömme raflar ve çalışma masasıyla koyu tonlu ev ofisi.", "Dark-toned home office with built-in shelving and a desk."),
+      photo("dark-residence", 3, "Koyu taş lavabo ve siyah armatürle sade bir banyo detayı.", "Minimal bathroom detail with a dark stone vanity and black faucet."),
+      photo("dark-residence", 4, "Doğrusal tavan ışıklarıyla koyu tonlarda tasarlanmış banyo.", "Dark bathroom finished with linear ceiling lighting."),
+    ],
   },
   {
-    slug: "the-courtyard",
-    year: "2024",
-    categoryKey: "hospitality",
-    content: {
-      tr: {
-        title: "The Courtyard",
-        category: "Konaklama",
-        location: "Bodrum",
-        summary:
-          "Açık taş, uzun gölgeler ve Akdeniz bitkileriyle sakin bir ritim kuran butik bir kaçış.",
-        narrative:
-          "Görseller, geniş avlunun etkileyici ölçeğini konaklamaya dair samimi anlarla buluşturuyor. Güneşle yıkanmış sıcak palet, deneyimi kıyı manzarasına bağlıyor.",
-        services: ["Dış mekân görselleştirme", "İç mekân görselleştirme", "Sanat yönetimi"],
-        images: [
-          {
-            src: "/images/courtyard-01.png",
-            alt: "Açık taş pavyonları ve uzun yansıma havuzuyla Akdeniz otel avlusu",
-          },
-          {
-            src: "/images/courtyard-02.png",
-            alt: "Sıcak sıva, meşe ve keten dokularıyla sakin bir butik otel odası",
-          },
-        ],
-      },
-      en: {
-        title: "The Courtyard",
-        category: "Hospitality",
-        location: "Bodrum",
-        summary:
-          "A boutique retreat where pale stone, long shadows and Mediterranean planting set an unhurried rhythm.",
-        narrative:
-          "The imagery pairs the generous scale of the courtyard with intimate moments of hospitality. A warm, sun-washed palette keeps the experience connected to its coastal setting.",
-        services: ["Exterior imagery", "Interior imagery", "Art direction"],
-        images: [
-          {
-            src: "/images/courtyard-01.png",
-            alt: "Mediterranean hotel courtyard with pale stone pavilions and a long reflecting pool",
-          },
-          {
-            src: "/images/courtyard-02.png",
-            alt: "Quiet boutique hotel suite with warm plaster, oak joinery and linen bedding",
-          },
-        ],
-      },
-    },
-  },
-  {
-    slug: "soft-geometry",
-    year: "2023",
+    slug: "soft-residence",
     categoryKey: "residential",
-    content: {
-      tr: {
-        title: "Soft Geometry",
-        category: "Konut",
-        location: "Londra",
-        summary:
-          "Yumuşak formları ev sıcaklığıyla buluşturan, özenle ele alınmış bir Londra evi.",
-        narrative:
-          "Kavisli sıva, açık meşe ve Londra’nın yumuşak gün ışığı karelerin karakterini belirliyor. Her kompozisyon, mimariyi ve malzeme detaylarını öne çıkaran bir nefes alanı bırakıyor.",
-        services: ["İç mekân görselleştirme", "Malzeme yönlendirmesi", "Sanat yönetimi"],
-        images: [
-          {
-            src: "/images/soft-geometry-01.png",
-            alt: "Yumuşak ışık alan Londra evinde heykelsi, kıvrımlı merdiven",
-          },
-          {
-            src: "/images/soft-geometry-02.png",
-            alt: "Ceviz masa ve kavisli sıva kemeriyle sakin bir Londra yemek odası",
-          },
-        ],
-      },
-      en: {
-        title: "Soft Geometry",
-        category: "Residential",
-        location: "London",
-        summary:
-          "A considered townhouse interior balancing sculptural forms with the familiar warmth of home.",
-        narrative:
-          "Curved plaster, pale oak and overcast daylight give the images their character. Each composition holds a little breathing room, allowing the architecture and its material details to lead.",
-        services: ["Interior imagery", "Material direction", "Art direction"],
-        images: [
-          {
-            src: "/images/soft-geometry-01.png",
-            alt: "Sculptural curved staircase in a softly lit London townhouse interior",
-          },
-          {
-            src: "/images/soft-geometry-02.png",
-            alt: "Quiet townhouse dining room with a walnut table and softly curved plaster arch",
-          },
-        ],
-      },
+    title: { tr: "Yumuşak Bir Ev", en: "A Softer Home" },
+    summary: {
+      tr: "Yumuşak renkler, doğal ahşap ve gündelik yaşama açık bir ev içi.",
+      en: "A welcoming home interior shaped by soft color, natural timber and everyday life.",
     },
+    narrative: {
+      tr: "Salon ile oyun köşesi, aynı sıcak palet ve doğal ışık etrafında bir araya geliyor.",
+      en: "A living area and a playful corner come together through a shared warm palette and natural light.",
+    },
+    images: [
+      photo("soft-residence", 1, "Yumuşak tonlu salon, açık raflar ve heykelsi aydınlatmalar.", "Soft-toned living room with open shelving and sculptural pendant lights."),
+      photo("soft-residence", 2, "Geniş pencere yanında oyun çadırı bulunan çocuk köşesi.", "Children's play corner with a small teepee beside a large window."),
+    ],
   },
   {
-    slug: "afterlight",
-    year: "2023",
+    slug: "arched-living",
+    categoryKey: "residential",
+    title: { tr: "Kemerli Salon", en: "Arched Living" },
+    summary: {
+      tr: "Kemerli pencereler ve kıvrımlı oturma elemanlarıyla tanımlanan aydınlık bir salon.",
+      en: "A bright living room defined by arched windows and curved seating.",
+    },
+    narrative: {
+      tr: "Geniş açıklıklar, alçak profilli mobilyalar ve taş dokulu yüzeyler sade bir odağı koruyor.",
+      en: "Generous openings, low-profile furniture and tactile stone surfaces keep the composition calm.",
+    },
+    images: [
+      photo("arched-living", 1, "Kemerli pencereler, kavisli oturma grubu ve taş sehpayla aydınlık salon.", "Bright living room with arched windows, curved seating and a stone coffee table."),
+    ],
+  },
+  {
+    slug: "quiet-residence",
+    categoryKey: "residential",
+    title: { tr: "Sessiz Işık", en: "Quiet Light" },
+    summary: {
+      tr: "Gün ışığıyla öne çıkan sakin bir salon ve yatak odası.",
+      en: "A calm living room and bedroom shaped by natural daylight.",
+    },
+    narrative: {
+      tr: "Nötr tekstiller ve açık meşe yüzeyler, iki mekân arasında dingin bir devamlılık kuruyor.",
+      en: "Neutral textiles and pale oak create a gentle continuity between the two rooms.",
+    },
+    images: [
+      photo("quiet-residence", 1, "Doğal ışık alan geniş salon ve yumuşak tonlu oturma alanı.", "Daylit living room with soft-toned seating."),
+      photo("quiet-residence", 2, "Açık meşe başlık paneli ve nötr tekstillerle yatak odası.", "Bedroom with pale oak headboard paneling and neutral textiles."),
+    ],
+  },
+  {
+    slug: "urban-residence",
+    categoryKey: "residential",
+    title: { tr: "Kentte Yaşam", en: "Urban Living" },
+    summary: {
+      tr: "Bir konut yapısının cephesinden mutfak ve çalışma alanlarına uzanan seçki.",
+      en: "A selection spanning a residential facade, kitchen and study.",
+    },
+    narrative: {
+      tr: "Dış cepheden iç mekânlara uzanan kareler, yaşam alanlarını doğal ışık ve yalın malzemelerle ele alıyor.",
+      en: "From the exterior to the interiors, the collection pairs natural light with a restrained material palette.",
+    },
+    images: [
+      photo("urban-residence", 1, "Açık taş ve koyu ahşap cepheleri bir araya getiren konut yapısı.", "Residential building combining pale stone and dark timber facades."),
+      photo("urban-residence", 2, "Geniş pencereler yanında yer alan açık tonlu mutfak.", "Pale kitchen beside tall windows."),
+      photo("urban-residence", 3, "Yemek alanına açılan modern mutfak ve ahşap dolaplar.", "Modern kitchen opening to a dining area with timber cabinetry."),
+      photo("urban-residence", 4, "Koyu kitaplıklar ve geniş masa ile ev çalışma alanı.", "Home study with dark bookshelves and a wide desk."),
+    ],
+  },
+  {
+    slug: "auditorium",
     categoryKey: "commercial",
-    content: {
-      tr: {
-        title: "Afterlight",
-        category: "Ticari",
-        location: "Dubai",
-        summary:
-          "Sıcak taş, bronz detaylar ve günün son ışığı etrafında kurgulanan bir konaklama mekânı.",
-        narrative:
-          "Proje, giriş alanının açıklığından salonun daha sakin atmosferine ilerliyor. Yansıyan ışık ve ölçülü malzeme paleti, iki sahneyi farklı ama birbiriyle ilişkili kılıyor.",
-        services: ["İç mekân görselleştirme", "Işık tasarımı yönlendirmesi", "Sanat yönetimi"],
-        images: [
-          {
-            src: "/images/afterlight-01.png",
-            alt: "Yontulmuş traverten bankosu ve bronz detaylarla güneş alan otel lobisi",
-          },
-          {
-            src: "/images/afterlight-02.png",
-            alt: "Kavisli oturma grupları ve akşam manzarasıyla çağdaş otel salonu",
-          },
-        ],
-      },
-      en: {
-        title: "Afterlight",
-        category: "Commercial",
-        location: "Dubai",
-        summary:
-          "A hospitality interior built around warm stone, bronze detail and the last light of the day.",
-        narrative:
-          "The project moves from the clarity of the arrival space to the quieter mood of the lounge. Reflected light and a restrained material palette give both scenes a distinct but connected atmosphere.",
-        services: ["Interior imagery", "Lighting direction", "Art direction"],
-        images: [
-          {
-            src: "/images/afterlight-01.png",
-            alt: "Sunlit hotel lobby with a sculpted travertine reception desk and bronze details",
-          },
-          {
-            src: "/images/afterlight-02.png",
-            alt: "Contemporary hospitality lounge with curved seating and an evening skyline",
-          },
-        ],
-      },
+    title: { tr: "Konferans Salonu", en: "Auditorium" },
+    summary: {
+      tr: "Sahne, sıralı oturma ve çizgisel tavan ışıklarıyla düzenlenen geniş bir salon.",
+      en: "A generous hall arranged around a stage, tiered seating and linear ceiling lights.",
     },
+    narrative: {
+      tr: "Tekrarlanan oturma düzeni ve tavan çizgileri mekânın ölçeğini vurguluyor.",
+      en: "Repeated seating and ceiling lines emphasize the scale of the room.",
+    },
+    images: [
+      photo("auditorium", 1, "Sahneye ve sıralı koltuklara bakan geniş konferans salonu.", "Wide auditorium facing a stage with rows of seats."),
+    ],
+  },
+  {
+    slug: "bedroom-suite",
+    categoryKey: "residential",
+    title: { tr: "Dinlenme Alanı", en: "Restful Suite" },
+    summary: {
+      tr: "Taş dokulu duvar ve koyu ahşapla tamamlanan yatak odası ve giyinme alanı.",
+      en: "A bedroom and dressing area finished with textured stone and dark timber.",
+    },
+    narrative: {
+      tr: "Yatak odası ve gardırop alanı, dokulu bir duvar ile koyu ahşap yüzeylerin dengesiyle bir araya geliyor.",
+      en: "The bedroom and wardrobe area balance a tactile feature wall with dark timber surfaces.",
+    },
+    images: [
+      photo("bedroom-suite", 1, "Taş dokulu duvar, alçak yatak ve nötr tekstiller.", "Bedroom with a textured stone wall, low bed and neutral linens."),
+      photo("bedroom-suite", 2, "Dumanlı camlı gardırop ve koyu ahşap giyinme alanı.", "Dressing area with smoked-glass wardrobe fronts and dark timber."),
+    ],
+  },
+  {
+    slug: "stone-house",
+    categoryKey: "residential",
+    title: { tr: "Taş Ev", en: "Stone House" },
+    summary: {
+      tr: "Bahçeye açılan, doğal taşla kaplı yalın bir ev.",
+      en: "A simple stone house opening onto a landscaped garden.",
+    },
+    narrative: {
+      tr: "Taş örgü, sade açıklıklar ve çevresindeki yeşil peyzaj yapıyı öne çıkarıyor.",
+      en: "Stonework, restrained openings and surrounding greenery define the home.",
+    },
+    images: [
+      photo("stone-house", 1, "Çevresi yeşilliklerle sarılmış alçak taş ev.", "Low stone house set within a green garden."),
+    ],
+  },
+  {
+    slug: "garden-pavilion",
+    categoryKey: "residential",
+    title: { tr: "Bahçe Pavyonu", en: "Garden Pavilion" },
+    summary: {
+      tr: "Derin saçakları ve cam cepheleriyle peyzajın içine yerleşen bir pavyon.",
+      en: "A pavilion nestled in the landscape beneath a deep canopy and glass facade.",
+    },
+    narrative: {
+      tr: "Açık planlı yapı bahçeyle kesintisiz bir ilişki kuruyor; iki açı aynı yapının farklı yüzlerini gösteriyor.",
+      en: "The open pavilion stays connected to its garden; the two views reveal different sides of the same structure.",
+    },
+    images: [
+      photo("garden-pavilion", 1, "Derin saçakları ve cam duvarlarıyla bahçe pavyonu.", "Garden pavilion with a deep canopy and glass walls."),
+      photo("garden-pavilion", 2, "Peyzaj içindeki pavyonun yuvarlak kolonlu dış görünümü.", "Exterior view of the garden pavilion with its round structural column."),
+    ],
+  },
+  {
+    slug: "dining-room",
+    categoryKey: "residential",
+    title: { tr: "Yemek Odası", en: "Dining Room" },
+    summary: {
+      tr: "Ahşap kitaplıklar ve mermer dokulu bir duvarla çevrelenen sıcak bir yemek alanı.",
+      en: "A warm dining area framed by timber shelving and a marble-textured wall.",
+    },
+    narrative: {
+      tr: "Dokulu yüzeyler ve yumuşak ışık, yemek masasını mekânın odağına taşıyor.",
+      en: "Tactile surfaces and soft light bring the dining table to the center of the room.",
+    },
+    images: [
+      photo("dining-room", 1, "Ahşap kitaplık, mermer dokulu duvar ve uzun yemek masası.", "Dining room with timber shelving, a marble-textured wall and a long table."),
+    ],
+  },
+  {
+    slug: "wellness-suite",
+    categoryKey: "commercial",
+    title: { tr: "Hareket Alanı", en: "Movement Studio" },
+    summary: {
+      tr: "Hareket ve dinlenme için düzenlenen, cam bölmeli bir stüdyo.",
+      en: "A glass-partitioned studio arranged for movement and rest.",
+    },
+    narrative: {
+      tr: "Geniş açıklıklar, doğal zemin ve ayrıştırılmış çalışma alanları ferah bir akış sağlıyor.",
+      en: "Generous openings, natural flooring and distinct activity zones create an open flow.",
+    },
+    images: [
+      photo("wellness-suite", 1, "Gün ışığı alan stüdyo ve egzersiz ekipmanları.", "Daylit wellness studio with exercise equipment."),
+      photo("wellness-suite", 2, "Hareket alanında mat ve ekipmanların bulunduğu iç mekân.", "Movement studio with mats and training equipment."),
+      photo("wellness-suite", 3, "Siyah çerçeveli cam bölmelerle ayrılan stüdyo alanı.", "Studio interior divided by black-framed glass partitions."),
+      photo("wellness-suite", 4, "Doğal ahşap zeminli ve geniş pencereli egzersiz alanı.", "Exercise area with oak flooring and large windows."),
+    ],
+  },
+  {
+    slug: "restaurant",
+    categoryKey: "hospitality",
+    title: { tr: "Açık Sofra", en: "Open Table" },
+    summary: {
+      tr: "Girişten yemek alanına uzanan, terracotta ve yeşil tonlarla katmanlanan bir yeme-içme mekânı.",
+      en: "A hospitality space moving from arrival to dining through terracotta and green tones.",
+    },
+    narrative: {
+      tr: "Dış karşılama alanı, bitkilendirilmiş oturma bölümleri ve geniş yemek masaları tek bir akış içinde bir araya geliyor.",
+      en: "The entrance, planted seating areas and generous dining tables come together in one continuous sequence.",
+    },
+    images: [
+      photo("restaurant", 1, "Yumuşak oturma grupları ve dairesel aydınlatmalarla restoran salonu.", "Restaurant lounge with soft seating and circular light fixtures."),
+      photo("restaurant", 2, "Bitkilendirilmiş açık teras ve terracotta renkli servis bankosu.", "Planted outdoor terrace with a terracotta service counter."),
+      photo("restaurant", 3, "Uzun masalar ve zeytin yeşili sandalyelerle yemek alanı.", "Dining area with long tables and olive-green chairs."),
+      photo("restaurant", 4, "Bitkilendirilmiş giriş alanında koyu kırmızı bir sundurma.", "Deep red entrance canopy framed by planting."),
+      photo("restaurant", 5, "Bitkiler ve yuvarlak oturma elemanlarıyla merkezi servis alanı.", "Central service area with planting and rounded seating."),
+      photo("restaurant", 6, "Ahşap tavan çıtaları altında düzenli yemek masaları.", "Dining tables arranged beneath a slatted timber ceiling."),
+    ],
+  },
+  {
+    slug: "boardroom",
+    categoryKey: "commercial",
+    title: { tr: "Toplantı Odası", en: "Boardroom" },
+    summary: {
+      tr: "Ahşap tavan detayları ve geniş toplantı masasıyla düzenlenen kurumsal bir salon.",
+      en: "A corporate meeting room with timber ceiling details and a generous table.",
+    },
+    narrative: {
+      tr: "Düzenli oturma planı ve gün ışığı, toplantılar için sakin bir arka plan oluşturuyor.",
+      en: "An orderly seating plan and natural light create a calm backdrop for meetings.",
+    },
+    images: [
+      photo("boardroom", 1, "Gün ışığı alan toplantı salonunda büyük masa ve sıralı sandalyeler.", "Daylit boardroom with a large meeting table and orderly seating."),
+    ],
+  },
+  {
+    slug: "lounge-bar",
+    categoryKey: "hospitality",
+    title: { tr: "Lounge & Bar", en: "Lounge & Bar" },
+    summary: {
+      tr: "Koyu taş, metal detaylar ve yumuşak ışıkla şekillenen bir lounge bar.",
+      en: "A lounge bar shaped by dark stone, metal details and soft lighting.",
+    },
+    narrative: {
+      tr: "Merkezi servis bankosu ve aydınlatılmış arka raflar, akşam atmosferinin odağını oluşturuyor.",
+      en: "A central bar and illuminated back shelving anchor the evening atmosphere.",
+    },
+    images: [
+      photo("lounge-bar", 1, "Koyu tonlu lounge alanında aydınlatılmış servis bankosu.", "Illuminated service bar within a dark-toned lounge."),
+      photo("lounge-bar", 2, "Kavisli raflar ve katmanlı aydınlatmayla bar alanı.", "Bar area with curved shelving and layered lighting."),
+    ],
+  },
+  {
+    slug: "media-residence",
+    categoryKey: "residential",
+    title: { tr: "Yaşam ve Medya Alanı", en: "Living & Media Room" },
+    summary: {
+      tr: "Kitaplık, ekran ve oturma alanlarının bir araya geldiği çağdaş bir konut.",
+      en: "A contemporary residence bringing shelving, media and lounge spaces together.",
+    },
+    narrative: {
+      tr: "Farklı açılardan görüntülenen yaşam alanları, ahşap yüzeyler ve yüksek pencereler etrafında tutarlı bir dil kuruyor.",
+      en: "Seen from several angles, the living spaces share a consistent language of timber surfaces and tall windows.",
+    },
+    images: [
+      photo("media-residence", 1, "Kitaplık ve ekran duvarının karşısında geniş oturma alanı.", "Spacious living area facing built-in shelving and a media wall."),
+      photo("media-residence", 2, "Ahşap kitaplık ve oturma gruplarıyla medya odası.", "Media room with timber bookshelves and lounge seating."),
+      photo("media-residence", 3, "Mermer duvar yüzeyi ve ekran bulunan oturma alanı.", "Living area with a marble feature wall and television."),
+      photo("media-residence", 4, "Yüksek pencereler önünde sakin bir oturma alanı.", "Quiet living area in front of full-height windows."),
+      photo("media-residence", 5, "Tam boy pencereler ve açık ahşapla aydınlık salon.", "Bright living room with full-height windows and pale timber."),
+      photo("media-residence", 6, "Ahşap duvarlar ve alçak oturma gruplarıyla geniş salon.", "Spacious lounge with timber walls and low seating."),
+    ],
   },
 ];
 
 export function getProjects(locale: Locale): PortfolioProject[] {
-  return projectRecords.map(({ content, ...project }) => ({
-    ...project,
-    ...content[locale],
+  const categoryLabels = messages[locale].work.categoryLabels;
+
+  return projectRecords.map((project) => ({
+    slug: project.slug,
+    categoryKey: project.categoryKey,
+    category: categoryLabels[project.categoryKey],
+    title: project.title[locale],
+    summary: project.summary[locale],
+    narrative: project.narrative[locale],
+    images: project.images.map(({ src, alt }) => ({ src, alt: alt[locale] })),
   }));
 }
 
 export function getProject(slug: string, locale: Locale): PortfolioProject | undefined {
-  const project = projectRecords.find((item) => item.slug === slug);
-
-  if (!project) {
-    return undefined;
-  }
-
-  const { content, ...metadata } = project;
-  return { ...metadata, ...content[locale] };
+  return getProjects(locale).find((project) => project.slug === slug);
 }
 
-export function getProjectSlugs() {
+export function getProjectSlugs(): string[] {
   return projectRecords.map(({ slug }) => slug);
 }

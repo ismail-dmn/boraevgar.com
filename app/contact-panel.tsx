@@ -15,9 +15,9 @@ export function ContactPanel({ locale }: ContactPanelProps) {
         <p className="eyebrow">{copy.contact.eyebrow}</p>
         <div className="contact-layout">
           <div>
-            <h2 className="contact-heading" id="contact-title">
-              {copy.contact.first} <em>{copy.contact.emphasis}</em>
-            </h2>
+<h2 aria-label={`${copy.contact.first} ${copy.contact.emphasis}`} className="contact-heading" id="contact-title">
+          {copy.contact.first}{" "}<em>{copy.contact.emphasis}</em>
+        </h2>
             <p className="contact-copy">{copy.contact.description}</p>
           </div>
           <div className="contact-actions">

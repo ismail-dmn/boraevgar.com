@@ -26,8 +26,8 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
       <div className="section-heading">
         <div className="section-heading-copy">
           <p className="eyebrow">{copy.work.eyebrow}</p>
-          <h2 id="work-title">
-            {copy.work.first} <em>{copy.work.emphasis}</em>
+          <h2 aria-label={`${copy.work.first} ${copy.work.emphasis}`} id="work-title">
+            {copy.work.first}{" "}<em>{copy.work.emphasis}</em>
           </h2>
         </div>
         <div
@@ -54,13 +54,17 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
       </div>
 
       <p className="visually-hidden" aria-live="polite">
-        {visibleProjects.length} {locale === "tr" ? "proje gösteriliyor" : "projects shown"}
+        {`${visibleProjects.length} ${locale === "tr" ? "proje gösteriliyor" : "projects shown"}`}
       </p>
 
       <div className="project-grid">
         {visibleProjects.map((project, index) => (
           <article className="project-card" key={project.slug}>
-            <Link className="project-card-link" href={`/${locale}/projects/${project.slug}`}>
+            <Link
+              aria-label={`${project.title}, ${project.category}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
+              className="project-card-link"
+              href={`/${locale}/projects/${project.slug}`}
+            >
               <figure className="project-card-image">
                 <Image
                   alt={project.images[0].alt}
@@ -79,11 +83,11 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
               <div className="project-card-meta">
                 <div>
                   <h3 className="project-card-title">{project.title}</h3>
-                  <p className="project-card-subtitle">
-                    {project.category} <span aria-hidden="true">·</span> {project.location}
-                  </p>
+                  <p className="project-card-subtitle">{project.category}</p>
                 </div>
-                <span className="project-card-year">{project.year}</span>
+                <span className="project-card-year">
+                  {project.images.length} {project.images.length === 1 ? copy.work.frame : copy.work.frames}
+                </span>
               </div>
             </Link>
           </article>
