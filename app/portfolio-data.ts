@@ -39,6 +39,21 @@ export type PortfolioProject = {
 
 const projectRecords: readonly ProjectRecord[] = weTransferProjectRecords;
 
+function normalizeImportedName(value: string, locale: Locale): string {
+  const language = locale === "tr" ? "tr-TR" : "en-US";
+
+  return value
+    .replace(/\s*\(\d+\)\s*$/u, "")
+    .trim()
+    .split(/\s+/u)
+    .filter(Boolean)
+    .map((word) => {
+      const lower = word.toLocaleLowerCase(language);
+      return lower.charAt(0).toLocaleUpperCase(language) + lower.slice(1);
+    })
+    .join(" ");
+}
+
 export function getProjects(locale: Locale): PortfolioProject[] {
   const categoryLabels = messages[locale].work.categoryLabels;
   const workTypeKey: ProjectWorkTypeKey = "design-render";
@@ -51,12 +66,15 @@ export function getProjects(locale: Locale): PortfolioProject[] {
     workTypeKey,
     workTypeLabel,
     category: categoryLabels[project.categoryKey],
-    title: project.images[0].fileName,
+    title: normalizeImportedName(project.images[0].fileName, locale),
     summary:
       locale === "tr"
-        ? `${project.images.length} görsel · özgün dosya adları korunmuştur`
-        : `${project.images.length} images · original file names preserved`,
-    images: project.images.map(({ src, fileName }) => ({ src, fileName, alt: fileName })),
+        ? `${project.images.length} görsel · proje bazlı arşiv`
+        : `${project.images.length} images · project-based archive`,
+    images: project.images.map(({ src, fileName }) => {
+      const displayName = normalizeImportedName(fileName, locale);
+      return { src, fileName: displayName, alt: displayName };
+    }),
   }));
 }
 
