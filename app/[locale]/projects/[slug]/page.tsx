@@ -101,7 +101,7 @@ async function ProjectPageContent({ params }: ProjectPageProps) {
           </div>
           <div className="project-heading-row">
             <div>
-              <p className="eyebrow">{project.category}</p>
+              <p className="project-source-folder">{project.sourceFolder}</p>
               <h1>{project.title}</h1>
             </div>
             <p className="project-summary">{project.summary}</p>
@@ -136,6 +136,7 @@ async function ProjectPageContent({ params }: ProjectPageProps) {
                 alt={image.alt}
                 className="gallery-image"
                 fill
+                unoptimized={image.src.endsWith(".gif")}
                 sizes={
                   index === 0
                     ? "(max-width: 760px) 100vw, calc(100vw - 72px)"
@@ -143,17 +144,9 @@ async function ProjectPageContent({ params }: ProjectPageProps) {
                 }
                 src={image.src}
               />
-              <figcaption className="gallery-caption">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <span>{project.title}</span>
-              </figcaption>
+              <figcaption className="gallery-caption">{image.fileName}</figcaption>
             </figure>
           ))}
-        </section>
-
-        <section className="project-story container">
-          <p className="eyebrow">{copy.project.approach}</p>
-          <p>{project.narrative}</p>
         </section>
 
         <nav
