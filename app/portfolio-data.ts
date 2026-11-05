@@ -395,6 +395,21 @@ const baseProjectRecords: readonly ProjectRecord[] = [
 
 const projectRecords: readonly ProjectRecord[] = [...baseProjectRecords, ...archiveProjects];
 
+function normalizeProjectTitle(value: string, locale: Locale): string {
+  const words = value
+    .replace(/\s*\(\d+\)\s*$/u, "")
+    .trim()
+    .split(/\s+/u)
+    .filter(Boolean);
+
+  return words
+    .map((word) => {
+      const lower = word.toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US");
+      return lower.charAt(0).toLocaleUpperCase(locale === "tr" ? "tr-TR" : "en-US") + lower.slice(1);
+    })
+    .join(" ");
+}
+
 export function getProjects(locale: Locale): PortfolioProject[] {
   const categoryLabels = messages[locale].work.categoryLabels;
   const workTypeLabels = messages[locale].work.filterLabels;
@@ -408,7 +423,7 @@ export function getProjects(locale: Locale): PortfolioProject[] {
       workTypeKey,
       workTypeLabel: workTypeLabels[workTypeKey],
       category: categoryLabels[project.categoryKey],
-      title: project.title[locale],
+      title: normalizeProjectTitle(project.title[locale], locale),
       summary: project.summary[locale],
       narrative: project.narrative[locale],
       images: project.images.map(({ src, alt }) => ({ src, alt: alt[locale] })),
