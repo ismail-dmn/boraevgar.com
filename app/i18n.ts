@@ -53,8 +53,9 @@ export const messages = {
         implemented: "Uygulaması Bitenler",
       },
       viewProject: "Projeyi incele",
-      frame: "kare",
-      frames: "kare",
+        frame: "görsel",
+        frames: "görsel",
+
     },
     services: {
       eyebrow: "Çalışma Modeli",
@@ -159,8 +160,9 @@ export const messages = {
         implemented: "Completed implementation",
       },
       viewProject: "View project",
-      frame: "frame",
-      frames: "frames",
+        frame: "image",
+        frames: "images",
+
     },
     services: {
       eyebrow: "Our process",

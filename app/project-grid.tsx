@@ -21,7 +21,6 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
     "residential",
     "commercial",
     "design-render",
-    "implemented",
   ];
   const visibleProjects = projects.filter((project) => {
     if (activeFilter === "all") return true;
@@ -83,8 +82,9 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
                   alt={project.images[0].alt}
                   className="project-card-img"
                   fill
-                  sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 70vw"
+                  sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
                   src={project.images[0].src}
+                  unoptimized={project.images[0].src.endsWith(".gif")}
                 />
                 <figcaption className="project-card-overlay">
                   <span className="project-card-number">{String(index + 1).padStart(2, "0")}</span>
@@ -96,12 +96,7 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
               <div className="project-card-meta">
                 <div>
                   <h3 className="project-card-title">{project.title}</h3>
-                  <p className="project-card-subtitle">
-                    {project.category}
-                    <span aria-hidden="true"> · </span>
-                    <span className="visually-hidden">, </span>
-                    {project.workTypeLabel}
-                  </p>
+                  <p className="project-card-subtitle">{project.sourceFolder}</p>
                 </div>
                 <span className="project-card-year">
                   {project.images.length} {project.images.length === 1 ? copy.work.frame : copy.work.frames}
