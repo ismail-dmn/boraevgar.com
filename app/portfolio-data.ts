@@ -3,6 +3,7 @@ import { messages, type Locale } from "./i18n";
 export const projectCategoryKeys = ["residential", "hospitality", "commercial"] as const;
 
 export type ProjectCategoryKey = (typeof projectCategoryKeys)[number];
+export type ProjectWorkTypeKey = "design-render" | "implemented";
 
 type LocalizedText = Record<Locale, string>;
 
@@ -14,6 +15,7 @@ type ProjectImageRecord = {
 type ProjectRecord = {
   slug: string;
   categoryKey: ProjectCategoryKey;
+  workTypeKey?: ProjectWorkTypeKey;
   title: LocalizedText;
   summary: LocalizedText;
   narrative: LocalizedText;
@@ -28,6 +30,8 @@ type ProjectImage = {
 export type PortfolioProject = {
   slug: string;
   categoryKey: ProjectCategoryKey;
+  workTypeKey: ProjectWorkTypeKey;
+  workTypeLabel: string;
   category: string;
   title: string;
   summary: string;
@@ -43,6 +47,85 @@ function photo(projectSlug: string, imageNumber: number, altTr: string, altEn: s
 }
 
 const projectRecords: readonly ProjectRecord[] = [
+  {
+    slug: "city-villa",
+    categoryKey: "residential",
+    workTypeKey: "design-render",
+    title: { tr: "Kentte Bir Villa", en: "A Villa in the City" },
+    summary: {
+      tr: "Koyu taş, sıcak ahşap ve geniş cam yüzeylerle bütünleşen çok katmanlı bir villa iç mekânı.",
+      en: "A layered villa interior shaped by dark stone, warm timber and generous glazing.",
+    },
+    narrative: {
+      tr: "Salon, mutfak, kış bahçesi ve yatak odası; koyu taş, yumuşak tekstiller ve sıcak metal detaylarla tek bir görsel dilde buluşuyor.",
+      en: "Living, kitchen, winter garden and bedroom spaces share one visual language of dark stone, soft textiles and warm metal accents.",
+    },
+    images: [
+      photo("city-villa", 1, "Koyu taş TV duvarı ve geniş oturma alanıyla çağdaş villa salonu.", "Contemporary villa living room with a dark stone media wall and generous seating."),
+      photo("city-villa", 2, "Şömine, kitaplık ve kavisli koltuklarla düzenlenen salon.", "Living room arranged around a fireplace, built-in shelving and curved chairs."),
+      photo("city-villa", 3, "Oluklu cam sürgülü kapılar ve ceviz dolaplarla tasarlanan mutfak.", "Kitchen with fluted glass sliders and warm walnut cabinetry."),
+      photo("city-villa", 4, "Geniş cam yüzeylerle bahçeye açılan kış bahçesi.", "Winter garden opening onto the landscape through full-height glazing."),
+      photo("city-villa", 5, "Sıcak ahşap ve yumuşak aydınlatmayla düzenlenen yatak odası.", "Bedroom layered with warm timber and soft lighting."),
+    ],
+  },
+  {
+    slug: "japandi-home",
+    categoryKey: "residential",
+    workTypeKey: "design-render",
+    title: { tr: "Japandi Yalınlığı", en: "Japandi Calm" },
+    summary: {
+      tr: "Kemerli pencereler, açık ahşap ve doğal dokularla şekillenen dingin bir yaşam alanı.",
+      en: "A quiet living space shaped by arched windows, pale timber and natural textures.",
+    },
+    narrative: {
+      tr: "Nötr renkler ve alçak profilli mobilyalar, gün ışığını ve malzeme dokularını öne çıkaran yalın bir iç mekân dili kuruyor.",
+      en: "Neutral tones and low-profile furniture create a restrained interior language that lets daylight and material texture lead.",
+    },
+    images: [
+      photo("japandi-home", 1, "Kemerli pencereler önünde doğal tonlarda düzenlenen salon.", "Living room in natural tones framed by arched windows."),
+      photo("japandi-home", 2, "Açık ahşap ve kavisli oturma grubuyla aydınlık yaşam alanı.", "Daylit living area with pale timber and curved seating."),
+      photo("japandi-home", 3, "Doğal dokulu koltuk ve heykelsi yan sehpa detayı.", "Detail of a textured lounge chair and sculptural side table."),
+      photo("japandi-home", 4, "Yumuşak formlu sarkıt aydınlatma ve sakin salon düzeni.", "Softly sculptural pendant above a calm living room composition."),
+    ],
+  },
+  {
+    slug: "garden-villa",
+    categoryKey: "residential",
+    workTypeKey: "design-render",
+    title: { tr: "Bahçeye Açılan Ev", en: "A Home Framed by Garden" },
+    summary: {
+      tr: "Yalın geometriler, geniş camlar ve peyzajla bütünleşen çağdaş bir villa.",
+      en: "A contemporary villa where clean geometry, generous glazing and landscape meet.",
+    },
+    narrative: {
+      tr: "Açık renkli yüzeyler ve koyu doğramalar, ağaçların gölgesinde sakin ve güçlü bir cephe kompozisyonu oluşturuyor.",
+      en: "Pale surfaces and dark frames shape a calm, confident facade beneath the surrounding trees.",
+    },
+    images: [
+      photo("garden-villa", 1, "Ağaçlar ve alçak peyzajla çevrili çağdaş villa cephesi.", "Contemporary villa facade surrounded by trees and low planting."),
+      photo("garden-villa", 2, "Geniş cam açıklıklar ve koyu doğramalarla modern ev görünümü.", "Modern residence with generous glazing and dark frames."),
+      photo("garden-villa", 3, "Yatay hacimler ve bahçeyle ilişki kuran villa dış görünümü.", "Villa exterior defined by horizontal volumes and a garden connection."),
+    ],
+  },
+  {
+    slug: "mediterranean-terrace",
+    categoryKey: "hospitality",
+    workTypeKey: "design-render",
+    title: { tr: "Akdeniz Terası", en: "Mediterranean Terrace" },
+    summary: {
+      tr: "Gölgelikli oturma alanları, yoğun bitkilendirme ve açık taş dokularıyla tasarlanan teras.",
+      en: "A terrace composed with shaded seating, lush planting and pale stone textures.",
+    },
+    narrative: {
+      tr: "Desenli zemin, çizgili saçaklar ve katmanlı bitkilendirme; açık havada yemek ve dinlenme için ferah bir akış kuruyor.",
+      en: "Patterned flooring, striped canopies and layered planting create an easy flow for outdoor dining and rest.",
+    },
+    images: [
+      photo("mediterranean-terrace", 1, "Bitkiler ve gölgelikli oturma alanlarıyla Akdeniz terası.", "Mediterranean terrace with layered planting and shaded seating."),
+      photo("mediterranean-terrace", 2, "Açık havada yemek alanı ve gölgelikli pergola.", "Outdoor dining beneath a shaded pergola."),
+      photo("mediterranean-terrace", 3, "Havuz kenarında açık tonlu masa ve oturma düzeni.", "Pale dining and lounge furniture beside the pool."),
+    ],
+  },
   {
     slug: "dark-residence",
     categoryKey: "residential",
@@ -311,16 +394,23 @@ const projectRecords: readonly ProjectRecord[] = [
 
 export function getProjects(locale: Locale): PortfolioProject[] {
   const categoryLabels = messages[locale].work.categoryLabels;
+  const workTypeLabels = messages[locale].work.filterLabels;
 
-  return projectRecords.map((project) => ({
-    slug: project.slug,
-    categoryKey: project.categoryKey,
-    category: categoryLabels[project.categoryKey],
-    title: project.title[locale],
-    summary: project.summary[locale],
-    narrative: project.narrative[locale],
-    images: project.images.map(({ src, alt }) => ({ src, alt: alt[locale] })),
-  }));
+  return projectRecords.map((project) => {
+    const workTypeKey = project.workTypeKey ?? "implemented";
+
+    return {
+      slug: project.slug,
+      categoryKey: project.categoryKey,
+      workTypeKey,
+      workTypeLabel: workTypeLabels[workTypeKey],
+      category: categoryLabels[project.categoryKey],
+      title: project.title[locale],
+      summary: project.summary[locale],
+      narrative: project.narrative[locale],
+      images: project.images.map(({ src, alt }) => ({ src, alt: alt[locale] })),
+    };
+  });
 }
 
 export function getProject(slug: string, locale: Locale): PortfolioProject | undefined {

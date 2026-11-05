@@ -7,8 +7,8 @@ const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "
 export function getWhatsAppHref(locale: Locale) {
   const message =
     locale === "tr"
-      ? "Merhaba Bora Evgar Studio, mimari görselleştirme projem hakkında görüşmek istiyorum."
-      : "Hello Bora Evgar Studio, I would like to discuss an architectural visualization project.";
+      ? "Merhaba Bora Evgar Studio, iç mimarlık ve anahtar teslim uygulama projem hakkında görüşmek istiyorum."
+      : "Hello Bora Evgar Studio, I would like to discuss an interior architecture and turnkey delivery project.";
   const encodedMessage = encodeURIComponent(message);
 
   return whatsappNumber
@@ -18,11 +18,11 @@ export function getWhatsAppHref(locale: Locale) {
 
 export function getProposalHref(locale: Locale) {
   const subject =
-    locale === "tr" ? "Mimari görselleştirme teklifi" : "Architectural visualization proposal";
+    locale === "tr" ? "İç mimarlık ve anahtar teslim uygulama teklifi" : "Interior architecture and turnkey delivery proposal";
   const body =
     locale === "tr"
-      ? "Merhaba Bora Evgar Studio,\n\nBir proje hakkında görüşmek istiyorum.\n\nProje türü:\nKonum:\nHedef teslim tarihi:\n\n"
-      : "Hello Bora Evgar Studio,\n\nI would like to discuss a project.\n\nProject type:\nLocation:\nTarget delivery date:\n\n";
+      ? "Merhaba Bora Evgar Studio,\n\nBir proje hakkında görüşmek istiyorum.\n\nProje türü:\nKonum:\nYaklaşık alan:\nHedef başlangıç tarihi:\n\n"
+      : "Hello Bora Evgar Studio,\n\nI would like to discuss a project.\n\nProject type:\nLocation:\nApproximate area:\nTarget start date:\n\n";
 
   return `mailto:${studioEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }

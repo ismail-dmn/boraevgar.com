@@ -58,8 +58,8 @@ export async function generateMetadata({ params }: LocaleMetadataProps): Promise
   const canonical = `/${localeParam}`;
   const imageAlt =
     localeParam === "tr"
-      ? "Bora Evgar Studio imzalı çağdaş taş konut"
-      : "Contemporary stone residence by Bora Evgar Studio";
+      ? "Bora Evgar Studio tasarımı çağdaş villa salonu"
+      : "Contemporary villa living room designed by Bora Evgar Studio";
 
   return {
     title: {
@@ -79,13 +79,13 @@ export async function generateMetadata({ params }: LocaleMetadataProps): Promise
       siteName: "Bora Evgar Studio",
       locale: localeParam === "tr" ? "tr_TR" : "en_US",
       type: "website",
-      images: [{ url: "/images/quiet-luxury-01.png", alt: imageAlt }],
+      images: [{ url: "/images/projects/city-villa/01.webp", alt: imageAlt }],
     },
     twitter: {
       card: "summary_large_image",
       title: copy.metadata.title,
       description: copy.metadata.description,
-      images: ["/images/quiet-luxury-01.png"],
+      images: ["/images/projects/city-villa/01.webp"],
     },
   };
 }
@@ -93,7 +93,7 @@ export async function generateMetadata({ params }: LocaleMetadataProps): Promise
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f1efea",
+  themeColor: "#000000",
 };
 
 export default async function RootLayout({ children, params }: LocaleLayoutProps) {
