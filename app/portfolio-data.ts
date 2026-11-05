@@ -1,4 +1,5 @@
 import { messages, type Locale } from "./i18n";
+import { archiveProjects } from "./archive-projects";
 
 export const projectCategoryKeys = ["residential", "hospitality", "commercial"] as const;
 
@@ -46,7 +47,7 @@ function photo(projectSlug: string, imageNumber: number, altTr: string, altEn: s
   };
 }
 
-const projectRecords: readonly ProjectRecord[] = [
+const baseProjectRecords: readonly ProjectRecord[] = [
   {
     slug: "city-villa",
     categoryKey: "residential",
@@ -391,6 +392,8 @@ const projectRecords: readonly ProjectRecord[] = [
     ],
   },
 ];
+
+const projectRecords: readonly ProjectRecord[] = [...baseProjectRecords, ...archiveProjects];
 
 export function getProjects(locale: Locale): PortfolioProject[] {
   const categoryLabels = messages[locale].work.categoryLabels;
