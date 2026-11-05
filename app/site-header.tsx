@@ -24,13 +24,13 @@ export function SiteHeader({ locale, currentHref, alternateHref }: SiteHeaderPro
           </span>
           <span className="brand-name">
             <strong>Bora Evgar</strong>
-            <span>{locale === "tr" ? "Mimari görselleştirme" : "Architectural visualization"}</span>
+            <span>{locale === "tr" ? "İç mimarlık & uygulama" : "Interior architecture & build"}</span>
           </span>
         </Link>
 
         <nav className="primary-nav" aria-label={locale === "tr" ? "Ana menü" : "Main navigation"}>
           <Link href={`/${locale}#work`}>{copy.nav.work}</Link>
-          <Link href={`/${locale}#studio`}>{copy.nav.studio}</Link>
+          <Link href={`/${locale}#process`}>{copy.nav.studio}</Link>
           <Link href={`/${locale}#contact`}>{copy.nav.contact}</Link>
         </nav>
 

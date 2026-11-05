@@ -4,22 +4,31 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { messages, type Locale } from "./i18n";
-import { projectCategoryKeys, type PortfolioProject, type ProjectCategoryKey } from "./portfolio-data";
+import { type PortfolioProject, type ProjectWorkTypeKey } from "./portfolio-data";
 
 type ProjectGridProps = {
   locale: Locale;
   projects: readonly PortfolioProject[];
 };
 
-type ProjectFilter = "all" | ProjectCategoryKey;
+type ProjectFilter = "all" | "residential" | "commercial" | ProjectWorkTypeKey;
 
 export function ProjectGrid({ locale, projects }: ProjectGridProps) {
   const copy = messages[locale];
   const [activeFilter, setActiveFilter] = useState<ProjectFilter>("all");
-  const filters: readonly ProjectFilter[] = ["all", ...projectCategoryKeys];
-  const visibleProjects = projects.filter(
-    (project) => activeFilter === "all" || project.categoryKey === activeFilter,
-  );
+  const filters: readonly ProjectFilter[] = [
+    "all",
+    "residential",
+    "commercial",
+    "design-render",
+    "implemented",
+  ];
+  const visibleProjects = projects.filter((project) => {
+    if (activeFilter === "all") return true;
+    if (activeFilter === "residential") return project.categoryKey === "residential";
+    if (activeFilter === "commercial") return project.categoryKey !== "residential";
+    return project.workTypeKey === activeFilter;
+  });
 
   return (
     <section className="work-section container" id="work" aria-labelledby="work-title">
@@ -27,16 +36,20 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
         <div className="section-heading-copy">
           <p className="eyebrow">{copy.work.eyebrow}</p>
           <h2 aria-label={`${copy.work.first} ${copy.work.emphasis}`} id="work-title">
-            {copy.work.first}{" "}<em>{copy.work.emphasis}</em>
+            {copy.work.first} <em>{copy.work.emphasis}</em>
           </h2>
         </div>
         <div
           className="filter-list"
           role="group"
-          aria-label={locale === "tr" ? "Projeleri kategoriye göre filtrele" : "Filter projects by category"}
+          aria-label={
+            locale === "tr"
+              ? "Projeleri türüne ve aşamasına göre filtrele"
+              : "Filter projects by category and phase"
+          }
         >
           {filters.map((filter) => {
-            const label = filter === "all" ? copy.work.all : copy.work.categoryLabels[filter];
+            const label = copy.work.filterLabels[filter];
 
             return (
               <button
@@ -61,7 +74,7 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
         {visibleProjects.map((project, index) => (
           <article className="project-card" key={project.slug}>
             <Link
-              aria-label={`${project.title}, ${project.category}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
+              aria-label={`${project.title}, ${project.category}, ${project.workTypeLabel}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
               className="project-card-link"
               href={`/${locale}/projects/${project.slug}`}
             >
@@ -83,7 +96,12 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
               <div className="project-card-meta">
                 <div>
                   <h3 className="project-card-title">{project.title}</h3>
-                  <p className="project-card-subtitle">{project.category}</p>
+                  <p className="project-card-subtitle">
+                    {project.category}
+                    <span aria-hidden="true"> · </span>
+                    <span className="visually-hidden">, </span>
+                    {project.workTypeLabel}
+                  </p>
                 </div>
                 <span className="project-card-year">
                   {project.images.length} {project.images.length === 1 ? copy.work.frame : copy.work.frames}

@@ -32,7 +32,10 @@ export default async function Home({ params }: HomeProps) {
     email: "hello@boraevgar.com",
     description: copy.metadata.description,
     areaServed: locale === "tr" ? "Dünya çapında" : "Worldwide",
-    serviceType: locale === "tr" ? "Mimari görselleştirme" : "Architectural visualization",
+    serviceType:
+      locale === "tr"
+        ? "İç mimarlık, teknik projelendirme ve anahtar teslim uygulama"
+        : "Interior architecture, technical documentation, and turnkey delivery",
   };
 
   return (
@@ -100,9 +103,9 @@ export default async function Home({ params }: HomeProps) {
             </span>
           </div>
           <div className="studio-copy">
-<h2 aria-label={`${copy.studio.first} ${copy.studio.emphasis}`} id="studio-title">
-          {copy.studio.first}{" "}<em>{copy.studio.emphasis}</em>
-        </h2>
+            <h2 aria-label={`${copy.studio.first} ${copy.studio.emphasis}`} id="studio-title">
+              {copy.studio.first} <em>{copy.studio.emphasis}</em>
+            </h2>
             <p>{copy.studio.description}</p>
             <ul className="studio-details" aria-label={locale === "tr" ? "Stüdyo bilgileri" : "Studio details"}>
               {copy.studio.details.map((detail) => (
@@ -114,7 +117,7 @@ export default async function Home({ params }: HomeProps) {
 
         <ProjectGrid locale={locale} projects={projects} />
 
-        <section className="services-section container" aria-labelledby="services-title">
+        <section className="services-section container" id="process" aria-labelledby="services-title">
           <div className="services-heading">
             <div>
               <p className="eyebrow">{copy.services.eyebrow}</p>
@@ -128,11 +131,16 @@ export default async function Home({ params }: HomeProps) {
           </div>
           <div className="services-list">
             {copy.services.items.map((service, index) => (
-              <article className="service-item" key={service.title}>
-                <span className="service-number">{String(index + 1).padStart(2, "0")}</span>
-                <h3>{service.title}</h3>
+              <details className="service-item" key={service.title} open={index === 0}>
+                <summary className="service-trigger">
+                  <span className="service-number">{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{service.title}</h3>
+                  <span className="service-toggle" aria-hidden="true">
+                    +
+                  </span>
+                </summary>
                 <p>{service.description}</p>
-              </article>
+              </details>
             ))}
           </div>
         </section>

@@ -114,6 +114,10 @@ async function ProjectPageContent({ params }: ProjectPageProps) {
             <dd>{project.category}</dd>
           </div>
           <div>
+            <dt>{copy.project.workType}</dt>
+            <dd>{project.workTypeLabel}</dd>
+          </div>
+          <div>
             <dt>{copy.project.frames}</dt>
             <dd>{`${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}`}</dd>
           </div>
