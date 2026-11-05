@@ -78,12 +78,13 @@ export default async function Home({ params }: HomeProps) {
               loading="eager"
               sizes="(max-width: 760px) 100vw, calc(100vw - 72px)"
               src={featuredProject.images[0].src}
+              unoptimized={featuredProject.images[0].src.endsWith(".gif")}
             />
             <figcaption className="hero-visual-caption">
               <span className="hero-visual-caption-main">
                 <span className="hero-index">01 / {String(projects.length).padStart(2, "0")}</span>
-                <span>
-                  {featuredProject.title} · {featuredProject.category}
+                <span className="hero-visual-caption-name">
+                  {featuredProject.images[0].fileName} · {featuredProject.sourceFolder}
                 </span>
               </span>
               <Link className="hero-visual-link" href={`/${locale}/projects/${featuredProject.slug}`}>
