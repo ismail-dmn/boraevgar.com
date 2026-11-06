@@ -93,7 +93,7 @@ export async function generateMetadata({ params }: LocaleMetadataProps): Promise
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#000000",
+  themeColor: "#eeece7",
 };
 
 export default async function RootLayout({ children, params }: LocaleLayoutProps) {
