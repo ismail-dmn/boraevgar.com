@@ -755,11 +755,31 @@ h2 em {
   text-transform: uppercase;
 }
 
-.contact-footer a {
+  .contact-footer a {
   color: var(--cream);
-}
+  }
 
-.site-footer {
+  .contact-info {
+  display: grid;
+  gap: 8px;
+  }
+
+  .contact-info address {
+  max-width: 360px;
+  color: #c1beb5;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  }
+
+  .contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 18px;
+  }
+
+  .site-footer {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -1309,11 +1329,15 @@ h2 em {
   }
 
   .contact-footer {
-    align-items: start;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 68px;
-    font-size: 8px;
+  align-items: start;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 68px;
+  font-size: 8px;
+  }
+
+  .contact-links {
+  justify-content: flex-start;
   }
 
   .site-footer {
