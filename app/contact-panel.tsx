@@ -1,4 +1,12 @@
-import { getProposalHref, getWhatsAppHref, studioEmail } from "./contact-details";
+import {
+  getProposalHref,
+  getWhatsAppHref,
+  studioAddress,
+  studioEmail,
+  studioInstagram,
+  studioLinkedIn,
+  studioPhone,
+} from "./contact-details";
 import { messages, type Locale } from "./i18n";
 import { LeadLink } from "./lead-link";
 
@@ -40,8 +48,16 @@ export function ContactPanel({ locale }: ContactPanelProps) {
           </div>
         </div>
         <div className="contact-footer">
-          <span>{copy.contact.footer}</span>
-          <a href={`mailto:${studioEmail}`}>{studioEmail}</a>
+          <div className="contact-info">
+            <span>{copy.contact.footer}</span>
+            <address>{studioAddress}</address>
+          </div>
+          <div className="contact-links">
+            <a href={`tel:${studioPhone.replace(/\D/g, "")}`}>{studioPhone}</a>
+            <a href={`mailto:${studioEmail}`}>{studioEmail}</a>
+            <a href={studioInstagram} target="_blank" rel="noreferrer">Instagram</a>
+            <a href={studioLinkedIn} target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>

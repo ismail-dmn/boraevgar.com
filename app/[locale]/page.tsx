@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { studioAddress, studioEmail, studioPhone } from "../contact-details";
 import { ContactPanel } from "../contact-panel";
 import { isLocale, messages, type Locale } from "../i18n";
 import { getProjects } from "../portfolio-data";
@@ -29,7 +30,16 @@ export default async function Home({ params }: HomeProps) {
     "@type": "ProfessionalService",
     name: "Bora Evgar Studio",
     url: `https://boraevgar.com/${locale}`,
-    email: "hello@boraevgar.com",
+    email: studioEmail,
+    telephone: studioPhone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: studioAddress,
+      addressLocality: "Çankaya",
+      addressRegion: "Ankara",
+      postalCode: "06690",
+      addressCountry: "TR",
+    },
     description: copy.metadata.description,
     areaServed: locale === "tr" ? "Dünya çapında" : "Worldwide",
     serviceType:
