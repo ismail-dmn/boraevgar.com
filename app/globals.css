@@ -123,10 +123,19 @@ h2 em {
 }
 
 .brand {
-  display: inline-flex;
-  width: max-content;
-  align-items: center;
-  gap: 11px;
+  display: block;
+  width: 240px;
+  height: 88px;
+  overflow: hidden;
+}
+
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  mix-blend-mode: multiply;
 }
 
 .brand-mark {
@@ -903,10 +912,19 @@ h2 em {
 }
 
 .footer-brand {
-  display: inline-flex;
-  width: max-content;
-  align-items: center;
-  gap: 10px;
+  display: block;
+  width: 210px;
+  height: 76px;
+  overflow: hidden;
+}
+
+.footer-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  mix-blend-mode: multiply;
 }
 
 .footer-brand .brand-mark {
@@ -1240,7 +1258,8 @@ h2 em {
   }
 
   .brand {
-    max-width: 200px;
+    width: 190px;
+    height: 72px;
   }
 
   .brand-mark {
