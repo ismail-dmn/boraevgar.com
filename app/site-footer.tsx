@@ -18,8 +18,15 @@ export function SiteFooter({ locale }: SiteFooterProps) {
 
   return (
     <footer className="site-footer container">
-      <Link className="footer-brand" href={`/${locale}`} aria-label="Bora Evgar Studio">
-        Bora Evgar <span>Studio</span>
+      <Link className="footer-brand" href={`/${locale}`} aria-label="Bora Evgar Interior Architecture">
+        <Image
+          className="footer-logo"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo2-GiN9gmGCmTLL0EQ7ERCmFfiyxFnwpI.jpeg"
+          alt="Bora Evgar Interior Architecture"
+          width={220}
+          height={90}
+          unoptimized
+        />
       </Link>
       <a
         className="db-brand"

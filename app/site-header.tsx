@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getProposalHref } from "./contact-details";
 import { messages, type Locale } from "./i18n";
@@ -18,14 +19,15 @@ export function SiteHeader({ locale, currentHref, alternateHref }: SiteHeaderPro
         {locale === "tr" ? "İçeriğe geç" : "Skip to content"}
       </a>
       <div className="site-nav container">
-        <Link className="brand" href={`/${locale}`} aria-label="Bora Evgar Studio">
-          <span className="brand-monogram" aria-hidden="true">
-            BE
-          </span>
-          <span className="brand-name">
-            <strong>Bora Evgar</strong>
-            <span>{locale === "tr" ? "İç mimarlık & uygulama" : "Interior architecture & build"}</span>
-          </span>
+        <Link className="brand" href={`/${locale}`} aria-label="Bora Evgar Interior Architecture">
+          <Image
+            className="brand-logo"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo2-GiN9gmGCmTLL0EQ7ERCmFfiyxFnwpI.jpeg"
+            alt="Bora Evgar Interior Architecture"
+            width={220}
+            height={90}
+            unoptimized
+          />
         </Link>
 
         <nav className="primary-nav" aria-label={locale === "tr" ? "Ana menü" : "Main navigation"}>
