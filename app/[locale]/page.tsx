@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { studioAddress, studioEmail, studioPhone } from "../contact-details";
+import { AboutSection } from "../about-section";
 import { ContactPanel } from "../contact-panel";
 import { isLocale, messages, type Locale } from "../i18n";
 import { getProjects } from "../portfolio-data";
@@ -125,6 +126,8 @@ export default async function Home({ params }: HomeProps) {
             </ul>
           </div>
         </section>
+
+        <AboutSection locale={locale} />
 
         <ProjectGrid locale={locale} projects={projects} />
 
