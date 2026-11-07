@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { studioEmail } from "./contact-details";
 import { CookieSettingsButton } from "./cookie-settings-button";
@@ -27,7 +28,13 @@ export function SiteFooter({ locale }: SiteFooterProps) {
         rel="noreferrer"
         aria-label="DB Bilişim web tasarım hizmetleri"
       >
-        <span aria-hidden="true">DB</span>
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/favicon.ico-z59U55CJqUs5Cibjtz7xtQYcusTDvd.x-icon"
+          alt="DB Bilişim"
+          width={28}
+          height={28}
+          unoptimized
+        />
       </a>
       <div className="footer-links">
         <a href={`mailto:${studioEmail}`}>{displayEmail}</a>

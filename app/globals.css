@@ -858,24 +858,25 @@ h2 em {
 
 .db-brand {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 34px;
+  height: 34px;
   place-items: center;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.08em;
-  line-height: 1;
-  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+  opacity: 0.42;
+  filter: grayscale(1);
+  transition: opacity 180ms ease, filter 180ms ease, transform 180ms ease;
+}
+
+.db-brand img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 .db-brand:hover {
-  border-color: var(--warm);
-  background: var(--warm);
-  color: var(--cream);
-  transform: translateY(-2px) rotate(-5deg);
+  opacity: 1;
+  filter: grayscale(0);
+  transform: translateY(-1px);
 }
 
 .footer-links {
@@ -1446,7 +1447,8 @@ h2 em {
   }
 
   .db-brand {
-  order: 2;
+    justify-self: start;
+    order: 2;
   }
 
   .project-intro {
