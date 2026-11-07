@@ -22,10 +22,11 @@ export function SiteHeader({ locale, currentHref, alternateHref }: SiteHeaderPro
         <Link className="brand" href={`/${locale}`} aria-label="Bora Evgar Interior Architecture">
           <Image
             className="brand-logo"
-            src="/images/brand/bora-evgar-logo.png"
+            src="/images/brand/bora-evgar-logo-white.png"
             alt="Bora Evgar Interior Architecture — Design, Visualization, Application"
-            width={755}
-            height={422}
+            width={798}
+            height={368}
+            priority
             unoptimized
           />
         </Link>

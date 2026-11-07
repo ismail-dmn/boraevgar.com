@@ -111,6 +111,8 @@ h2 em {
 .site-header {
   position: relative;
   z-index: 5;
+  background: #000;
+  color: #f4f2ed;
 }
 
 .site-nav {
@@ -118,20 +120,38 @@ h2 em {
   grid-template-columns: 1fr auto auto;
   column-gap: clamp(16px, 2.6vw, 38px);
   align-items: center;
-  min-height: 92px;
-  border-bottom: 1px solid var(--line);
+  min-height: 112px;
 }
 
 .brand {
   display: block;
   justify-self: start;
-  width: 172px;
-  padding-block: 12px;
+  width: 220px;
+  padding-block: 16px;
   transition: opacity 0.2s ease;
 }
 
 .brand:hover {
-  opacity: 0.72;
+  opacity: 0.8;
+}
+
+.site-header .primary-nav,
+.site-header .language-switcher {
+  color: #a9a7a1;
+}
+
+.site-header .primary-nav a:hover,
+.site-header .language-switcher a:hover,
+.site-header .language-switcher a.is-active {
+  color: #fff;
+}
+
+.site-header .language-switcher > span {
+  color: #55534f;
+}
+
+.site-header .header-cta {
+  border-bottom-color: #f4f2ed;
 }
 
 .brand-logo {
@@ -1254,12 +1274,12 @@ h2 em {
   }
 
   .site-nav {
-    min-height: 75px;
+    min-height: 84px;
   }
 
   .brand {
-    width: 136px;
-    padding-block: 10px;
+    width: 164px;
+    padding-block: 12px;
   }
 
   .brand-mark {
