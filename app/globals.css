@@ -123,10 +123,9 @@ h2 em {
 }
 
 .brand {
-  display: inline-flex;
-  width: 178px;
-  height: 64px;
-  align-items: center;
+  display: block;
+  width: 240px;
+  height: 88px;
   overflow: hidden;
 }
 
@@ -135,8 +134,54 @@ h2 em {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 67%;
+  object-position: center 50%;
   mix-blend-mode: multiply;
+}
+
+.brand-mark {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--ink);
+  border-top-width: 2px;
+  position: relative;
+}
+
+.brand-mark::after {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 12px;
+  height: 1px;
+  background: var(--paper);
+  content: "";
+}
+
+.brand-copy {
+  display: grid;
+  gap: 2px;
+}
+
+.brand-copy strong {
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.13em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.brand-copy > span {
+  color: var(--muted);
+  font: 8px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-copy small {
+  color: var(--warm);
+  font: 7px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .brand-monogram {
@@ -868,8 +913,8 @@ h2 em {
 
 .footer-brand {
   display: block;
-  width: 150px;
-  height: 54px;
+  width: 210px;
+  height: 76px;
   overflow: hidden;
 }
 
@@ -878,8 +923,25 @@ h2 em {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 67%;
+  object-position: center 50%;
   mix-blend-mode: multiply;
+}
+
+.footer-brand .brand-mark {
+  width: 29px;
+  height: 29px;
+}
+
+.footer-brand .brand-copy strong {
+  font-size: 10px;
+}
+
+.footer-brand .brand-copy > span {
+  font-size: 7px;
+}
+
+.footer-brand .brand-copy small {
+  font-size: 6px;
 }
 
 .db-brand {
@@ -1196,8 +1258,25 @@ h2 em {
   }
 
   .brand {
-    width: 142px;
-    height: 52px;
+    width: 190px;
+    height: 72px;
+  }
+
+  .brand-mark {
+    width: 31px;
+    height: 31px;
+  }
+
+  .brand-copy strong {
+    font-size: 10px;
+  }
+
+  .brand-copy > span {
+    font-size: 7px;
+  }
+
+  .brand-copy small {
+    font-size: 6px;
   }
 
   .brand-monogram {
