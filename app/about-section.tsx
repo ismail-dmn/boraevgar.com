@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Locale } from "./i18n";
 
 type AboutSectionProps = {
@@ -44,6 +45,16 @@ export function AboutSection({ locale }: AboutSectionProps) {
         <p className="eyebrow">{copy.eyebrow}</p>
         <h2 id="about-title">{copy.quote}</h2>
         <p className="about-intro">{copy.intro}</p>
+        <figure className="about-profile">
+          <Image
+            alt={locale === "tr" ? "Bora Evgar portre fotoğrafı" : "Portrait of Bora Evgar"}
+            className="about-profile-image"
+            fill
+            sizes="(max-width: 760px) 100vw, 42vw"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bora-eqGp6ScOEgM94yjAGLwkfeOoHNdC1F.jpeg"
+            unoptimized
+          />
+        </figure>
       </div>
       <div className="about-body">
         {copy.paragraphs.map((paragraph) => (

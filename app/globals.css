@@ -419,6 +419,21 @@ h2 em {
   line-height: 1.55;
 }
 
+.about-profile {
+  position: relative;
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 5;
+  margin: clamp(42px, 6vw, 76px) 0 0;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+
+.about-profile-image {
+  object-fit: cover;
+  object-position: center 34%;
+  filter: saturate(0.88);
+}
+
 .about-body {
   display: grid;
   align-content: start;
@@ -1292,6 +1307,11 @@ h2 em {
 
   .about-intro {
     font-size: 14px;
+  }
+
+  .about-profile {
+    width: min(100%, 420px);
+    margin-top: 38px;
   }
 
   .about-body {
