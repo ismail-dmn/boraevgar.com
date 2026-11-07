@@ -6,8 +6,8 @@ export const weTransferProjectRecords = [
     "title": "Bora EVGAR concept renderları",
     "images": [
       {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/banyo kırmızı (1).webp",
-        "fileName": "banyo kırmızı (1)"
+        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderlivingroom.webp",
+        "fileName": "renderlivingroom"
       },
       {
         "src": "/images/wetransfer/Bora EVGAR concept renderları/banyo kırmızı (2).webp",
@@ -110,10 +110,6 @@ export const weTransferProjectRecords = [
         "fileName": "mutfak4final"
       },
       {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render2 - Kopya.webp",
-        "fileName": "örnek3render2 - Kopya"
-      },
-      {
         "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render2.webp",
         "fileName": "örnek3render2"
       },
@@ -124,10 +120,6 @@ export const weTransferProjectRecords = [
       {
         "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render4.webp",
         "fileName": "örnek3render4"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render5 - Kopya.webp",
-        "fileName": "örnek3render5 - Kopya"
       },
       {
         "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render5.webp",
@@ -144,14 +136,6 @@ export const weTransferProjectRecords = [
       {
         "src": "/images/wetransfer/Bora EVGAR concept renderları/PHOTO-2026-11-05-11-20-13 (25).webp",
         "fileName": "PHOTO-2026-11-05-11-20-13 (25)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/PHOTO-2026-11-05-11-20-13 (26).webp",
-        "fileName": "PHOTO-2026-11-05-11-20-13 (26)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/PHOTO-2026-11-05-11-20-13 (27).webp",
-        "fileName": "PHOTO-2026-11-05-11-20-13 (27)"
       },
       {
         "src": "/images/wetransfer/Bora EVGAR concept renderları/PHOTO-2026-11-05-11-20-13 (28).webp",
@@ -637,14 +621,6 @@ export const weTransferProjectRecords = [
         "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/yemekhane (2).webp",
         "fileName": "yemekhane (2)"
       },
-      {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/yemekhane (3).webp",
-        "fileName": "yemekhane (3)"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/yemekhane (4).webp",
-        "fileName": "yemekhane (4)"
-      }
     ]
   },
   {
