@@ -856,11 +856,27 @@ h2 em {
   font-weight: 400;
 }
 
-.footer-copyright {
-  margin: 0;
-  font: 9px ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.db-brand {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  opacity: 0.42;
+  filter: grayscale(1);
+  transition: opacity 180ms ease, filter 180ms ease, transform 180ms ease;
+}
+
+.db-brand img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.db-brand:hover {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: translateY(-1px);
 }
 
 .footer-links {
@@ -1430,8 +1446,8 @@ h2 em {
     gap: 14px 18px;
   }
 
-  .footer-copyright {
-    order: 3;
+  .db-brand {
+    justify-self: start;
   }
 
   .project-intro {
