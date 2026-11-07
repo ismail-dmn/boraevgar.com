@@ -12,6 +12,7 @@ export const messages = {
     nav: {
       work: "Seçili işler",
       studio: "Çalışma Modeli",
+      about: "Hakkımda",
       contact: "İletişim",
       cta: "Proje başlat",
       language: "Dil seçimi",
@@ -119,6 +120,7 @@ export const messages = {
     nav: {
       work: "Selected work",
       studio: "Our process",
+      about: "About me",
       contact: "Contact",
       cta: "Start a project",
       language: "Choose language",
