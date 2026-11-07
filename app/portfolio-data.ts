@@ -39,6 +39,69 @@ export type PortfolioProject = {
 
 const projectRecords: readonly ProjectRecord[] = weTransferProjectRecords;
 
+const englishProjectTerms: Array<[string, string]> = [
+  ["Bora EVGAR concept renderları", "Bora EVGAR concept renders"],
+  ["concept poje", "concept project"],
+  ["dış cephe", "exterior facade"],
+  ["dışcephe", "exterior facade"],
+  ["yatak odası", "bedroom"],
+  ["oturma odası", "living room"],
+  ["çalışma odası", "study room"],
+  ["çalışma", "study"],
+  ["toplantı", "meeting"],
+  ["yemekhane", "cafeteria"],
+  ["zemin kat", "ground floor"],
+  ["küçük", "small"],
+  ["giriş", "entrance"],
+  ["banyo", "bathroom"],
+  ["kırmızı", "red"],
+  ["çocuk", "children"],
+  ["mutfak", "kitchen"],
+  ["salon", "living room"],
+  ["projeleri", "projects"],
+  ["projectsi", "projects"],
+  ["projectleri", "projects"],
+  ["projectler", "projects"],
+  ["projectsi", "projects"],
+  ["inşaat", "construction"],
+  ["cephe", "facade"],
+  ["mekanları", "spaces"],
+  ["genç odası", "young person room"],
+  ["lüks", "luxury"],
+  ["mekânı", "interior space"],
+  ["ırak", "iraq"],
+  ["ticari", "commercial"],
+  ["tasarımları", "designs"],
+  ["tasarımları", "designs"],
+  ["bilişim", "technology"],
+  ["mimarlık", "architecture"],
+  ["diş kliniği", "dental clinic"],
+  ["terapi merkezi", "therapy center"],
+  ["makam odası", "executive office"],
+  ["özel", "private"],
+  ["merkezi", "center"],
+  ["kuaför", "salon"],
+  ["alternatifli", "alternatives"],
+  ["otel", "hotel"],
+  ["proje", "project"],
+  ["renderları", "renders"],
+  ["ofis", "office"],
+  ["ofisi", "office"],
+  ["cephesi", "facade"],
+  ["altın saatte", "golden hour"],
+];
+
+function translateProjectLabel(value: string, locale: Locale): string {
+  if (locale === "tr") return value;
+
+  const lowerCaseValue = value.toLocaleLowerCase("tr-TR");
+
+  return englishProjectTerms.reduce(
+    (label, [turkish, english]) => label.replaceAll(turkish, english),
+    lowerCaseValue,
+  );
+}
+
 function normalizeImportedName(value: string, locale: Locale): string {
   const language = locale === "tr" ? "tr-TR" : "en-US";
 
@@ -62,17 +125,17 @@ export function getProjects(locale: Locale): PortfolioProject[] {
   return projectRecords.map((project) => ({
     slug: project.slug,
     categoryKey: project.categoryKey,
-    sourceFolder: project.sourceFolder,
+    sourceFolder: translateProjectLabel(project.sourceFolder, locale),
     workTypeKey,
     workTypeLabel,
     category: categoryLabels[project.categoryKey],
-    title: normalizeImportedName(project.images[0].fileName, locale),
+    title: normalizeImportedName(translateProjectLabel(project.images[0].fileName, locale), locale),
     summary:
       locale === "tr"
         ? `${project.images.length} görsel · proje bazlı arşiv`
         : `${project.images.length} images · project-based archive`,
     images: project.images.map(({ src, fileName }) => {
-      const displayName = normalizeImportedName(fileName, locale);
+      const displayName = normalizeImportedName(translateProjectLabel(fileName, locale), locale);
       return { src, fileName: displayName, alt: displayName };
     }),
   }));

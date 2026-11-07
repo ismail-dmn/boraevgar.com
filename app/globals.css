@@ -124,9 +124,19 @@ h2 em {
 
 .brand {
   display: inline-flex;
-  width: max-content;
+  width: 178px;
+  height: 64px;
   align-items: center;
-  gap: 12px;
+  overflow: hidden;
+}
+
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 67%;
+  mix-blend-mode: multiply;
 }
 
 .brand-monogram {
@@ -857,18 +867,19 @@ h2 em {
 }
 
 .footer-brand {
-  width: max-content;
-  color: var(--ink);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  display: block;
+  width: 150px;
+  height: 54px;
+  overflow: hidden;
 }
 
-.footer-brand span {
-  margin-left: 5px;
-  color: var(--warm);
-  font-weight: 400;
+.footer-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 67%;
+  mix-blend-mode: multiply;
 }
 
 .db-brand {
@@ -1182,6 +1193,11 @@ h2 em {
 
   .site-nav {
     min-height: 75px;
+  }
+
+  .brand {
+    width: 142px;
+    height: 52px;
   }
 
   .brand-monogram {
