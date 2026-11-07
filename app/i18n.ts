@@ -29,7 +29,7 @@ export const messages = {
     studio: {
       eyebrow: "Bora Evgar Studio",
       descriptor: "İç mimarlık ve uygulama stüdyosu",
-      location: "2018’den beri · İstanbul",
+      location: "2018’den beri · Ankara",
       first: "Tasarımdan",
       emphasis: "uygulamaya.",
       description:
@@ -86,7 +86,7 @@ export const messages = {
         "Hayalinizdeki konsepti anahtar teslim gerçeğe dönüştürmek için bizimle iletişime geçin. Tasarımdan şantiyeye tüm süreci biz yönetelim.",
       proposal: "Teklif isteyin",
       whatsapp: "WhatsApp’tan yazın",
-      footer: "İstanbul merkezli · Konut ve ticari projeler",
+      footer: "Ankara merkezli · Konut ve ticari projeler",
     },
     project: {
       back: "Seçili işlere dön",
@@ -137,7 +137,7 @@ export const messages = {
     studio: {
       eyebrow: "Bora Evgar Studio",
       descriptor: "Interior architecture & build studio",
-      location: "Est. 2018 · Istanbul",
+      location: "Est. 2018 · Ankara",
       first: "From first sketch",
       emphasis: "to the finished space.",
       description:
@@ -194,7 +194,7 @@ export const messages = {
         "Turn your concept into a turnkey reality. Get in touch and we’ll manage every step from design through site delivery.",
       proposal: "Request a proposal",
       whatsapp: "Message us on WhatsApp",
-      footer: "Istanbul-based · Residential and commercial projects",
+      footer: "Ankara-based · Residential and commercial projects",
     },
     project: {
       back: "Back to selected work",
