@@ -124,19 +124,20 @@ h2 em {
 
 .brand {
   display: block;
-  width: 270px;
-  height: 108px;
-  overflow: hidden;
+  justify-self: start;
+  width: 172px;
+  padding-block: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.brand:hover {
+  opacity: 0.72;
 }
 
 .brand-logo {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 65%;
-  transform: scale(1.35);
-  mix-blend-mode: multiply;
+  height: auto;
 }
 
 .brand-mark {
@@ -914,18 +915,16 @@ h2 em {
 
 .footer-brand {
   display: block;
-  width: 220px;
-  height: 88px;
-  overflow: hidden;
+  justify-self: start;
+  width: 150px;
+  padding-block: 18px;
 }
 
 .footer-logo {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 65%;
-  mix-blend-mode: multiply;
+  height: auto;
+  opacity: 0.85;
 }
 
 .footer-brand .brand-mark {
@@ -1259,8 +1258,8 @@ h2 em {
   }
 
   .brand {
-    width: 210px;
-    height: 84px;
+    width: 136px;
+    padding-block: 10px;
   }
 
   .brand-mark {

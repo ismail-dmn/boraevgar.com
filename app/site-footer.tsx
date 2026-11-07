@@ -21,10 +21,10 @@ export function SiteFooter({ locale }: SiteFooterProps) {
       <Link className="footer-brand" href={`/${locale}`} aria-label="Bora Evgar Interior Architecture">
         <Image
           className="footer-logo"
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo3-Krj5U8utt97RL6OgHjgC22DkgjCfTp.jpeg"
+          src="/images/brand/bora-evgar-logo.png"
           alt="Bora Evgar Interior Architecture — Design, Visualization, Application"
-          width={300}
-          height={200}
+          width={755}
+          height={422}
           unoptimized
         />
       </Link>
