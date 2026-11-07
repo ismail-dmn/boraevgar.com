@@ -856,11 +856,26 @@ h2 em {
   font-weight: 400;
 }
 
-.footer-copyright {
-  margin: 0;
-  font: 9px ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.db-brand {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 1;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.db-brand:hover {
+  border-color: var(--warm);
+  background: var(--warm);
+  color: var(--cream);
+  transform: translateY(-2px) rotate(-5deg);
 }
 
 .footer-links {
@@ -1430,8 +1445,8 @@ h2 em {
     gap: 14px 18px;
   }
 
-  .footer-copyright {
-    order: 3;
+  .db-brand {
+  order: 2;
   }
 
   .project-intro {
