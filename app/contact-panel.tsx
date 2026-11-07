@@ -2,7 +2,6 @@ import {
   getProposalHref,
   getWhatsAppHref,
   studioAddress,
-  studioEmail,
   studioInstagram,
   studioLinkedIn,
   studioPhone,
@@ -16,7 +15,6 @@ type ContactPanelProps = {
 
 export function ContactPanel({ locale }: ContactPanelProps) {
   const copy = messages[locale];
-  const displayEmail = studioEmail.toUpperCase();
 
   return (
     <section className="contact-section" id="contact" aria-labelledby="contact-title">
@@ -55,7 +53,6 @@ export function ContactPanel({ locale }: ContactPanelProps) {
           </div>
           <div className="contact-links">
             <a href={`tel:${studioPhone.replace(/\D/g, "")}`}>{studioPhone}</a>
-            <a href={`mailto:${studioEmail}`}>{displayEmail}</a>
             <a href={studioInstagram} target="_blank" rel="noreferrer">Instagram</a>
             <a href={studioLinkedIn} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
