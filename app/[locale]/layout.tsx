@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: LocaleMetadataProps): Promise
   const copy = messages[localeParam];
   const canonical = `/${localeParam}`;
   const featuredImage = getProjects(localeParam)[0]?.images[0];
-  const imageUrl = featuredImage?.src ?? "/images/wetransfer/Bora EVGAR concept renderları/banyo kırmızı (1).webp";
+  const imageUrl = featuredImage?.src ?? "/images/wetransfer/Bora EVGAR concept renderları/renderlivingroom.webp";
   const imageAlt = featuredImage?.alt ?? copy.metadata.title;
 
   return {

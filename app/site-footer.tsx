@@ -13,6 +13,7 @@ const hasTracking = Boolean(
 
 export function SiteFooter({ locale }: SiteFooterProps) {
   const copy = messages[locale];
+  const displayEmail = studioEmail.toUpperCase();
 
   return (
     <footer className="site-footer container">
@@ -21,7 +22,7 @@ export function SiteFooter({ locale }: SiteFooterProps) {
       </Link>
       <p className="footer-copyright">© 2026 Bora Evgar Studio</p>
       <div className="footer-links">
-        <a href={`mailto:${studioEmail}`}>{copy.footer.email}</a>
+        <a href={`mailto:${studioEmail}`}>{displayEmail}</a>
         <Link href={`/${locale}#work`}>{copy.footer.work}</Link>
         {hasTracking ? <CookieSettingsButton label={copy.footer.cookieSettings} /> : null}
       </div>
