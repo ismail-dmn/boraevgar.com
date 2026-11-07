@@ -1448,6 +1448,7 @@ h2 em {
 
   .db-brand {
     justify-self: start;
+    order: 2;
   }
 
   .project-intro {
