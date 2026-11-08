@@ -4,30 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { messages, type Locale } from "./i18n";
-import { type PortfolioProject, type ProjectWorkTypeKey } from "./portfolio-data";
+import { projectCategoryKeys, type PortfolioProject, type ProjectCategoryKey } from "./portfolio-data";
 
 type ProjectGridProps = {
   locale: Locale;
   projects: readonly PortfolioProject[];
 };
 
-type ProjectFilter = "all" | "residential" | "commercial" | ProjectWorkTypeKey;
+type ProjectFilter = "all" | ProjectCategoryKey;
 
 export function ProjectGrid({ locale, projects }: ProjectGridProps) {
   const copy = messages[locale];
   const [activeFilter, setActiveFilter] = useState<ProjectFilter>("all");
-  const filters: readonly ProjectFilter[] = [
-    "all",
-    "residential",
-    "commercial",
-    "design-render",
-  ];
-  const visibleProjects = projects.filter((project) => {
-    if (activeFilter === "all") return true;
-    if (activeFilter === "residential") return project.categoryKey === "residential";
-    if (activeFilter === "commercial") return project.categoryKey !== "residential";
-    return project.workTypeKey === activeFilter;
-  });
+  const filters: readonly ProjectFilter[] = ["all", ...projectCategoryKeys];
+  const visibleProjects = projects.filter(
+    (project) => activeFilter === "all" || project.categoryKey === activeFilter,
+  );
 
   return (
     <section className="work-section container" id="work" aria-labelledby="work-title">
@@ -43,8 +35,8 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
           role="group"
           aria-label={
             locale === "tr"
-              ? "Projeleri türüne ve aşamasına göre filtrele"
-              : "Filter projects by category and phase"
+              ? "Projeleri Drive klasörüne göre filtrele"
+              : "Filter projects by Drive folder"
           }
         >
           {filters.map((filter) => {
@@ -73,7 +65,7 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
         {visibleProjects.map((project, index) => (
           <article className="project-card" key={project.slug}>
             <Link
-              aria-label={`${project.title}, ${project.category}, ${project.workTypeLabel}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
+              aria-label={`${project.title}, ${project.category}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
               className="project-card-link"
               href={`/${locale}/projects/${project.slug}`}
             >

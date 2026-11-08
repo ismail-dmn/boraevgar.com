@@ -1,10 +1,9 @@
 import { messages, type Locale } from "./i18n";
 import { weTransferProjectRecords } from "./wetransfer-project-records";
 
-export const projectCategoryKeys = ["residential", "hospitality", "commercial"] as const;
+export const projectCategoryKeys = ["commercial-projects", "exterior", "concept-renders"] as const;
 
 export type ProjectCategoryKey = (typeof projectCategoryKeys)[number];
-export type ProjectWorkTypeKey = "design-render" | "implemented";
 
 type ProjectImageRecord = {
   src: string;
@@ -29,8 +28,6 @@ export type PortfolioProject = {
   slug: string;
   categoryKey: ProjectCategoryKey;
   sourceFolder: string;
-  workTypeKey: ProjectWorkTypeKey;
-  workTypeLabel: string;
   category: string;
   title: string;
   summary: string;
@@ -95,6 +92,15 @@ function translateProjectLabel(value: string, locale: Locale): string {
   if (locale === "tr") return value;
 
   const lowerCaseValue = value.toLocaleLowerCase("tr-TR");
+  const categoryTranslations: Record<string, string> = {
+    "ticari projeler": "Commercial Projects",
+    "dış cephe": "Exterior Facades",
+    "bora evgar konsept renderler": "Bora Evgar Concept Renders",
+  };
+
+  if (categoryTranslations[lowerCaseValue]) {
+    return categoryTranslations[lowerCaseValue];
+  }
 
   return englishProjectTerms.reduce(
     (label, [turkish, english]) => label.replaceAll(turkish, english),
@@ -119,15 +125,11 @@ function normalizeImportedName(value: string, locale: Locale): string {
 
 export function getProjects(locale: Locale): PortfolioProject[] {
   const categoryLabels = messages[locale].work.categoryLabels;
-  const workTypeKey: ProjectWorkTypeKey = "design-render";
-  const workTypeLabel = messages[locale].work.filterLabels[workTypeKey];
 
   return projectRecords.map((project) => ({
     slug: project.slug,
     categoryKey: project.categoryKey,
     sourceFolder: translateProjectLabel(project.sourceFolder, locale),
-    workTypeKey,
-    workTypeLabel,
     category: categoryLabels[project.categoryKey],
     title: normalizeImportedName(translateProjectLabel(project.images[0].fileName, locale), locale),
     summary:
