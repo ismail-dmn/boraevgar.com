@@ -1,6 +1,6 @@
-import type { ProjectCategoryKey } from "./portfolio-data";
+type ArchivedCategoryKey = "residential" | "hospitality" | "commercial";
 
-const names: Array<[string, ProjectCategoryKey, string, string, number]> = [
+const names: Array<[string, ArchivedCategoryKey, string, string, number]> = [
   ["bora-evgar-concept-renderlari", "residential", "Bora Evgar Concept Renderları", "Bora Evgar Concept Renders", 64],
   ["beytepe-villa-ofis-cephe", "residential", "Beytepe Villa Ofis Cephe", "Beytepe Villa Office Facade", 2],
   ["afrika-banka-proje", "commercial", "Afrika Banka Projesi", "Africa Bank Project", 2],

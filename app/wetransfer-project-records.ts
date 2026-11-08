@@ -1,1061 +1,1241 @@
 export const weTransferProjectRecords = [
   {
-    "slug": "bora-evgar-concept-renderlari",
-    "categoryKey": "residential",
-    "sourceFolder": "Bora EVGAR concept renderları",
-    "title": "Bora EVGAR concept renderları",
-    "images": [
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderlivingroom.webp",
-        "fileName": "renderlivingroom"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/banyo kırmızı (2).webp",
-        "fileName": "banyo kırmızı (2)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/banyorender.webp",
-        "fileName": "banyorender"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/concept poje (1).webp",
-        "fileName": "concept poje (1)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/concept poje (2).webp",
-        "fileName": "concept poje (2)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çalışmarender1-1.webp",
-        "fileName": "çalışmarender1-1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çalışmarender1-2.webp",
-        "fileName": "çalışmarender1-2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çalışmarender1-3.webp",
-        "fileName": "çalışmarender1-3"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çalışmarender1-4.webp",
-        "fileName": "çalışmarender1-4"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çocuk1.webp",
-        "fileName": "çocuk1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çocuk2.webp",
-        "fileName": "çocuk2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çocuk3.webp",
-        "fileName": "çocuk3"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çocuk4.webp",
-        "fileName": "çocuk4"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/çocuk5.webp",
-        "fileName": "çocuk5"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/dış cephe render1.webp",
-        "fileName": "dış cephe render1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/japandi1.webp",
-        "fileName": "japandi1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/japandi2.webp",
-        "fileName": "japandi2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/japandi3.webp",
-        "fileName": "japandi3"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/japandi4.webp",
-        "fileName": "japandi4"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/kapak1.gif",
-        "fileName": "kapak1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/kapak1--jpg.webp",
-        "fileName": "kapak1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/londonproje.webp",
-        "fileName": "londonproje"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/mutfak1final.webp",
-        "fileName": "mutfak1final"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/mutfak2final.webp",
-        "fileName": "mutfak2final"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/mutfak3final.webp",
-        "fileName": "mutfak3final"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/mutfak4final.webp",
-        "fileName": "mutfak4final"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render2.webp",
-        "fileName": "örnek3render2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render3.webp",
-        "fileName": "örnek3render3"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render4.webp",
-        "fileName": "örnek3render4"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/örnek3render5.webp",
-        "fileName": "örnek3render5"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/PHOTO-2026-11-05-11-20-13 (23).webp",
-        "fileName": "PHOTO-2026-11-05-11-20-13 (23)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/PHOTO-2026-11-05-11-20-13 (24).webp",
-        "fileName": "PHOTO-2026-11-05-11-20-13 (24)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/PHOTO-2026-11-05-11-20-13 (25).webp",
-        "fileName": "PHOTO-2026-11-05-11-20-13 (25)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/PHOTO-2026-11-05-11-20-13 (28).webp",
-        "fileName": "PHOTO-2026-11-05-11-20-13 (28)"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/render final dış cephe1.webp",
-        "fileName": "render final dış cephe1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/render final dış cephe2.webp",
-        "fileName": "render final dış cephe2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderbagno1-1.webp",
-        "fileName": "renderbagno1-1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderbagno1.webp",
-        "fileName": "renderbagno1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderbagno2-1.webp",
-        "fileName": "renderbagno2-1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderbagno2.webp",
-        "fileName": "renderbagno2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderbagno3-1.webp",
-        "fileName": "renderbagno3-1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderbagno3.webp",
-        "fileName": "renderbagno3"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderbagno4-1.webp",
-        "fileName": "renderbagno4-1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderbagno4.webp",
-        "fileName": "renderbagno4"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderlivingroom.webp",
-        "fileName": "renderlivingroom"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderlivingroom2.webp",
-        "fileName": "renderlivingroom2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderlivingroom3.webp",
-        "fileName": "renderlivingroom3"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/renderlivingroom4.webp",
-        "fileName": "renderlivingroom4"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/salon.webp",
-        "fileName": "salon"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/salon2.webp",
-        "fileName": "salon2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/salon3.webp",
-        "fileName": "salon3"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/salon4.webp",
-        "fileName": "salon4"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/salonrender1.webp",
-        "fileName": "salonrender1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/salonrender2.webp",
-        "fileName": "salonrender2"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/salonrender3.webp",
-        "fileName": "salonrender3"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/yatak odası1ps.webp",
-        "fileName": "yatak odası1ps"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/yatak odası2ps.webp",
-        "fileName": "yatak odası2ps"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/yatak odası3ps.webp",
-        "fileName": "yatak odası3ps"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/yatak odası4-1.webp",
-        "fileName": "yatak odası4-1"
-      },
-      {
-        "src": "/images/wetransfer/Bora EVGAR concept renderları/yatak odası5.webp",
-        "fileName": "yatak odası5"
-      }
-    ]
-  },
-  {
-    "slug": "dis-cephe",
-    "categoryKey": "commercial",
-    "sourceFolder": "dış cephe",
-    "title": "dış cephe",
-    "images": [
-      {
-        "src": "/images/wetransfer/dış cephe/evgen ofisi (1).webp",
-        "fileName": "evgen ofisi (1)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/evgen ofisi (2).webp",
-        "fileName": "evgen ofisi (2)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/güneş apartmanı ankara.webp",
-        "fileName": "güneş apartmanı ankara"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/meydan kule (1).webp",
-        "fileName": "meydan kule (1)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/meydan kule (2).webp",
-        "fileName": "meydan kule (2)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/Zarif Gotik Gökdelen ve Kafe.webp",
-        "fileName": "Zarif Gotik Gökdelen ve Kafe"
-      }
-    ]
-  },
-  {
-    "slug": "dis-cephe-afrika-banka-proje",
-    "categoryKey": "commercial",
-    "sourceFolder": "dış cephe / afrika banka proje",
-    "title": "afrika banka proje",
-    "images": [
-      {
-        "src": "/images/wetransfer/dış cephe/afrika banka proje/Altın Saatte Modern Banka Cephesi.webp",
-        "fileName": "Altın Saatte Modern Banka Cephesi"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/afrika banka proje/YAE Bank Modern Mimari ve Peyzaj.webp",
-        "fileName": "YAE Bank Modern Mimari ve Peyzaj"
-      }
-    ]
-  },
-  {
-    "slug": "dis-cephe-beytepe-villa-ofis-cephe",
-    "categoryKey": "residential",
-    "sourceFolder": "dış cephe / Beytepe villa ofis cephe",
-    "title": "Beytepe villa ofis cephe",
-    "images": [
-      {
-        "src": "/images/wetransfer/dış cephe/Beytepe villa ofis cephe/beytepe ofis villa (1).webp",
-        "fileName": "beytepe ofis villa (1)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/Beytepe villa ofis cephe/beytepe ofis villa (2).webp",
-        "fileName": "beytepe ofis villa (2)"
-      }
-    ]
-  },
-  {
-    "slug": "dis-cephe-dis-cephe-konut-projesi",
-    "categoryKey": "residential",
-    "sourceFolder": "dış cephe / dış cephe konut projesi",
-    "title": "dış cephe konut projesi",
-    "images": [
-      {
-        "src": "/images/wetransfer/dış cephe/dış cephe konut projesi/ankara dış cephe site (1).webp",
-        "fileName": "ankara dış cephe site (1)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/dış cephe konut projesi/ankara dış cephe site (2).webp",
-        "fileName": "ankara dış cephe site (2)"
-      }
-    ]
-  },
-  {
-    "slug": "dis-cephe-discephe-concept",
-    "categoryKey": "commercial",
-    "sourceFolder": "dış cephe / dışcephe concept",
-    "title": "dışcephe concept",
-    "images": [
-      {
-        "src": "/images/wetransfer/dış cephe/dışcephe concept/dışcephefinalson.webp",
-        "fileName": "dışcephefinalson"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/dışcephe concept/dışcephefinalson1.webp",
-        "fileName": "dışcephefinalson1"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/dışcephe concept/porschegece.webp",
-        "fileName": "porschegece"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/dışcephe concept/porschegündüz.webp",
-        "fileName": "porschegündüz"
-      }
-    ]
-  },
-  {
-    "slug": "dis-cephe-maz-insaat-cephe-bilkent",
-    "categoryKey": "commercial",
-    "sourceFolder": "dış cephe / maz inşaat cephe bilkent",
-    "title": "maz inşaat cephe bilkent",
-    "images": [
-      {
-        "src": "/images/wetransfer/dış cephe/maz inşaat cephe bilkent/maz inşaat cephe.webp",
-        "fileName": "maz inşaat cephe"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/maz inşaat cephe bilkent/maz inşaat cephe2.webp",
-        "fileName": "maz inşaat cephe2"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/maz inşaat cephe bilkent/maz inşaat.webp",
-        "fileName": "maz inşaat"
-      }
-    ]
-  },
-  {
-    "slug": "dis-cephe-menderes-projesi",
-    "categoryKey": "commercial",
-    "sourceFolder": "dış cephe / menderes projesi",
-    "title": "menderes projesi",
-    "images": [
-      {
-        "src": "/images/wetransfer/dış cephe/menderes projesi/menderes (1).webp",
-        "fileName": "menderes (1)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/menderes projesi/menderes (2).webp",
-        "fileName": "menderes (2)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/menderes projesi/menderes (3).webp",
-        "fileName": "menderes (3)"
-      }
-    ]
-  },
-  {
-    "slug": "dis-cephe-ozel-villa-ankara",
-    "categoryKey": "residential",
-    "sourceFolder": "dış cephe / özel villa ankara",
-    "title": "özel villa ankara",
-    "images": [
-      {
-        "src": "/images/wetransfer/dış cephe/özel villa ankara/özel villa (1).webp",
-        "fileName": "özel villa (1)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/özel villa ankara/özel villa (2).webp",
-        "fileName": "özel villa (2)"
-      },
-      {
-        "src": "/images/wetransfer/dış cephe/özel villa ankara/özel villa (3).webp",
-        "fileName": "özel villa (3)"
-      }
-    ]
-  },
-  {
-    "slug": "ticari-projeler",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler",
-    "title": "ticari projeler",
-    "images": [
-      {
-        "src": "/images/wetransfer/ticari projeler/akassa projei render.webp",
-        "fileName": "akassa projei render"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/ankara özel proje.webp",
-        "fileName": "ankara özel proje"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/bodrum yatak odası.webp",
-        "fileName": "bodrum yatak odası"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/etili seramik 2.webp",
-        "fileName": "etili seramik 2"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel proje wc.webp",
-        "fileName": "istanbul özel proje wc"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/küçük wc.webp",
-        "fileName": "küçük wc"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/yatak odası ankara.webp",
-        "fileName": "yatak odası ankara"
-      }
-    ]
-  },
-  {
-    "slug": "ticari-projeler-4s-bilisim-teknolojileri",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / 4s bilişim teknolojileri",
+    "slug": "commercial-projects-4s-bilisim-teknolojileri",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "4s bilişim teknolojileri",
     "title": "4s bilişim teknolojileri",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/4s giriş.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/4s%20giri%C5%9F.webp",
         "fileName": "4s giriş"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/bodrum kat cafe.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/bodrum%20kat%20cafe.webp",
         "fileName": "bodrum kat cafe"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/giriş dışarısı.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/giri%C5%9F%20d%C4%B1%C5%9Far%C4%B1s%C4%B1.webp",
         "fileName": "giriş dışarısı"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/küçük toplantı (1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/k%C3%BC%C3%A7%C3%BCk%20toplant%C4%B1%20(1).webp",
         "fileName": "küçük toplantı (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/küçük toplantı (2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/k%C3%BC%C3%A7%C3%BCk%20toplant%C4%B1%20(2).webp",
         "fileName": "küçük toplantı (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/toplantı odası.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/toplant%C4%B1%20odas%C4%B1.webp",
         "fileName": "toplantı odası"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/yemekhane.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/yemekhane.webp",
         "fileName": "yemekhane"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/yemekhane2.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/yemekhane2.webp",
         "fileName": "yemekhane2"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/4s bilişim teknolojileri/zemin kat.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/zemin%20kat.webp",
         "fileName": "zemin kat"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-ankara-ofis-toplanti",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / ankara ofis toplantı",
+    "slug": "commercial-projects-akassa-projesi-salon-tasarimi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "Ticari Projeler",
+    "title": "akassa projesi salon tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/akassa%20projesi%20salon%20tasar%C4%B1m%C4%B1.webp",
+        "fileName": "akassa projesi salon tasarımı"
+      }
+    ]
+  },
+  {
+    "slug": "commercial-projects-ankara-ofis-toplanti",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "ankara ofis toplantı",
     "title": "ankara ofis toplantı",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/ankara ofis toplantı/toplantı (1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/ankara%20ofis%20toplant%C4%B1/toplant%C4%B1%20(1).webp",
         "fileName": "toplantı (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ankara ofis toplantı/toplantı (2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/ankara%20ofis%20toplant%C4%B1/toplant%C4%B1%20(2).webp",
         "fileName": "toplantı (2)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-antalya-otel",
-    "categoryKey": "hospitality",
-    "sourceFolder": "ticari projeler / antalya otel",
+    "slug": "commercial-projects-ankara-ozel-proje-yatak-odasi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "Ticari Projeler",
+    "title": "ankara özel proje yatak odası",
+    "images": [
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/ankara%20%C3%B6zel%20proje%20yatak%20odas%C4%B1.webp",
+        "fileName": "ankara özel proje yatak odası"
+      }
+    ]
+  },
+  {
+    "slug": "commercial-projects-antalya-otel",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "antalya otel",
     "title": "antalya otel",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/antalya otel/antalya otel1.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/antalya%20otel/antalya%20otel1.webp",
         "fileName": "antalya otel1"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/antalya otel/antalya otel2.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/antalya%20otel/antalya%20otel2.webp",
         "fileName": "antalya otel2"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/antalya otel/antalya otel3.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/antalya%20otel/antalya%20otel3.webp",
         "fileName": "antalya otel3"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-arinna-park",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / arinna park",
+    "slug": "commercial-projects-arinna-park",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "arinna park",
     "title": "arinna park",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/arinna park/arinna çalışma odası (1).webp",
-        "fileName": "arinna çalışma odası (1)"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/arinna park/arinna çalışma odası (2).webp",
-        "fileName": "arinna çalışma odası (2)"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/arinna park/arinna çalışma.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/arinna%20park/arinna%20%C3%A7al%C4%B1%C5%9Fma.webp",
         "fileName": "arinna çalışma"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/arinna park/arinna oturma odası.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/arinna%20park/arinna%20%C3%A7al%C4%B1%C5%9Fma%20odas%C4%B1%20(1).webp",
+        "fileName": "arinna çalışma odası (1)"
+      },
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/arinna%20park/arinna%20%C3%A7al%C4%B1%C5%9Fma%20odas%C4%B1%20(2).webp",
+        "fileName": "arinna çalışma odası (2)"
+      },
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/arinna%20park/arinna%20oturma%20odas%C4%B1.webp",
         "fileName": "arinna oturma odası"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-concorde-otel",
-    "categoryKey": "hospitality",
-    "sourceFolder": "ticari projeler / concorde otel",
+    "slug": "commercial-projects-beylikduzu-kucuk-wc-tasarimi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "Ticari Projeler",
+    "title": "beylikdüzü küçük wc tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/beylikd%C3%BCz%C3%BC%20k%C3%BC%C3%A7%C3%BCk%20wc%20tasar%C4%B1m%C4%B1.webp",
+        "fileName": "beylikdüzü küçük wc tasarımı"
+      }
+    ]
+  },
+  {
+    "slug": "commercial-projects-bodrum-ozel-proje-yatak-odasi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "Ticari Projeler",
+    "title": "bodrum özel proje yatak odası",
+    "images": [
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/bodrum%20%C3%B6zel%20proje%20yatak%20odas%C4%B1.webp",
+        "fileName": "bodrum özel proje yatak odası"
+      }
+    ]
+  },
+  {
+    "slug": "commercial-projects-concorde-otel",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "concorde otel",
     "title": "concorde otel",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/concorde otel/night club.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/concorde%20otel/night%20club.webp",
         "fileName": "night club"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/concorde otel/night club2.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/concorde%20otel/night%20club2.webp",
         "fileName": "night club2"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/concorde otel/Restaurant1.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/concorde%20otel/Restaurant1.webp",
         "fileName": "Restaurant1"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/concorde otel/Restaurant2.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/concorde%20otel/Restaurant2.webp",
         "fileName": "Restaurant2"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/concorde otel/Restaurant3.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/concorde%20otel/Restaurant3.webp",
         "fileName": "Restaurant3"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/concorde otel/Restaurant4.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/concorde%20otel/Restaurant4.webp",
         "fileName": "Restaurant4"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/concorde otel/Restaurant5.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/concorde%20otel/Restaurant5.webp",
         "fileName": "Restaurant5"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-eae-merkez-yemekhane",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / eae merkez yemekhane",
+    "slug": "commercial-projects-eae-merkez-yemekhane",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "eae merkez yemekhane",
     "title": "eae merkez yemekhane",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/final3.webp",
-        "fileName": "final3"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(1).webp",
+        "fileName": "eae yemekhane (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/final4.webp",
-        "fileName": "final4"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(2).webp",
+        "fileName": "eae yemekhane (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/final8.webp",
-        "fileName": "final8"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(3).webp",
+        "fileName": "eae yemekhane (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/final9.webp",
-        "fileName": "final9"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(4).webp",
+        "fileName": "eae yemekhane (4)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/final11.webp",
-        "fileName": "final11"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(5).webp",
+        "fileName": "eae yemekhane (5)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/yemekhane (1).webp",
-        "fileName": "yemekhane (1)"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(6).webp",
+        "fileName": "eae yemekhane (6)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/eae merkez yemekhane/yemekhane (2).webp",
-        "fileName": "yemekhane (2)"
-      },
-    ]
-  },
-  {
-    "slug": "ticari-projeler-formaggio-cafe",
-    "categoryKey": "hospitality",
-    "sourceFolder": "ticari projeler / formaggio cafe",
-    "title": "formaggio cafe",
-    "images": [
-      {
-        "src": "/images/wetransfer/ticari projeler/formaggio cafe/formaggio (1).webp",
-        "fileName": "formaggio (1)"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(7).webp",
+        "fileName": "eae yemekhane (7)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/formaggio cafe/formaggio (2).webp",
-        "fileName": "formaggio (2)"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(8).webp",
+        "fileName": "eae yemekhane (8)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/formaggio cafe/formaggio (3).webp",
-        "fileName": "formaggio (3)"
+        "src": "/images/wetransfer/Ticari%20Projeler/eae%20merkez%20yemekhane/eae%20yemekhane%20(9).webp",
+        "fileName": "eae yemekhane (9)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-gazprom-projesi",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / gazprom projesi",
+    "slug": "commercial-projects-formaggio-cafe",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "formaggio cafe",
+    "title": "formaggio cafe",
+    "images": [
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/formaggio%20cafe/formaggio%20cafe%20(1).webp",
+        "fileName": "formaggio cafe (1)"
+      },
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/formaggio%20cafe/formaggio%20cafe%20(2).webp",
+        "fileName": "formaggio cafe (2)"
+      },
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/formaggio%20cafe/formaggio%20cafe%20(3).webp",
+        "fileName": "formaggio cafe (3)"
+      }
+    ]
+  },
+  {
+    "slug": "commercial-projects-gazprom-projesi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "gazprom projesi",
     "title": "gazprom projesi",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/gazprom projesi/konferans salonu.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/gazprom%20projesi/konferans%20salonu.webp",
         "fileName": "konferans salonu"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/gazprom projesi/makam odası (1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/gazprom%20projesi/makam%20odas%C4%B1%20(1).webp",
         "fileName": "makam odası (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/gazprom projesi/makam odası (2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/gazprom%20projesi/makam%20odas%C4%B1%20(2).webp",
         "fileName": "makam odası (2)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-hakan-bey-villa",
-    "categoryKey": "residential",
-    "sourceFolder": "ticari projeler / hakan bey villa",
+    "slug": "commercial-projects-hakan-bey-villa",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "hakan bey villa",
     "title": "hakan bey villa",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/hakan bey villa/hakan bey villa mekanları (1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/hakan%20bey%20villa/hakan%20bey%20villa%20mekanlar%C4%B1%20(1).webp",
         "fileName": "hakan bey villa mekanları (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/hakan bey villa/hakan bey villa mekanları (2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/hakan%20bey%20villa/hakan%20bey%20villa%20mekanlar%C4%B1%20(2).webp",
         "fileName": "hakan bey villa mekanları (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/hakan bey villa/hakan bey villa mekanları (3).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/hakan%20bey%20villa/hakan%20bey%20villa%20mekanlar%C4%B1%20(3).webp",
         "fileName": "hakan bey villa mekanları (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/hakan bey villa/hakan bey villa mekanları (4).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/hakan%20bey%20villa/hakan%20bey%20villa%20mekanlar%C4%B1%20(4).webp",
         "fileName": "hakan bey villa mekanları (4)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/hakan bey villa/hakan bey villa mekanları (5).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/hakan%20bey%20villa/hakan%20bey%20villa%20mekanlar%C4%B1%20(5).webp",
         "fileName": "hakan bey villa mekanları (5)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-irak-avrocity-projesi",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / ırak avrocity projesi",
+    "slug": "commercial-projects-irak-avrocity-projesi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "ırak avrocity projesi",
     "title": "ırak avrocity projesi",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/avrocity gürbağ.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20g%C3%BCrba%C4%9F.webp",
         "fileName": "avrocity gürbağ"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/avrocity r blok (1).webp",
-        "fileName": "avrocity r blok (1)"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20r%20blok%20misafir%20odas%C4%B1.webp",
+        "fileName": "avrocity r blok misafir odası"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/avrocity r blok 2.webp",
-        "fileName": "avrocity r blok 2"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20r%20blok%20salon.webp",
+        "fileName": "avrocity r blok salon"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/finalsalonrev1.webp",
-        "fileName": "finalsalonrev1"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(1).webp",
+        "fileName": "e blok dış cephe  (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/finalsalonrev2.webp",
-        "fileName": "finalsalonrev2"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(2).webp",
+        "fileName": "e blok dış cephe  (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/finalsalonrev4.webp",
-        "fileName": "finalsalonrev4"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(3).webp",
+        "fileName": "e blok dış cephe  (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/giyinme1.webp",
-        "fileName": "giyinme1"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20master%20banyo.webp",
+        "fileName": "f blok master banyo"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/giyinme2.webp",
-        "fileName": "giyinme2"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(1).webp",
+        "fileName": "f blok misafir odası (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/giyinme3.webp",
-        "fileName": "giyinme3"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(2).webp",
+        "fileName": "f blok misafir odası (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/groom1rev.webp",
-        "fileName": "groom1rev"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(3).webp",
+        "fileName": "f blok misafir odası (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/groom3.webp",
-        "fileName": "groom3"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "f blok salon tasarımı (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/groom4.webp",
-        "fileName": "groom4"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "f blok salon tasarımı (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/masterbanyo1.webp",
-        "fileName": "masterbanyo1"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "f blok salon tasarımı (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/WhatsApp Image 2026-07-18 at 21.18.49 (2).webp",
-        "fileName": "WhatsApp Image 2026-07-18 at 21.18.49 (2)"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(1).webp",
+        "fileName": "fblok giyinme odası (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/WhatsApp Image 2026-07-18 at 21.18.49 (4).webp",
-        "fileName": "WhatsApp Image 2026-07-18 at 21.18.49 (4)"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(2).webp",
+        "fileName": "fblok giyinme odası (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/ırak avrocity projesi/WhatsApp Image 2026-07-18 at 21.18.49.webp",
-        "fileName": "WhatsApp Image 2026-07-18 at 21.18.49"
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(3).webp",
+        "fileName": "fblok giyinme odası (3)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-istanbul-ab-mimarlik-villa",
-    "categoryKey": "residential",
-    "sourceFolder": "ticari projeler / istanbul ab mimarlık villa",
+    "slug": "commercial-projects-istanbul-ab-mimarlik-villa",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "istanbul ab mimarlık villa",
     "title": "istanbul ab mimarlık villa",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul ab mimarlık villa/düzeltme1.webp",
-        "fileName": "düzeltme1"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(1)--jpg.webp",
+        "fileName": "özel villa projesi (1)--jpg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul ab mimarlık villa/düzeltme2.webp",
-        "fileName": "düzeltme2"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(1)--png.webp",
+        "fileName": "özel villa projesi (1)--png"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul ab mimarlık villa/salon diğer açı.webp",
-        "fileName": "salon diğer açı"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(2).webp",
+        "fileName": "özel villa projesi (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul ab mimarlık villa/Sıcak Tonlarda Modern Salon.webp",
-        "fileName": "Sıcak Tonlarda Modern Salon"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(3).webp",
+        "fileName": "özel villa projesi (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul ab mimarlık villa/Sıcak Tonlarda Modern Yemek Odası.webp",
-        "fileName": "Sıcak Tonlarda Modern Yemek Odası"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(4).webp",
+        "fileName": "özel villa projesi (4)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-istanbul-ozel-villa",
-    "categoryKey": "residential",
-    "sourceFolder": "ticari projeler / istanbul özel villa",
+    "slug": "commercial-projects-istanbul-ozel-villa",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "istanbul özel villa",
     "title": "istanbul özel villa",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/genç odası (1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/gen%C3%A7%20odas%C4%B1%20(1).webp",
         "fileName": "genç odası (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/genç odası (2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/gen%C3%A7%20odas%C4%B1%20(2).webp",
         "fileName": "genç odası (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/giyinme odası (1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/giyinme%20odas%C4%B1%20(1).webp",
         "fileName": "giyinme odası (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/giyinme odası (2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/giyinme%20odas%C4%B1%20(2).webp",
         "fileName": "giyinme odası (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/kış bahçesi (1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/k%C4%B1%C5%9F%20bah%C3%A7esi%20(1).webp",
         "fileName": "kış bahçesi (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/kış bahçesi (2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/k%C4%B1%C5%9F%20bah%C3%A7esi%20(2).webp",
         "fileName": "kış bahçesi (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/Oluklu Cam Sürgülü Kapılı Modern Mutfak.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/master%20yatak%20odas%C4%B1.webp",
+        "fileName": "master yatak odası"
+      },
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/Oluklu%20Cam%20S%C3%BCrg%C3%BCl%C3%BC%20Kap%C4%B1l%C4%B1%20Modern%20Mutfak.webp",
         "fileName": "Oluklu Cam Sürgülü Kapılı Modern Mutfak"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/salon (1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/salon%20(1).webp",
         "fileName": "salon (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/salon (2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20%C3%B6zel%20villa/salon%20(2).webp",
         "fileName": "salon (2)"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/istanbul özel villa/Sıcak Tonlarda Lüks Yatak Odası.webp",
-        "fileName": "Sıcak Tonlarda Lüks Yatak Odası"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-istanbul-terapi-merkezi-hande-hanim",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / istanbul terapi merkezi hande hanım",
+    "slug": "commercial-projects-istanbul-terapi-merkezi-hande-hanim",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "istanbul terapi merkezi hande hanım",
     "title": "istanbul terapi merkezi hande hanım",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul terapi merkezi hande hanım/final1.webp",
-        "fileName": "final1"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20terapi%20merkezi%20hande%20han%C4%B1m/ortak%20terapi%20odas%C4%B1%201.webp",
+        "fileName": "ortak terapi odası 1"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul terapi merkezi hande hanım/final2.webp",
-        "fileName": "final2"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20terapi%20merkezi%20hande%20han%C4%B1m/ortak%20terapi%20odas%C4%B1%202.webp",
+        "fileName": "ortak terapi odası 2"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul terapi merkezi hande hanım/final3.webp",
-        "fileName": "final3"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20terapi%20merkezi%20hande%20han%C4%B1m/seans%20odas%C4%B1%20(1).webp",
+        "fileName": "seans odası (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul terapi merkezi hande hanım/final4.webp",
-        "fileName": "final4"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20terapi%20merkezi%20hande%20han%C4%B1m/seans%20odas%C4%B1%20(2).webp",
+        "fileName": "seans odası (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul terapi merkezi hande hanım/ortak terapi odası.webp",
-        "fileName": "ortak terapi odası"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20terapi%20merkezi%20hande%20han%C4%B1m/seans%20odas%C4%B1%20(3).webp",
+        "fileName": "seans odası (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/istanbul terapi merkezi hande hanım/ortak terapi odası1.webp",
-        "fileName": "ortak terapi odası1"
-      },
-      {
-        "src": "/images/wetransfer/ticari projeler/istanbul terapi merkezi hande hanım/ortak terapi odası2.webp",
-        "fileName": "ortak terapi odası2"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20terapi%20merkezi%20hande%20han%C4%B1m/seans%20odas%C4%B1%20(4).webp",
+        "fileName": "seans odası (4)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-izmir-dis-klinigi",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / izmir diş kliniği",
+    "slug": "commercial-projects-izmir-dis-klinigi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "izmir diş kliniği",
     "title": "izmir diş kliniği",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/izmir diş kliniği/diş kliniği (1)--jpg.webp",
-        "fileName": "diş kliniği (1)"
+        "src": "/images/wetransfer/Ticari%20Projeler/izmir%20di%C5%9F%20klini%C4%9Fi/di%C5%9F%20klini%C4%9Fi%20(1)--jpg.webp",
+        "fileName": "diş kliniği (1)--jpg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/izmir diş kliniği/diş kliniği (1)--png.webp",
-        "fileName": "diş kliniği (1)"
+        "src": "/images/wetransfer/Ticari%20Projeler/izmir%20di%C5%9F%20klini%C4%9Fi/di%C5%9F%20klini%C4%9Fi%20(1)--png.webp",
+        "fileName": "diş kliniği (1)--png"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/izmir diş kliniği/diş kliniği (3).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/izmir%20di%C5%9F%20klini%C4%9Fi/di%C5%9F%20klini%C4%9Fi%20(3).webp",
         "fileName": "diş kliniği (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/izmir diş kliniği/diş kliniği yönetici ofisi.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/izmir%20di%C5%9F%20klini%C4%9Fi/di%C5%9F%20klini%C4%9Fi%20y%C3%B6netici%20ofisi.webp",
         "fileName": "diş kliniği yönetici ofisi"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-kaizen-kuafor",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / kaizen kuaför",
+    "slug": "commercial-projects-kaizen-kuafor",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "kaizen kuaför",
     "title": "kaizen kuaför",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/kaizen kuaför/Lüks Modern Kuaför Salonu İç Mekânı.webp",
-        "fileName": "Lüks Modern Kuaför Salonu İç Mekânı"
+        "src": "/images/wetransfer/Ticari%20Projeler/kaizen%20kuaf%C3%B6r/kaizen%20kuaf%C3%B6r%20(karavan%20mimarl%C4%B1k%20tasar%C4%B1m%C4%B1)%20(1).webp",
+        "fileName": "kaizen kuaför (karavan mimarlık tasarımı) (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/kaizen kuaför/Lüks Modern Kuaför Salonu.webp",
-        "fileName": "Lüks Modern Kuaför Salonu"
+        "src": "/images/wetransfer/Ticari%20Projeler/kaizen%20kuaf%C3%B6r/kaizen%20kuaf%C3%B6r%20(karavan%20mimarl%C4%B1k%20tasar%C4%B1m%C4%B1)%20(2).webp",
+        "fileName": "kaizen kuaför (karavan mimarlık tasarımı) (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/kaizen kuaför/Modern Kaizen Resepsiyon Alanı.webp",
-        "fileName": "Modern Kaizen Resepsiyon Alanı"
+        "src": "/images/wetransfer/Ticari%20Projeler/kaizen%20kuaf%C3%B6r/kaizen%20kuaf%C3%B6r%20(karavan%20mimarl%C4%B1k%20tasar%C4%B1m%C4%B1)%20(3).webp",
+        "fileName": "kaizen kuaför (karavan mimarlık tasarımı) (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/kaizen kuaför/Sıcak Işıklı Lüks Güzellik Salonu.webp",
-        "fileName": "Sıcak Işıklı Lüks Güzellik Salonu"
+        "src": "/images/wetransfer/Ticari%20Projeler/kaizen%20kuaf%C3%B6r/kaizen%20kuaf%C3%B6r%20(karavan%20mimarl%C4%B1k%20tasar%C4%B1m%C4%B1)%20(4).webp",
+        "fileName": "kaizen kuaför (karavan mimarlık tasarımı) (4)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/kaizen kuaför/Sıcak Tonlarda Modern Lounge Alanı.webp",
-        "fileName": "Sıcak Tonlarda Modern Lounge Alanı"
+        "src": "/images/wetransfer/Ticari%20Projeler/kaizen%20kuaf%C3%B6r/kaizen%20kuaf%C3%B6r%20(karavan%20mimarl%C4%B1k%20tasar%C4%B1m%C4%B1)%20(5).webp",
+        "fileName": "kaizen kuaför (karavan mimarlık tasarımı) (5)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-maeven-design-yatak-odasi",
-    "categoryKey": "residential",
-    "sourceFolder": "ticari projeler / maeven design yatak odası",
+    "slug": "commercial-projects-londra-oturma-odasi-tasarimi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "Ticari Projeler",
+    "title": "Londra oturma odası tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/Londra%20oturma%20odas%C4%B1%20tasar%C4%B1m%C4%B1.webp",
+        "fileName": "Londra oturma odası tasarımı"
+      }
+    ]
+  },
+  {
+    "slug": "commercial-projects-maeven-design-yatak-odasi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "maeven design yatak odası",
     "title": "maeven design yatak odası",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/maeven design yatak odası/final1.webp",
-        "fileName": "final1"
+        "src": "/images/wetransfer/Ticari%20Projeler/maeven%20design%20yatak%20odas%C4%B1/yatak%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20%20(1).webp",
+        "fileName": "yatak odası tasarımı  (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/maeven design yatak odası/final2.webp",
-        "fileName": "final2"
+        "src": "/images/wetransfer/Ticari%20Projeler/maeven%20design%20yatak%20odas%C4%B1/yatak%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20%20(2).webp",
+        "fileName": "yatak odası tasarımı  (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/maeven design yatak odası/final3.webp",
-        "fileName": "final3"
+        "src": "/images/wetransfer/Ticari%20Projeler/maeven%20design%20yatak%20odas%C4%B1/yatak%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20%20(3).webp",
+        "fileName": "yatak odası tasarımı  (3)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/maeven design yatak odası/final4.webp",
-        "fileName": "final4"
+        "src": "/images/wetransfer/Ticari%20Projeler/maeven%20design%20yatak%20odas%C4%B1/yatak%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20%20(4).webp",
+        "fileName": "yatak odası tasarımı  (4)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/maeven design yatak odası/final5.webp",
-        "fileName": "final5"
+        "src": "/images/wetransfer/Ticari%20Projeler/maeven%20design%20yatak%20odas%C4%B1/yatak%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20%20(5).webp",
+        "fileName": "yatak odası tasarımı  (5)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-manaz-interiors",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / manaz interiors",
+    "slug": "commercial-projects-manaz-interiors",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "manaz interiors",
     "title": "manaz interiors",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/manaz interiors/konut ankara (1).webp",
-        "fileName": "konut ankara (1)"
+        "src": "/images/wetransfer/Ticari%20Projeler/manaz%20interiors/%C3%B6zel%20konut%20mekanlar%C4%B1%20(1).webp",
+        "fileName": "özel konut mekanları (1)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/manaz interiors/konut ankara (2).webp",
-        "fileName": "konut ankara (2)"
+        "src": "/images/wetransfer/Ticari%20Projeler/manaz%20interiors/%C3%B6zel%20konut%20mekanlar%C4%B1%20(2).webp",
+        "fileName": "özel konut mekanları (2)"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/manaz interiors/konut ankara (3).webp",
-        "fileName": "konut ankara (3)"
+        "src": "/images/wetransfer/Ticari%20Projeler/manaz%20interiors/%C3%B6zel%20konut%20mekanlar%C4%B1%20(3).webp",
+        "fileName": "özel konut mekanları (3)"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-nevsehir-makam-odasi-tasarimlari-alternatifli",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / nevşehir makam odası tasarımları alternatifli",
+    "slug": "commercial-projects-nevsehir-makam-odasi-tasarimlari-alternatifli",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "nevşehir makam odası tasarımları alternatifli",
     "title": "nevşehir makam odası tasarımları alternatifli",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/lüks1.webp",
-        "fileName": "lüks1"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(1)--jpeg.webp",
+        "fileName": "makam odası concept (1)--jpeg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/lüks2.webp",
-        "fileName": "lüks2"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(1)--jpg.webp",
+        "fileName": "makam odası concept (1)--jpg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/lüks3.webp",
-        "fileName": "lüks3"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(2)--jpeg.webp",
+        "fileName": "makam odası concept (2)--jpeg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/lüks4.webp",
-        "fileName": "lüks4"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(2)--jpg.webp",
+        "fileName": "makam odası concept (2)--jpg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/lüks5.webp",
-        "fileName": "lüks5"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(3)--jpeg.webp",
+        "fileName": "makam odası concept (3)--jpeg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/lüks6.webp",
-        "fileName": "lüks6"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(3)--jpg.webp",
+        "fileName": "makam odası concept (3)--jpg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/lüks7.webp",
-        "fileName": "lüks7"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(4)--jpeg.webp",
+        "fileName": "makam odası concept (4)--jpeg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/makam2.webp",
-        "fileName": "makam2"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(4)--jpg.webp",
+        "fileName": "makam odası concept (4)--jpg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/makam3.webp",
-        "fileName": "makam3"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(5)--jpeg.webp",
+        "fileName": "makam odası concept (5)--jpeg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/makam4.webp",
-        "fileName": "makam4"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(5)--jpg.webp",
+        "fileName": "makam odası concept (5)--jpg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/makam5.webp",
-        "fileName": "makam5"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(6)--jpeg.webp",
+        "fileName": "makam odası concept (6)--jpeg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/makam6.webp",
-        "fileName": "makam6"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(6)--jpg.webp",
+        "fileName": "makam odası concept (6)--jpg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/makam7.webp",
-        "fileName": "makam7"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(7)--jpeg.webp",
+        "fileName": "makam odası concept (7)--jpeg"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/nevşehir makam odası tasarımları alternatifli/WhatsApp Image 2026-10-31 at 12.56.43.webp",
-        "fileName": "WhatsApp Image 2026-10-31 at 12.56.43"
+        "src": "/images/wetransfer/Ticari%20Projeler/nev%C5%9Fehir%20makam%20odas%C4%B1%20tasar%C4%B1mlar%C4%B1%20alternatifli/makam%20odas%C4%B1%20concept%20(7)--jpg.webp",
+        "fileName": "makam odası concept (7)--jpg"
       }
     ]
   },
   {
-    "slug": "ticari-projeler-yasamkent-ofis-projesi",
-    "categoryKey": "commercial",
-    "sourceFolder": "ticari projeler / yaşamkent ofis projesi",
+    "slug": "commercial-projects-otel-banyo-tasarimi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "Ticari Projeler",
+    "title": "otel banyo tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/otel%20banyo%20tasar%C4%B1m%C4%B1.webp",
+        "fileName": "otel banyo tasarımı"
+      }
+    ]
+  },
+  {
+    "slug": "commercial-projects-yasamkent-ofis-projesi",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "yaşamkent ofis projesi",
     "title": "yaşamkent ofis projesi",
     "images": [
       {
-        "src": "/images/wetransfer/ticari projeler/yaşamkent ofis projesi/yaşamkent ofis final.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/ya%C5%9Famkent%20ofis%20projesi/ya%C5%9Famkent%20ofis%20final.webp",
         "fileName": "yaşamkent ofis final"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/yaşamkent ofis projesi/yaşamkent ofis final2.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/ya%C5%9Famkent%20ofis%20projesi/ya%C5%9Famkent%20ofis%20final2.webp",
         "fileName": "yaşamkent ofis final2"
       },
       {
-        "src": "/images/wetransfer/ticari projeler/yaşamkent ofis projesi/yaşamkent ofis toplantı alanı.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/ya%C5%9Famkent%20ofis%20projesi/ya%C5%9Famkent%20ofis%20toplant%C4%B1%20alan%C4%B1.webp",
         "fileName": "yaşamkent ofis toplantı alanı"
+      }
+    ]
+  },
+  {
+    "slug": "commercial-projects-yatak-odasi-tasarimi-ankara",
+    "categoryKey": "commercial-projects",
+    "sourceFolder": "Ticari Projeler",
+    "title": "yatak odası tasarımı ankara",
+    "images": [
+      {
+        "src": "/images/wetransfer/Ticari%20Projeler/yatak%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20ankara.webp",
+        "fileName": "yatak odası tasarımı ankara"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-afrika-banka-proje",
+    "categoryKey": "exterior",
+    "sourceFolder": "afrika banka proje",
+    "title": "afrika banka proje",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/afrika%20banka%20proje/afrika%20banka%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "afrika banka tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/afrika%20banka%20proje/afrika%20banka%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "afrika banka tasarımı (2)"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-beytepe-villa-ofis-cephe",
+    "categoryKey": "exterior",
+    "sourceFolder": "Beytepe villa ofis cephe",
+    "title": "Beytepe villa ofis cephe",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/Beytepe%20villa%20ofis%20cephe/beytepe%20ofis%20d%C4%B1%C5%9F%20cephe%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "beytepe ofis dış cephe tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/Beytepe%20villa%20ofis%20cephe/beytepe%20ofis%20d%C4%B1%C5%9F%20cephe%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "beytepe ofis dış cephe tasarımı (2)"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-dis-cephe-konut-projesi",
+    "categoryKey": "exterior",
+    "sourceFolder": "dış cephe konut projesi",
+    "title": "dış cephe konut projesi",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/d%C4%B1%C5%9F%20cephe%20konut%20projesi/ankara%20site%20alan%C4%B1%20d%C4%B1%C5%9F%20cephe%20%20(1).webp",
+        "fileName": "ankara site alanı dış cephe  (1)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/d%C4%B1%C5%9F%20cephe%20konut%20projesi/ankara%20site%20alan%C4%B1%20d%C4%B1%C5%9F%20cephe%20%20(2).webp",
+        "fileName": "ankara site alanı dış cephe  (2)"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-discephe-concept",
+    "categoryKey": "exterior",
+    "sourceFolder": "dışcephe concept",
+    "title": "dışcephe concept",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/d%C4%B1%C5%9Fcephe%20concept/villa%20concept%20d%C4%B1%C5%9F%20cephe%20(1).webp",
+        "fileName": "villa concept dış cephe (1)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/d%C4%B1%C5%9Fcephe%20concept/villa%20concept%20d%C4%B1%C5%9F%20cephe%20(2).webp",
+        "fileName": "villa concept dış cephe (2)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/d%C4%B1%C5%9Fcephe%20concept/villa%20concept%20d%C4%B1%C5%9F%20cephe%20(3).webp",
+        "fileName": "villa concept dış cephe (3)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/d%C4%B1%C5%9Fcephe%20concept/villa%20concept%20d%C4%B1%C5%9F%20cephe%20(4).webp",
+        "fileName": "villa concept dış cephe (4)"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-evgen-ofisi",
+    "categoryKey": "exterior",
+    "sourceFolder": "Dış cephe",
+    "title": "evgen ofisi",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/evgen%20ofisi%20(1).webp",
+        "fileName": "evgen ofisi (1)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/evgen%20ofisi%20(2).webp",
+        "fileName": "evgen ofisi (2)"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-gotik-gokdelen-tasarimi-istanbul",
+    "categoryKey": "exterior",
+    "sourceFolder": "Dış cephe",
+    "title": "gotik gökdelen tasarımı istanbul",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/gotik%20g%C3%B6kdelen%20tasar%C4%B1m%C4%B1%20istanbul.webp",
+        "fileName": "gotik gökdelen tasarımı istanbul"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-gunes-apartmani-ankara",
+    "categoryKey": "exterior",
+    "sourceFolder": "Dış cephe",
+    "title": "güneş apartmanı ankara",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/g%C3%BCne%C5%9F%20apartman%C4%B1%20ankara.webp",
+        "fileName": "güneş apartmanı ankara"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-maz-insaat-cephe-bilkent",
+    "categoryKey": "exterior",
+    "sourceFolder": "maz inşaat cephe bilkent",
+    "title": "maz inşaat cephe bilkent",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/maz%20in%C5%9Faat%20cephe%20bilkent/maz%20in%C5%9Faat%20ya%C5%9Fam%20alan%C4%B1%20projesi%20(1)--jfif.webp",
+        "fileName": "maz inşaat yaşam alanı projesi (1)--jfif"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/maz%20in%C5%9Faat%20cephe%20bilkent/maz%20in%C5%9Faat%20ya%C5%9Fam%20alan%C4%B1%20projesi%20(1)--jpg.webp",
+        "fileName": "maz inşaat yaşam alanı projesi (1)--jpg"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/maz%20in%C5%9Faat%20cephe%20bilkent/maz%20in%C5%9Faat%20ya%C5%9Fam%20alan%C4%B1%20projesi%20(2).webp",
+        "fileName": "maz inşaat yaşam alanı projesi (2)"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-menderes-projesi",
+    "categoryKey": "exterior",
+    "sourceFolder": "menderes projesi",
+    "title": "menderes projesi",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/menderes%20projesi/menderes%20ta%C5%9F%20ev%20tasar%C4%B1mlar%C4%B1%20(1).webp",
+        "fileName": "menderes taş ev tasarımları (1)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/menderes%20projesi/menderes%20ta%C5%9F%20ev%20tasar%C4%B1mlar%C4%B1%20(2).webp",
+        "fileName": "menderes taş ev tasarımları (2)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/menderes%20projesi/menderes%20ta%C5%9F%20ev%20tasar%C4%B1mlar%C4%B1%20(3).webp",
+        "fileName": "menderes taş ev tasarımları (3)"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-meydan-kule",
+    "categoryKey": "exterior",
+    "sourceFolder": "Dış cephe",
+    "title": "meydan kule",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/meydan%20kule%20(1).webp",
+        "fileName": "meydan kule (1)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/meydan%20kule%20(2).webp",
+        "fileName": "meydan kule (2)"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-ozel-villa-ankara",
+    "categoryKey": "exterior",
+    "sourceFolder": "özel villa ankara",
+    "title": "özel villa ankara",
+    "images": [
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/%C3%B6zel%20villa%20ankara/%C3%B6zel%20villa%20(1).webp",
+        "fileName": "özel villa (1)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/%C3%B6zel%20villa%20ankara/%C3%B6zel%20villa%20(2).webp",
+        "fileName": "özel villa (2)"
+      },
+      {
+        "src": "/images/wetransfer/D%C4%B1%C5%9F%20cephe/%C3%B6zel%20villa%20ankara/%C3%B6zel%20villa%20(3).webp",
+        "fileName": "özel villa (3)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-acik-renk-mutfak-tasarimi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "açık renk mutfak tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/a%C3%A7%C4%B1k%20renk%20mutfak%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "açık renk mutfak tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/a%C3%A7%C4%B1k%20renk%20mutfak%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "açık renk mutfak tasarımı (2)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/a%C3%A7%C4%B1k%20renk%20mutfak%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "açık renk mutfak tasarımı (3)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/a%C3%A7%C4%B1k%20renk%20mutfak%20tasar%C4%B1m%C4%B1%20(4).webp",
+        "fileName": "açık renk mutfak tasarımı (4)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-banyorender",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "banyorender",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/banyorender.webp",
+        "fileName": "banyorender"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-bordo-asalet",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "Bordo asalet",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/Bordo%20asalet%20(1).webp",
+        "fileName": "Bordo asalet (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/Bordo%20asalet%20(2).webp",
+        "fileName": "Bordo asalet (2)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-calismarender1-3",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "çalışmarender1-3",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C3%A7al%C4%B1%C5%9Fmarender1-3.webp",
+        "fileName": "çalışmarender1-3"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-calismarender1-4",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "çalışmarender1-4",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C3%A7al%C4%B1%C5%9Fmarender1-4.webp",
+        "fileName": "çalışmarender1-4"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-cocuk-odasi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "çocuk odası",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C3%A7ocuk%20odas%C4%B1%20(1).webp",
+        "fileName": "çocuk odası (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C3%A7ocuk%20odas%C4%B1%20(3).webp",
+        "fileName": "çocuk odası (3)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C3%A7ocuk%20odas%C4%B1%20(4).webp",
+        "fileName": "çocuk odası (4)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C3%A7ocuk%20odas%C4%B1%20(5).webp",
+        "fileName": "çocuk odası (5)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-istanbul-ozel-villa-oturma-odasi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "İstanbul özel villa oturma odası",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C4%B0stanbul%20%C3%B6zel%20villa%20oturma%20odas%C4%B1%20(1).webp",
+        "fileName": "İstanbul özel villa oturma odası (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C4%B0stanbul%20%C3%B6zel%20villa%20oturma%20odas%C4%B1%20(2).webp",
+        "fileName": "İstanbul özel villa oturma odası (2)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-japandi-tasarimi-oturma-odasi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "japandi tasarımı oturma odası",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/japandi%20tasar%C4%B1m%C4%B1%20oturma%20odas%C4%B1%20(1).webp",
+        "fileName": "japandi tasarımı oturma odası (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/japandi%20tasar%C4%B1m%C4%B1%20oturma%20odas%C4%B1%20(2).webp",
+        "fileName": "japandi tasarımı oturma odası (2)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/japandi%20tasar%C4%B1m%C4%B1%20oturma%20odas%C4%B1%20(3).webp",
+        "fileName": "japandi tasarımı oturma odası (3)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/japandi%20tasar%C4%B1m%C4%B1%20oturma%20odas%C4%B1%20(4).webp",
+        "fileName": "japandi tasarımı oturma odası (4)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-kucuk-oturma-odasi-tasarimi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "küçük oturma odası tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/k%C3%BC%C3%A7%C3%BCk%20oturma%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "küçük oturma odası tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/k%C3%BC%C3%A7%C3%BCk%20oturma%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "küçük oturma odası tasarımı (2)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/k%C3%BC%C3%A7%C3%BCk%20oturma%20odas%C4%B1%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "küçük oturma odası tasarımı (3)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-kucuk-wc-tasarimi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "küçük wc tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/k%C3%BC%C3%A7%C3%BCk%20wc%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "küçük wc tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/k%C3%BC%C3%A7%C3%BCk%20wc%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "küçük wc tasarımı (2)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/k%C3%BC%C3%A7%C3%BCk%20wc%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "küçük wc tasarımı (3)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/k%C3%BC%C3%A7%C3%BCk%20wc%20tasar%C4%B1m%C4%B1%20(4).webp",
+        "fileName": "küçük wc tasarımı (4)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-modern-gym-tasarimi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "modern gym tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/modern%20gym%20tasar%C4%B1m%C4%B1%20(1)--jpg.webp",
+        "fileName": "modern gym tasarımı (1)--jpg"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/modern%20gym%20tasar%C4%B1m%C4%B1%20(1)--png.webp",
+        "fileName": "modern gym tasarımı (1)--png"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/modern%20gym%20tasar%C4%B1m%C4%B1%20(2)--jpg.webp",
+        "fileName": "modern gym tasarımı (2)--jpg"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/modern%20gym%20tasar%C4%B1m%C4%B1%20(2)--png.webp",
+        "fileName": "modern gym tasarımı (2)--png"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/modern%20gym%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "modern gym tasarımı (3)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/modern%20gym%20tasar%C4%B1m%C4%B1%20(4).webp",
+        "fileName": "modern gym tasarımı (4)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/modern%20gym%20tasar%C4%B1m%C4%B1%20(5).webp",
+        "fileName": "modern gym tasarımı (5)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-mutfak-alani-tasarimi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "mutfak alanı tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/mutfak%20alan%C4%B1%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "mutfak alanı tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/mutfak%20alan%C4%B1%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "mutfak alanı tasarımı (2)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/mutfak%20alan%C4%B1%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "mutfak alanı tasarımı (3)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/mutfak%20alan%C4%B1%20tasar%C4%B1m%C4%B1%20(4).webp",
+        "fileName": "mutfak alanı tasarımı (4)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-oturma-odasi-concept-tasarimi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "oturma odası concept tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/oturma%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1.webp",
+        "fileName": "oturma odası concept tasarımı"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/oturma%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "oturma odası concept tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/oturma%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "oturma odası concept tasarımı (2)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/oturma%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "oturma odası concept tasarımı (3)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-ozel-villa-antalya",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "özel villa Antalya",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C3%B6zel%20villa%20Antalya%20(1).webp",
+        "fileName": "özel villa Antalya (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/%C3%B6zel%20villa%20Antalya%20(2).webp",
+        "fileName": "özel villa Antalya (2)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-siyah-calisma-odasi-concept",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "siyah çalışma odası concept",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/siyah%20%C3%A7al%C4%B1%C5%9Fma%20odas%C4%B1%20concept%20(1).webp",
+        "fileName": "siyah çalışma odası concept (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/siyah%20%C3%A7al%C4%B1%C5%9Fma%20odas%C4%B1%20concept%20(2).webp",
+        "fileName": "siyah çalışma odası concept (2)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-villa-concept-salon-tasarimi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "villa concept salon tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/villa%20concept%20salon%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "villa concept salon tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/villa%20concept%20salon%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "villa concept salon tasarımı (2)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/villa%20concept%20salon%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "villa concept salon tasarımı (3)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/villa%20concept%20salon%20tasar%C4%B1m%C4%B1%20(4).webp",
+        "fileName": "villa concept salon tasarımı (4)"
+      }
+    ]
+  },
+  {
+    "slug": "concept-renders-yatak-odasi-concept-tasarimi",
+    "categoryKey": "concept-renders",
+    "sourceFolder": "Bora Evgar Konsept Renderler",
+    "title": "yatak odası concept tasarımı",
+    "images": [
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/yatak%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "fileName": "yatak odası concept tasarımı (1)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/yatak%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "fileName": "yatak odası concept tasarımı (2)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/yatak%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "fileName": "yatak odası concept tasarımı (3)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/yatak%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1%20(4).webp",
+        "fileName": "yatak odası concept tasarımı (4)"
+      },
+      {
+        "src": "/images/wetransfer/Bora%20Evgar%20Konsept%20Renderler/yatak%20odas%C4%B1%20concept%20tasar%C4%B1m%C4%B1%20(5).webp",
+        "fileName": "yatak odası concept tasarımı (5)"
       }
     ]
   }
