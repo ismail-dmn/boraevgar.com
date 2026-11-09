@@ -378,12 +378,8 @@ export const weTransferProjectRecords = [
     "title": "istanbul ab mimarlık villa",
     "images": [
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(1)--jpg.webp",
-        "fileName": "özel villa projesi (1)--jpg"
-      },
-      {
-        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(1)--png.webp",
-        "fileName": "özel villa projesi (1)--png"
+        "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(1).jpg",
+        "fileName": "özel villa projesi (1)"
       },
       {
         "src": "/images/wetransfer/Ticari%20Projeler/istanbul%20ab%20mimarl%C4%B1k%20villa/%C3%B6zel%20villa%20projesi%20(2).webp",
