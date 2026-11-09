@@ -27,7 +27,9 @@ export function LeadLink({
     }
 
     window.gtag("event", "generate_lead", {
-      event_label: trackingLabel,
+      lead_method: trackingLabel,
+      link_url: href,
+      page_path: window.location.pathname,
     });
 
     const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;

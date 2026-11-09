@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getProposalHref } from "./contact-details";
 import { messages, type Locale } from "./i18n";
 import { LeadLink } from "./lead-link";
+import { serviceIndexPath } from "./seo/paths";
 
 type SiteHeaderProps = {
   locale: Locale;
@@ -33,6 +34,7 @@ export function SiteHeader({ locale, currentHref, alternateHref }: SiteHeaderPro
 
         <nav className="primary-nav" aria-label={locale === "tr" ? "Ana menü" : "Main navigation"}>
           <Link href={`/${locale}#work`}>{copy.nav.work}</Link>
+          <Link href={serviceIndexPath(locale)}>{copy.nav.services}</Link>
           <Link href={`/${locale}#process`}>{copy.nav.studio}</Link>
           <Link href={`/${locale}/about`}>{copy.nav.about}</Link>
           <Link href={`/${locale}#contact`}>{copy.nav.contact}</Link>

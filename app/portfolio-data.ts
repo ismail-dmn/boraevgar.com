@@ -128,21 +128,32 @@ function normalizeImportedName(value: string, locale: Locale): string {
 export function getProjects(locale: Locale): PortfolioProject[] {
   const categoryLabels = messages[locale].work.categoryLabels;
 
-  return projectRecords.map((project) => ({
-    slug: project.slug,
-    categoryKey: project.categoryKey,
-    sourceFolder: translateProjectLabel(project.sourceFolder, locale),
-    category: categoryLabels[project.categoryKey],
-    title: normalizeImportedName(translateProjectLabel(project.images[0].fileName, locale), locale),
-    summary:
+  return projectRecords.map((project) => {
+    const title = normalizeImportedName(translateProjectLabel(project.images[0].fileName, locale), locale);
+    const summary =
       locale === "tr"
-        ? `${project.images.length} görsel · proje bazlı arşiv`
-        : `${project.images.length} images · project-based archive`,
-    images: project.images.map(({ src, fileName }) => {
-      const displayName = normalizeImportedName(translateProjectLabel(fileName, locale), locale);
-      return { src, fileName: displayName, alt: displayName };
-    }),
-  }));
+        ? `${title} başlıklı portfolyo kaydında ${project.images.length} görsel bulunuyor.`
+        : `This portfolio record titled ${title} contains ${project.images.length} images.`;
+
+    return {
+      slug: project.slug,
+      categoryKey: project.categoryKey,
+      sourceFolder: translateProjectLabel(project.sourceFolder, locale),
+      category: categoryLabels[project.categoryKey],
+      title,
+      summary,
+      images: project.images.map(({ src, fileName }) => {
+        const displayName = normalizeImportedName(translateProjectLabel(fileName, locale), locale);
+        const alt =
+          displayName === title
+            ? displayName
+            : locale === "tr"
+              ? `${displayName} — ${title} projesi`
+              : `${displayName} — ${title} project`;
+        return { src, fileName: displayName, alt };
+      }),
+    };
+  });
 }
 
 export function getProject(slug: string, locale: Locale): PortfolioProject | undefined {

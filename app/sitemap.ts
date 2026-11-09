@@ -1,35 +1,45 @@
 import type { MetadataRoute } from "next";
 import { getProjectSlugs } from "./portfolio-data";
+import { articleRecords, articlePath } from "./seo/articles";
+import { absoluteUrl, blogIndexPath, localLandingPaths, serviceIndexPath, servicePath } from "./seo/paths";
+import { serviceRecords } from "./seo/services";
 
-const siteUrl = "https://boraevgar.com";
-const locales = ["tr", "en"] as const;
+function localizedEntries(paths: { tr: string; en: string }): MetadataRoute.Sitemap {
+  const languages = {
+    tr: absoluteUrl(paths.tr),
+    en: absoluteUrl(paths.en),
+  };
+
+  return ["tr", "en"].map((locale) => ({
+    url: absoluteUrl(paths[locale as "tr" | "en"]),
+    alternates: { languages },
+  }));
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const homePages = locales.map((locale) => ({
-    url: `${siteUrl}/${locale}`,
-    changeFrequency: "monthly" as const,
-    priority: 1,
-    alternates: {
-      languages: {
-        tr: `${siteUrl}/tr`,
-        en: `${siteUrl}/en`,
-      },
-    },
-  }));
+  const pairedPages = [
+    localizedEntries({ tr: "/tr", en: "/en" }),
+    localizedEntries({ tr: "/tr/about", en: "/en/about" }),
+    localizedEntries({ tr: serviceIndexPath("tr"), en: serviceIndexPath("en") }),
+    localizedEntries(localLandingPaths),
+    localizedEntries({ tr: "/tr/iletisim", en: "/en/contact" }),
+    localizedEntries({ tr: blogIndexPath("tr"), en: blogIndexPath("en") }),
+    ...serviceRecords.map((service) =>
+      localizedEntries({
+        tr: servicePath("tr", service.tr.slug),
+        en: servicePath("en", service.en.slug),
+      }),
+    ),
+    ...articleRecords.map((article) =>
+      localizedEntries({
+        tr: articlePath("tr", article.tr.slug),
+        en: articlePath("en", article.en.slug),
+      }),
+    ),
+    ...getProjectSlugs().map((slug) =>
+      localizedEntries({ tr: `/tr/projects/${slug}`, en: `/en/projects/${slug}` }),
+    ),
+  ];
 
-  const projectPages = getProjectSlugs().flatMap((slug) =>
-    locales.map((locale) => ({
-      url: `${siteUrl}/${locale}/projects/${slug}`,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-      alternates: {
-        languages: {
-          tr: `${siteUrl}/tr/projects/${slug}`,
-          en: `${siteUrl}/en/projects/${slug}`,
-        },
-      },
-    })),
-  );
-
-  return [...homePages, ...projectPages];
+  return pairedPages.flat();
 }

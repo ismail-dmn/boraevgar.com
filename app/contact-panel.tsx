@@ -52,7 +52,12 @@ export function ContactPanel({ locale }: ContactPanelProps) {
             <address>{studioAddress}</address>
           </div>
           <div className="contact-links">
-            <a href={`tel:${studioPhone.replace(/\D/g, "")}`}>{studioPhone}</a>
+            <LeadLink
+              href={`tel:${studioPhone.replace(/\D/g, "")}`}
+              trackingLabel="phone"
+            >
+              {studioPhone}
+            </LeadLink>
             <a href={studioInstagram} target="_blank" rel="noreferrer">Instagram</a>
             <a href={studioLinkedIn} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
