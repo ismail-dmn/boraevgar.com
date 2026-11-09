@@ -112,6 +112,8 @@ function normalizeImportedName(value: string, locale: Locale): string {
   const language = locale === "tr" ? "tr-TR" : "en-US";
 
   return value
+    .trim()
+    .replace(/\s*--\s*(?:jpe?g|png|webp)\s*$/iu, "")
     .replace(/\s*\(\d+\)\s*$/u, "")
     .trim()
     .split(/\s+/u)
