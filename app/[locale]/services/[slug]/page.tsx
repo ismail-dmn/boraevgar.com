@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { isLocale } from "../../../i18n";
 import { getProjects } from "../../../portfolio-data";
@@ -34,7 +35,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function EnglishServiceDetail({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+type ServiceDetailRouteProps = {
+  params: Promise<{ locale: string; slug: string }>;
+};
+
+export default function EnglishServiceDetail({ params }: ServiceDetailRouteProps) {
+  return (
+    <Suspense fallback={<div className="container project-loading" role="status">Loading service details…</div>}>
+      <ResolvedEnglishServiceDetail params={params} />
+    </Suspense>
+  );
+}
+
+async function ResolvedEnglishServiceDetail({ params }: ServiceDetailRouteProps) {
   const { locale, slug } = await params;
   if (!isLocale(locale) || locale !== "en") notFound();
   return <ServiceDetailPage locale="en" slug={slug} />;

@@ -88,11 +88,15 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
       ? "exterior-design"
       : project.categoryKey === "concept-renders"
         ? "architectural-visualization"
-        : /villa/u.test(projectText)
-          ? "villa-design"
-          : /ofis|office|toplantı|meeting/u.test(projectText)
-            ? "office-design"
-            : "commercial-interiors";
+        : /otel|hotel/u.test(projectText)
+          ? "hotel-interiors"
+          : /restoran|restaurant|kafe|cafe/u.test(projectText)
+            ? "restaurant-cafe-interiors"
+            : /villa/u.test(projectText)
+              ? "villa-design"
+              : /ofis|office|toplantı|meeting/u.test(projectText)
+                ? "office-design"
+                : "commercial-interiors";
   const relatedService = getServiceById(relatedServiceId);
   const homeLabel = locale === "tr" ? "Ana sayfa" : "Home";
   const portfolioLabel = locale === "tr" ? "Portfolyo" : "Portfolio";
@@ -107,6 +111,8 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
     "@id": `${absoluteUrl(currentHref)}#project`,
     name: project.title,
     description: project.summary,
+    creator: { "@id": "https://boraevgar.com/#organization" },
+    mainEntityOfPage: absoluteUrl(currentHref),
     genre: project.category,
     inLanguage: locale === "tr" ? "tr-TR" : "en",
     isPartOf: { "@id": "https://boraevgar.com/#website" },

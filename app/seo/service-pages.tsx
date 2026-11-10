@@ -123,7 +123,9 @@ const relatedServiceIds: Readonly<Record<ServiceId, readonly ServiceId[]>> = {
   "villa-design": ["residential-design", "architectural-visualization", "exterior-design"],
   "residential-design": ["interior-architecture", "villa-design", "architectural-visualization"],
   "office-design": ["commercial-interiors", "technical-documentation", "turnkey-interior-architecture"],
-  "commercial-interiors": ["office-design", "interior-architecture", "turnkey-interior-architecture"],
+  "commercial-interiors": ["hotel-interiors", "restaurant-cafe-interiors", "office-design"],
+  "hotel-interiors": ["commercial-interiors", "restaurant-cafe-interiors", "turnkey-interior-architecture"],
+  "restaurant-cafe-interiors": ["commercial-interiors", "hotel-interiors", "turnkey-interior-architecture"],
   "turnkey-interior-architecture": ["interior-architecture", "technical-documentation", "commercial-interiors"],
   "architectural-visualization": ["interior-architecture", "villa-design", "exterior-design"],
   "technical-documentation": ["interior-architecture", "office-design", "turnkey-interior-architecture"],
@@ -251,6 +253,19 @@ export function ServiceDetailPage({ locale, slug }: { locale: Locale; slug: stri
                 { "@type": "City", name: "Ankara" },
                 { "@type": "Country", name: "Türkiye" },
               ],
+            },
+            {
+              "@type": "FAQPage",
+              "@id": `${absoluteUrl(currentPath)}#faq`,
+              inLanguage: locale === "tr" ? "tr-TR" : "en",
+              mainEntity: copy.faqs.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
             },
           ],
         }} />

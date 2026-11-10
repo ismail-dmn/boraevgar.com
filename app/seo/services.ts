@@ -6,6 +6,8 @@ export type ServiceId =
   | "residential-design"
   | "office-design"
   | "commercial-interiors"
+  | "hotel-interiors"
+  | "restaurant-cafe-interiors"
   | "turnkey-interior-architecture"
   | "architectural-visualization"
   | "technical-documentation"
@@ -333,6 +335,129 @@ export const serviceRecords: readonly ServiceRecord[] = [
       "commercial-projects-4s-bilisim-teknolojileri",
       "commercial-projects-antalya-otel",
       "commercial-projects-formaggio-cafe",
+    ],
+  },
+  {
+    id: "hotel-interiors",
+    tr: {
+      slug: "otel-ic-mimarligi",
+      title: "Otel İç Mimarlığı",
+      metaTitle: "Ankara Otel İç Mimarlığı | Bora Evgar Studio",
+      description:
+        "Otel lobi, oda ve ortak alanlarında misafir deneyimi, işletme akışı, malzeme ve aydınlatmayı proje kapsamına göre birlikte planlayın.",
+      intro:
+        "Otel iç mimarlığı; misafir deneyimini, servis ve dolaşım akışını, bakım gereksinimlerini ve mekânın tasarım dilini birlikte ele alır. Bora Evgar Studio, Ankara merkezli ekibiyle otel projelerinde konsept, görselleştirme ve teknik çalışmaları proje kapsamına göre planlar.",
+      scopeHeading: "Otel iç mimarlığında ele alınabilecek alanlar",
+      scope: [
+        "Lobi, resepsiyon, misafir odaları ve ortak alanların işlevsel ilişkisi.",
+        "Misafir ve servis dolaşımı, mobilya yerleşimi ve kullanım senaryoları.",
+        "Malzeme, aydınlatma, 3D sunum ve teknik çizimlerin kararlaştırılan kapsamı.",
+      ],
+      processHeading: "Otel projesinde tasarım akışı",
+      process: [
+        { title: "İşletme ve mekânı anlama", description: "Kullanım senaryoları, mevcut planlar, teknik koşullar ve proje hedefleri değerlendirilir." },
+        { title: "Konsept ve yerleşim", description: "Misafir deneyimi, servis akışı ve tasarım dili birlikte geliştirilir." },
+        { title: "Teknik geliştirme", description: "Onaylanan kararlar, teklif kapsamındaki görselleştirme ve uygulama dokümanlarına aktarılır." },
+      ],
+      faqHeading: "Otel iç mimarlığı hakkında sık sorulanlar",
+      faqs: [
+        { question: "Otel iç mimarlık projesinde hangi alanlar ele alınır?", answer: "Proje ihtiyacına göre lobi, resepsiyon, misafir odaları ve ortak alanların yerleşimi; misafir ve servis dolaşımı; malzeme ve aydınlatma kararları değerlendirilebilir. Dahil olan alanlar teklif aşamasında netleştirilir." },
+        { question: "Otel tasarımına uygulama ve saha takibi dahil olur mu?", answer: "Uygulama, tedarik ve saha koordinasyonu yalnızca teklif ve sözleşmede açıkça tanımlandığında hizmet kapsamına girer. Her otel projesinin sorumlulukları ayrıca belirlenir." },
+        { question: "Ankara dışındaki otel projeleri değerlendirilebilir mi?", answer: "Bora Evgar Studio Ankara merkezlidir ve Türkiye genelinden gelen proje taleplerini değerlendirir. Saha ziyareti ve koordinasyon biçimi, projenin konumu ve üzerinde anlaşılan kapsama göre planlanır." },
+      ],
+    },
+    en: {
+      slug: "hotel-interior-design",
+      title: "Hotel Interior Design",
+      metaTitle: "Hotel Interior Design | Bora Evgar Studio",
+      description:
+        "Plan hotel lobbies, guest rooms and shared spaces around guest experience, operational flow, materials and lighting within an agreed scope.",
+      intro:
+        "Hotel interior design connects guest experience, service and circulation flows, maintenance needs and the visual character of a space. Based in Ankara, Bora Evgar Studio plans concept design, visualization and technical work for hotel briefs according to the agreed scope.",
+      scopeHeading: "What a hotel interior brief can cover",
+      scope: [
+        "The relationship between lobbies, reception, guest rooms and shared spaces.",
+        "Guest and service circulation, furniture layouts and use scenarios.",
+        "Materials, lighting, 3D presentations and technical drawings defined by the project scope.",
+      ],
+      processHeading: "A hotel design process",
+      process: [
+        { title: "Understand the operation and space", description: "Use scenarios, existing plans, technical conditions and project goals are reviewed." },
+        { title: "Concept and planning", description: "Guest experience, service flow and visual direction are developed together." },
+        { title: "Technical development", description: "Approved decisions are translated into the visualization and implementation documents included in the proposal." },
+      ],
+      faqHeading: "Hotel interior design FAQs",
+      faqs: [
+        { question: "Which areas can a hotel interior design project cover?", answer: "Depending on the brief, planning may consider the lobby, reception, guest rooms and shared spaces, guest and service circulation, materials and lighting. Included areas are defined in the proposal." },
+        { question: "Does hotel design include implementation and site follow-up?", answer: "Implementation, procurement and site coordination are included only when clearly specified in the proposal and agreement. Responsibilities are agreed for each hotel project." },
+        { question: "Can hotel projects outside Ankara be considered?", answer: "Bora Evgar Studio is based in Ankara and reviews project enquiries from across Türkiye. Site visits and coordination are planned according to the location and agreed scope." },
+      ],
+    },
+    relatedProjectSlugs: [
+      "commercial-projects-antalya-otel",
+      "commercial-projects-concorde-otel",
+      "commercial-projects-otel-banyo-tasarimi",
+    ],
+  },
+  {
+    id: "restaurant-cafe-interiors",
+    tr: {
+      slug: "restoran-kafe-ic-mimarligi",
+      title: "Restoran ve Kafe İç Mimarlığı",
+      metaTitle: "Ankara Restoran ve Kafe Tasarımı | Bora Evgar Studio",
+      description:
+        "Restoran ve kafe tasarımında oturma düzeni, servis akışı, atmosfer, malzeme ve aydınlatma kararlarını proje kapsamına göre geliştirin.",
+      intro:
+        "Restoran ve kafe iç mimarlığı; misafir alanlarını, servis akışını, oturma düzenini ve mekânın atmosferini bir arada planlar. Bora Evgar Studio, konsept ve teknik teslimleri işletme ihtiyaçları ve proje kapsamına göre değerlendirir.",
+      scopeHeading: "Restoran ve kafe tasarımında ele alınabilecek başlıklar",
+      scope: [
+        "Oturma düzeni, kapasite, giriş ve misafir dolaşımının mekânla ilişkisi.",
+        "Servis akışı, karşılama ve işletme gereksinimlerinin planlamaya etkisi.",
+        "Konsepte uygun malzeme, aydınlatma, 3D görselleştirme ve teknik çizimler.",
+      ],
+      processHeading: "İşletme akışından mekân tasarımına",
+      process: [
+        { title: "İhtiyaçları ve teknik koşulları anlama", description: "İşletme modeli, kullanıcı profili, mevcut ölçüler ve teknik gereksinimler gözden geçirilir." },
+        { title: "Yerleşim ve konsept", description: "Misafir ve servis akışını destekleyen oturma planı ile tasarım dili geliştirilir." },
+        { title: "Sunum ve dokümantasyon", description: "Kararlaştırılan tasarım, proje kapsamındaki görselleştirme ve teknik çizimlerle aktarılır." },
+      ],
+      faqHeading: "Restoran ve kafe tasarımı hakkında sık sorulanlar",
+      faqs: [
+        { question: "Restoran veya kafe iç mimarlığı neleri kapsar?", answer: "Kapsam; oturma düzeni, misafir ve servis dolaşımı, malzeme ve aydınlatma kararları, 3D sunum ve teknik çizimlerden ihtiyaca göre seçilir. Dahil olan teslimler teklif öncesinde netleştirilir." },
+        { question: "Mevcut bir restoran veya kafe yenilenebilir mi?", answer: "Evet, mevcut plan, ölçüler, korunacak öğeler ve işletmenin çalışma koşulları incelenerek tasarım kapsamı belirlenebilir. Uygulama sıralaması ve saha erişimi proje bazında değerlendirilir." },
+        { question: "Tasarım hizmetine anahtar teslim uygulama dahil mi?", answer: "Hayır, otomatik olarak dahil değildir. Uygulama ve saha koordinasyonu ancak teklif ve sözleşmede açıkça tanımlanan işler için üstlenilir." },
+      ],
+    },
+    en: {
+      slug: "restaurant-cafe-interior-design",
+      title: "Restaurant and Café Interior Design",
+      metaTitle: "Restaurant and Café Interior Design | Bora Evgar Studio",
+      description:
+        "Develop seating layouts, service flow, atmosphere, materials and lighting for restaurant and café projects within an agreed scope.",
+      intro:
+        "Restaurant and café interior design brings guest areas, service flow, seating layouts and atmosphere into one plan. Bora Evgar Studio considers concept and technical deliverables around operational needs and the agreed project scope.",
+      scopeHeading: "What restaurant and café design can consider",
+      scope: [
+        "Seating, capacity, entry and guest circulation in relation to the space.",
+        "How service flow, reception and operational needs affect planning.",
+        "Materials, lighting, 3D visualization and technical drawings suited to the concept.",
+      ],
+      processHeading: "From operational flow to spatial design",
+      process: [
+        { title: "Understand needs and conditions", description: "The business model, visitor profile, existing dimensions and technical requirements are reviewed." },
+        { title: "Planning and concept", description: "A seating layout and visual direction are developed to support guest and service flow." },
+        { title: "Presentation and documentation", description: "The agreed design is translated into the visualization and technical drawings in scope." },
+      ],
+      faqHeading: "Restaurant and café design FAQs",
+      faqs: [
+        { question: "What does restaurant or café interior design include?", answer: "The scope can include seating layouts, guest and service circulation, materials and lighting, 3D presentations and technical drawings. Deliverables are agreed before a proposal." },
+        { question: "Can an existing restaurant or café be renovated?", answer: "The brief can be assessed by reviewing existing plans, dimensions, items to retain and operating conditions. Phasing and site access are considered for each project." },
+        { question: "Does design automatically include turnkey implementation?", answer: "No. Implementation and site coordination are included only for work explicitly defined in the proposal and agreement." },
+      ],
+    },
+    relatedProjectSlugs: [
+      "commercial-projects-formaggio-cafe",
+      "commercial-projects-concorde-otel",
     ],
   },
   {
