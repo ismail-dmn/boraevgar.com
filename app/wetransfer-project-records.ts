@@ -6,39 +6,57 @@ export const weTransferProjectRecords = [
     "title": "4s bilişim teknolojileri",
     "images": [
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/4s%20giri%C5%9F.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/4s%20giri%C5%9F.png",
+        "width": 1144,
+        "height": 1375,
         "fileName": "4s giriş"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/bodrum%20kat%20cafe.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/bodrum%20kat%20cafe.png",
+        "width": 1363,
+        "height": 1154,
         "fileName": "bodrum kat cafe"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/giri%C5%9F%20d%C4%B1%C5%9Far%C4%B1s%C4%B1.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/giri%C5%9F%20d%C4%B1%C5%9Far%C4%B1s%C4%B1.png",
+        "width": 1345,
+        "height": 1170,
         "fileName": "giriş dışarısı"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/k%C3%BC%C3%A7%C3%BCk%20toplant%C4%B1%20(1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/k%C3%BC%C3%A7%C3%BCk%20toplant%C4%B1%20(1).png",
+        "width": 1144,
+        "height": 1375,
         "fileName": "küçük toplantı (1)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/k%C3%BC%C3%A7%C3%BCk%20toplant%C4%B1%20(2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/k%C3%BC%C3%A7%C3%BCk%20toplant%C4%B1%20(2).png",
+        "width": 1144,
+        "height": 1375,
         "fileName": "küçük toplantı (2)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/toplant%C4%B1%20odas%C4%B1.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/toplant%C4%B1%20odas%C4%B1.png",
+        "width": 1478,
+        "height": 1064,
         "fileName": "toplantı odası"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/yemekhane.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/yemekhane.png",
+        "width": 1254,
+        "height": 1254,
         "fileName": "yemekhane"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/yemekhane2.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/yemekhane2.png",
+        "width": 1254,
+        "height": 1254,
         "fileName": "yemekhane2"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/zemin%20kat.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/4s%20bili%C5%9Fim%20teknolojileri/zemin%20kat.png",
+        "width": 1144,
+        "height": 1375,
         "fileName": "zemin kat"
       }
     ]
@@ -306,67 +324,99 @@ export const weTransferProjectRecords = [
     "title": "ırak avrocity projesi",
     "images": [
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20g%C3%BCrba%C4%9F.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20g%C3%BCrba%C4%9F.jpg",
+        "width": 1365,
+        "height": 768,
         "fileName": "avrocity gürbağ"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20r%20blok%20misafir%20odas%C4%B1.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20r%20blok%20misafir%20odas%C4%B1.png",
+        "width": 1424,
+        "height": 1104,
         "fileName": "avrocity r blok misafir odası"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20r%20blok%20salon.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/avrocity%20r%20blok%20salon.png",
+        "width": 1573,
+        "height": 1000,
         "fileName": "avrocity r blok salon"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(1).jpeg",
+        "width": 2048,
+        "height": 1152,
         "fileName": "e blok dış cephe  (1)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(2).jpeg",
+        "width": 2048,
+        "height": 1152,
         "fileName": "e blok dış cephe  (2)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(3).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/e%20blok%20d%C4%B1%C5%9F%20cephe%20%20(3).jpeg",
+        "width": 2048,
+        "height": 1152,
         "fileName": "e blok dış cephe  (3)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20master%20banyo.webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20master%20banyo.jpg",
+        "width": 1600,
+        "height": 2400,
         "fileName": "f blok master banyo"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(1).jpg",
+        "width": 2600,
+        "height": 1500,
         "fileName": "f blok misafir odası (1)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(2).jpg",
+        "width": 2600,
+        "height": 1500,
         "fileName": "f blok misafir odası (2)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(3).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20misafir%20odas%C4%B1%20(3).jpg",
+        "width": 2600,
+        "height": 1500,
         "fileName": "f blok misafir odası (3)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(1).jpg",
+        "width": 2500,
+        "height": 1300,
         "fileName": "f blok salon tasarımı (1)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(2).jpg",
+        "width": 2500,
+        "height": 1300,
         "fileName": "f blok salon tasarımı (2)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(3).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/f%20blok%20salon%20tasar%C4%B1m%C4%B1%20(3).jpg",
+        "width": 1104,
+        "height": 574,
         "fileName": "f blok salon tasarımı (3)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(1).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(1).jpg",
+        "width": 1600,
+        "height": 2400,
         "fileName": "fblok giyinme odası (1)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(2).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(2).jpg",
+        "width": 1600,
+        "height": 2400,
         "fileName": "fblok giyinme odası (2)"
       },
       {
-        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(3).webp",
+        "src": "/images/wetransfer/Ticari%20Projeler/%C4%B1rak%20avrocity%20projesi/fblok%20giyinme%20odas%C4%B1%20(3).jpg",
+        "width": 1600,
+        "height": 2400,
         "fileName": "fblok giyinme odası (3)"
       }
     ]

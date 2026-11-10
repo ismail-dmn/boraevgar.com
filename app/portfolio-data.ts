@@ -8,6 +8,8 @@ export type ProjectCategoryKey = (typeof projectCategoryKeys)[number];
 type ProjectImageRecord = {
   src: string;
   fileName: string;
+  width?: number;
+  height?: number;
 };
 
 type ProjectRecord = {
@@ -22,6 +24,8 @@ type ProjectImage = {
   src: string;
   fileName: string;
   alt: string;
+  width?: number;
+  height?: number;
 };
 
 export type PortfolioProject = {
@@ -143,7 +147,7 @@ export function getProjects(locale: Locale): PortfolioProject[] {
       category,
       title,
       summary,
-      images: project.images.map(({ src, fileName }) => {
+      images: project.images.map(({ src, fileName, width, height }) => {
         const displayName = normalizeImportedName(translateProjectLabel(fileName, locale), locale);
         const alt =
           displayName === title
@@ -151,7 +155,7 @@ export function getProjects(locale: Locale): PortfolioProject[] {
             : locale === "tr"
               ? `${displayName} — ${title} projesi`
               : `${displayName} — ${title} project`;
-        return { src, fileName: displayName, alt };
+        return { src, fileName: displayName, alt, width, height };
       }),
     };
   });

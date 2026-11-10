@@ -98,6 +98,9 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
                 ? "office-design"
                 : "commercial-interiors";
   const relatedService = getServiceById(relatedServiceId);
+  const preserveOriginalImages =
+    project.slug === "commercial-projects-irak-avrocity-projesi" ||
+    project.slug === "commercial-projects-4s-bilisim-teknolojileri";
   const homeLabel = locale === "tr" ? "Ana sayfa" : "Home";
   const portfolioLabel = locale === "tr" ? "Portfolyo" : "Portfolio";
   const projectBreadcrumb = breadcrumbSchema([
@@ -166,12 +169,17 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
             <figure
               className={`gallery-item${index === 0 ? " gallery-item-featured" : " gallery-item-secondary"}`}
               key={image.src}
+              style={
+                preserveOriginalImages && image.width && image.height
+                  ? { aspectRatio: `${image.width} / ${image.height}` }
+                  : undefined
+              }
             >
               <Image
                 alt={image.alt}
-                className="gallery-image"
+                className={`gallery-image${preserveOriginalImages ? " gallery-image-original" : ""}`}
                 fill
-                unoptimized={image.src.endsWith(".gif")}
+                unoptimized={preserveOriginalImages || image.src.endsWith(".gif")}
                 sizes={
                   index === 0
                     ? "(max-width: 760px) 100vw, calc(100vw - 72px)"
