@@ -631,6 +631,15 @@ h2 em {
   transform: scale(1.025);
 }
 
+.project-card-img-original {
+  object-fit: contain;
+  transition: none;
+}
+
+.project-card-link:hover .project-card-img-original {
+  transform: none;
+}
+
 .project-card-image::after {
   position: absolute;
   inset: 46% 0 0;
@@ -1123,6 +1132,10 @@ h2 em {
 
 .gallery-image {
   object-fit: cover;
+}
+
+.gallery-image-original {
+  object-fit: contain;
 }
 
 .gallery-item::after {

@@ -62,41 +62,55 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
       </p>
 
       <div className="project-grid">
-        {visibleProjects.map((project, index) => (
-          <article className="project-card" key={project.slug}>
-            <Link
-              aria-label={`${project.title}, ${project.category}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
-              className="project-card-link"
-              href={`/${locale}/projects/${project.slug}`}
-            >
-              <figure className="project-card-image">
-                <Image
-                  alt={project.images[0].alt}
-                  className="project-card-img"
-                  fill
-                  sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                  src={project.images[0].src}
-                  unoptimized={project.images[0].src.endsWith(".gif")}
-                />
-                <figcaption className="project-card-overlay">
-                  <span className="project-card-number">{String(index + 1).padStart(2, "0")}</span>
-                  <span className="project-card-view">
-                    {copy.work.viewProject} <span aria-hidden="true">↗</span>
+        {visibleProjects.map((project, index) => {
+          const preserveOriginalImage =
+            project.slug === "commercial-projects-irak-avrocity-projesi" ||
+            project.slug === "commercial-projects-4s-bilisim-teknolojileri";
+          const leadImage = project.images[0];
+
+          return (
+            <article className="project-card" key={project.slug}>
+              <Link
+                aria-label={`${project.title}, ${project.category}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
+                className="project-card-link"
+                href={`/${locale}/projects/${project.slug}`}
+              >
+                <figure
+                  className="project-card-image"
+                  style={
+                    preserveOriginalImage && leadImage.width && leadImage.height
+                      ? { aspectRatio: `${leadImage.width} / ${leadImage.height}` }
+                      : undefined
+                  }
+                >
+                  <Image
+                    alt={leadImage.alt}
+                    className={`project-card-img${preserveOriginalImage ? " project-card-img-original" : ""}`}
+                    fill
+                    sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                    src={leadImage.src}
+                    unoptimized={preserveOriginalImage || leadImage.src.endsWith(".gif")}
+                  />
+                  <figcaption className="project-card-overlay">
+                    <span className="project-card-number">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="project-card-view">
+                      {copy.work.viewProject} <span aria-hidden="true">↗</span>
+                    </span>
+                  </figcaption>
+                </figure>
+                <div className="project-card-meta">
+                  <div>
+                    <h3 className="project-card-title">{project.title}</h3>
+                    <p className="project-card-subtitle">{project.sourceFolder}</p>
+                  </div>
+                  <span className="project-card-year">
+                    {project.images.length} {project.images.length === 1 ? copy.work.frame : copy.work.frames}
                   </span>
-                </figcaption>
-              </figure>
-              <div className="project-card-meta">
-                <div>
-                  <h3 className="project-card-title">{project.title}</h3>
-                  <p className="project-card-subtitle">{project.sourceFolder}</p>
                 </div>
-                <span className="project-card-year">
-                  {project.images.length} {project.images.length === 1 ? copy.work.frame : copy.work.frames}
-                </span>
-              </div>
-            </Link>
-          </article>
-        ))}
+              </Link>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
