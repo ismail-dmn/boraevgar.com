@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -16,6 +15,8 @@ type ProjectPageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
+export const instant = false;
+
 export function generateStaticParams() {
   return getProjectSlugs().map((slug) => ({ slug }));
 }
@@ -29,12 +30,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
   const project = getProject(slug, localeParam);
 
-  if (!project) {
-    return {
-      title: localeParam === "tr" ? "Proje bulunamadı" : "Project not found",
-      robots: { index: false, follow: false },
-    };
-  }
+  if (!project) notFound();
 
   const canonical = `/${localeParam}/projects/${project.slug}`;
   const title = `${project.title} | Bora Evgar Studio`;
@@ -63,22 +59,16 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  return (
-    <Suspense fallback={<div className="container project-loading" role="status">Loading…</div>}>
-      <ProjectPageContent params={params} />
-    </Suspense>
-  );
-}
-
-async function ProjectPageContent({ params }: ProjectPageProps) {
+export default async function ProjectPage({ params }: ProjectPageProps) {
   const { locale: localeParam, slug } = await params;
 
-  if (!isLocale(localeParam)) {
-    notFound();
-  }
+  if (!isLocale(localeParam)) notFound();
+  if (!getProject(slug, localeParam)) notFound();
 
-  const locale: Locale = localeParam;
+  return <ProjectPageContent locale={localeParam} slug={slug} />;
+}
+
+function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) {
   const copy = messages[locale];
   const projects = getProjects(locale);
   const projectIndex = projects.findIndex((item) => item.slug === slug);
