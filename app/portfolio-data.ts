@@ -129,17 +129,18 @@ export function getProjects(locale: Locale): PortfolioProject[] {
   const categoryLabels = messages[locale].work.categoryLabels;
 
   return projectRecords.map((project) => {
-    const title = normalizeImportedName(translateProjectLabel(project.images[0].fileName, locale), locale);
+    const title = normalizeImportedName(translateProjectLabel(project.title, locale), locale);
+    const category = categoryLabels[project.categoryKey];
     const summary =
       locale === "tr"
-        ? `${title} başlıklı portfolyo kaydında ${project.images.length} görsel bulunuyor.`
-        : `This portfolio record titled ${title} contains ${project.images.length} images.`;
+        ? `${title}, ${category.toLocaleLowerCase("tr-TR")} portföyünde yer alan seçili bir çalışmadır.`
+        : `${title} is a selected project in the ${category.toLocaleLowerCase("en-US")} portfolio.`;
 
     return {
       slug: project.slug,
       categoryKey: project.categoryKey,
       sourceFolder: translateProjectLabel(project.sourceFolder, locale),
-      category: categoryLabels[project.categoryKey],
+      category,
       title,
       summary,
       images: project.images.map(({ src, fileName }) => {

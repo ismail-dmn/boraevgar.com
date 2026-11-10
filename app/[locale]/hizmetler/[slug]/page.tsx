@@ -41,7 +41,7 @@ type ServiceDetailRouteProps = {
 
 export default function TurkishServiceDetail({ params }: ServiceDetailRouteProps) {
   return (
-    <Suspense fallback={<div className="container project-loading" role="status">Loading service details…</div>}>
+    <Suspense fallback={<div className="container project-loading" role="status">Hizmet detayları yükleniyor…</div>}>
       <ResolvedServiceDetail params={params} />
     </Suspense>
   );
