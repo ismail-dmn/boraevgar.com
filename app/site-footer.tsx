@@ -3,6 +3,7 @@ import Link from "next/link";
 import { studioEmail } from "./contact-details";
 import { CookieSettingsButton } from "./cookie-settings-button";
 import { messages, type Locale } from "./i18n";
+import { localLandingPaths, serviceIndexPath } from "./seo/paths";
 
 type SiteFooterProps = {
   locale: Locale;
@@ -46,6 +47,10 @@ export function SiteFooter({ locale }: SiteFooterProps) {
       <div className="footer-links">
         <a href={`mailto:${studioEmail}`}>{displayEmail}</a>
         <Link href={`/${locale}#work`}>{copy.footer.work}</Link>
+        <Link href={serviceIndexPath(locale)}>{locale === "tr" ? "Hizmetler" : "Services"}</Link>
+        <Link href={localLandingPaths[locale]}>{locale === "tr" ? "Ankara" : "Ankara service area"}</Link>
+        <Link href={locale === "tr" ? "/tr/iletisim" : "/en/contact"}>{locale === "tr" ? "İletişim" : "Contact"}</Link>
+        <Link href={`/${locale}/blog`}>{locale === "tr" ? "Yazılar" : "Journal"}</Link>
         {hasTracking ? <CookieSettingsButton label={copy.footer.cookieSettings} /> : null}
       </div>
     </footer>

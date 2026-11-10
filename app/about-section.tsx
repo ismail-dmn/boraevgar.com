@@ -43,7 +43,7 @@ export function AboutSection({ locale }: AboutSectionProps) {
     <section className="about-section container" id="about" aria-labelledby="about-title">
       <div className="about-heading">
         <p className="eyebrow">{copy.eyebrow}</p>
-        <h2 id="about-title">{copy.quote}</h2>
+        <h1 id="about-title">{copy.quote}</h1>
         <p className="about-intro">{copy.intro}</p>
         <figure className="about-profile">
           <Image

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -8,10 +7,15 @@ import { isLocale, messages, type Locale } from "../../../i18n";
 import { getProject, getProjectSlugs, getProjects } from "../../../portfolio-data";
 import { SiteFooter } from "../../../site-footer";
 import { SiteHeader } from "../../../site-header";
+import { absoluteUrl, breadcrumbSchema, localizedAlternates, servicePath } from "../../../seo/paths";
+import { getServiceById, type ServiceId } from "../../../seo/services";
+import { StructuredData } from "../../../seo/structured-data";
 
 type ProjectPageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
+
+export const instant = false;
 
 export function generateStaticParams() {
   return getProjectSlugs().map((slug) => ({ slug }));
@@ -26,52 +30,45 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
   const project = getProject(slug, localeParam);
 
-  if (!project) {
-    return {
-      title: localeParam === "tr" ? "Proje bulunamadı" : "Project not found",
-      robots: { index: false, follow: false },
-    };
-  }
+  if (!project) notFound();
 
   const canonical = `/${localeParam}/projects/${project.slug}`;
+  const title = `${project.title} | Bora Evgar Studio`;
 
   return {
-    title: project.title,
+    title: { absolute: title },
     description: project.summary,
-    alternates: {
-      canonical,
-      languages: {
-        tr: `/tr/projects/${project.slug}`,
-        en: `/en/projects/${project.slug}`,
-      },
-    },
+    alternates: localizedAlternates(localeParam, {
+      tr: `/tr/projects/${project.slug}`,
+      en: `/en/projects/${project.slug}`,
+    }),
     openGraph: {
-      title: `${project.title} — Bora Evgar Studio`,
+      title,
       description: project.summary,
-      url: canonical,
+      url: absoluteUrl(canonical),
       locale: localeParam === "tr" ? "tr_TR" : "en_US",
       type: "article",
       images: [{ url: project.images[0].src, alt: project.images[0].alt }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: project.summary,
+      images: [project.images[0].src],
+    },
   };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  return (
-    <Suspense fallback={<div className="container project-loading" role="status">Loading…</div>}>
-      <ProjectPageContent params={params} />
-    </Suspense>
-  );
-}
-
-async function ProjectPageContent({ params }: ProjectPageProps) {
+export default async function ProjectPage({ params }: ProjectPageProps) {
   const { locale: localeParam, slug } = await params;
 
-  if (!isLocale(localeParam)) {
-    notFound();
-  }
+  if (!isLocale(localeParam)) notFound();
+  if (!getProject(slug, localeParam)) notFound();
 
-  const locale: Locale = localeParam;
+  return <ProjectPageContent locale={localeParam} slug={slug} />;
+}
+
+function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) {
   const copy = messages[locale];
   const projects = getProjects(locale);
   const projectIndex = projects.findIndex((item) => item.slug === slug);
@@ -85,11 +82,47 @@ async function ProjectPageContent({ params }: ProjectPageProps) {
   const alternateLocale = locale === "tr" ? "en" : "tr";
   const currentHref = `/${locale}/projects/${project.slug}`;
   const alternateHref = `/${alternateLocale}/projects/${project.slug}`;
+  const projectText = `${project.title} ${project.sourceFolder}`.toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US");
+  const relatedServiceId: ServiceId =
+    project.categoryKey === "exterior"
+      ? "exterior-design"
+      : project.categoryKey === "concept-renders"
+        ? "architectural-visualization"
+        : /villa/u.test(projectText)
+          ? "villa-design"
+          : /ofis|office|toplantı|meeting/u.test(projectText)
+            ? "office-design"
+            : "commercial-interiors";
+  const relatedService = getServiceById(relatedServiceId);
+  const homeLabel = locale === "tr" ? "Ana sayfa" : "Home";
+  const portfolioLabel = locale === "tr" ? "Portfolyo" : "Portfolio";
+  const projectBreadcrumb = breadcrumbSchema([
+    { name: homeLabel, url: absoluteUrl(`/${locale}`) },
+    { name: portfolioLabel, url: absoluteUrl(`/${locale}#work`) },
+    { name: project.title, url: absoluteUrl(currentHref) },
+  ]);
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": `${absoluteUrl(currentHref)}#project`,
+    name: project.title,
+    description: project.summary,
+    genre: project.category,
+    inLanguage: locale === "tr" ? "tr-TR" : "en",
+    isPartOf: { "@id": "https://boraevgar.com/#website" },
+    image: project.images.map((image) => ({
+      "@type": "ImageObject",
+      contentUrl: absoluteUrl(image.src),
+      caption: image.alt,
+    })),
+  };
 
   return (
     <>
       <SiteHeader alternateHref={alternateHref} currentHref={currentHref} locale={locale} />
       <main id="main-content">
+        <StructuredData data={projectSchema} />
+        <StructuredData data={projectBreadcrumb} />
         <header className="project-intro container">
           <div className="project-back-row">
             <Link href={`/${locale}#work`}>
@@ -154,6 +187,15 @@ async function ProjectPageContent({ params }: ProjectPageProps) {
             {nextProject.title} <span aria-hidden="true">↗</span>
           </Link>
         </nav>
+
+        {relatedService ? (
+          <nav className="project-next container" aria-label={locale === "tr" ? "İlgili hizmet" : "Related service"}>
+            <span className="eyebrow">{locale === "tr" ? "HİZMET" : "SERVICE"}</span>
+            <Link href={servicePath(locale, relatedService[locale].slug)}>
+              {relatedService[locale].title} <span aria-hidden="true">↗</span>
+            </Link>
+          </nav>
+        ) : null}
 
         <ContactPanel locale={locale} />
       </main>

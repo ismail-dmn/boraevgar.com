@@ -23,6 +23,7 @@ const cormorant = Cormorant_Garamond({
 
 const analyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION;
 const primaryTagId = analyticsId || adsId;
 const googleTagBootstrap = [
   "window.dataLayer = window.dataLayer || [];",
@@ -56,7 +57,6 @@ export async function generateMetadata({ params }: LocaleMetadataProps): Promise
   }
 
   const copy = messages[localeParam];
-  const canonical = `/${localeParam}`;
   const featuredImage = getProjects(localeParam)[0]?.images[0];
   const imageUrl =
     featuredImage?.src ??
@@ -68,16 +68,15 @@ export async function generateMetadata({ params }: LocaleMetadataProps): Promise
       default: copy.metadata.title,
       template: "%s | Bora Evgar Studio",
     },
+    applicationName: "Bora Evgar Studio",
+    creator: "Bora Evgar",
+    publisher: "Bora Evgar Studio",
     description: copy.metadata.description,
+    verification: googleSiteVerification ? { google: googleSiteVerification } : undefined,
     metadataBase: new URL("https://boraevgar.com"),
-    alternates: {
-      canonical,
-      languages: { tr: "/tr", en: "/en" },
-    },
     openGraph: {
       title: copy.metadata.title,
       description: copy.metadata.description,
-      url: `https://boraevgar.com${canonical}`,
       siteName: "Bora Evgar Studio",
       locale: localeParam === "tr" ? "tr_TR" : "en_US",
       type: "website",
