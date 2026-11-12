@@ -1284,5 +1284,23 @@ export const weTransferProjectRecords = [
         "fileName": "yatak odası concept tasarımı (5)"
       }
     ]
+  },
+  {
+    "slug": "application-site-gurbag-genel-merkez-ofisi",
+    "categoryKey": "application-site",
+    "filterCategoryKeys": ["application-site", "commercial-projects"],
+    "sourceFolder": "Gürbağ Genel Merkez Ofisi",
+    "title": "Gürbağ Genel Merkez Ofisi",
+    "badge": {
+      "tr": "Uygulama Süreci Katkısı",
+      "en": "Construction Phase Contribution"
+    },
+    "images": [
+      {
+        "src": "/images/projects/gurbag-merkez-1.webp",
+        "fileName": "Gürbağ Genel Merkez Ofisi",
+        "isPlaceholder": true
+      }
+    ]
   }
 ] as const;

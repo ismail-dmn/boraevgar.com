@@ -627,6 +627,45 @@ h2 em {
   transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
+.project-image-fallback {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--cream), var(--paper-deep));
+  color: var(--muted);
+}
+
+.project-image-fallback-label {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  background: rgb(247 245 240 / 76%);
+  color: var(--ink);
+  font: 9px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.project-card-badge {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 16px;
+  max-width: calc(100% - 32px);
+  padding: 8px 11px;
+  border: 1px solid rgb(207 205 197 / 82%);
+  border-radius: 999px;
+  background: rgb(247 245 240 / 92%);
+  color: var(--ink);
+  font: 9px/1.25 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
 .project-card-link:hover .project-card-img {
   transform: scale(1.025);
 }
