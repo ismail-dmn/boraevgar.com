@@ -1313,9 +1313,220 @@ export const weTransferProjectRecords = [
     },
     "images": [
       {
-        "src": "/images/projects/gurbag-merkez-1.webp",
-        "fileName": "Gürbağ Genel Merkez Ofisi",
-        "isPlaceholder": true
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/06.webp",
+        "fileName": "Ana giriş ve lobi alanı",
+        "width": 2400,
+        "height": 1580
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/09.webp",
+        "fileName": "giriş bankosu resepsiyon (1)",
+        "width": 2400,
+        "height": 2030
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/10.webp",
+        "fileName": "giriş bankosu resepsiyon (2)",
+        "width": 1974,
+        "height": 2400
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/11.webp",
+        "fileName": "giriş bankosu resepsiyon (3)",
+        "width": 2400,
+        "height": 1458
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/07.webp",
+        "fileName": "galeri alanı (1)",
+        "width": 2400,
+        "height": 1508
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/08.webp",
+        "fileName": "galeri alanı (2)",
+        "width": 2400,
+        "height": 1498
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/20.webp",
+        "fileName": "yönetim katı bankosu (2)",
+        "width": 2400,
+        "height": 1395
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/21.webp",
+        "fileName": "yönetim katı bankosu",
+        "width": 2400,
+        "height": 1431
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/22.webp",
+        "fileName": "yönetim katı makam ofis (1)",
+        "width": 2400,
+        "height": 1395
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/23.webp",
+        "fileName": "yönetim katı makam ofis (2)",
+        "width": 2400,
+        "height": 1462
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/24.webp",
+        "fileName": "yönetim katı makam ofis (3)",
+        "width": 2400,
+        "height": 1569
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/25.webp",
+        "fileName": "yönetim katı makam ofis (4)",
+        "width": 2400,
+        "height": 1409
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/26.webp",
+        "fileName": "yönetim katı makam ofis (5)",
+        "width": 2400,
+        "height": 1381
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/27.webp",
+        "fileName": "yönetim katı makam ofis (6)",
+        "width": 2400,
+        "height": 1452
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/28.webp",
+        "fileName": "yönetim katı makam ofis (7)",
+        "width": 2400,
+        "height": 1399
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/29.webp",
+        "fileName": "yönetim katı makam ofis (8)",
+        "width": 2400,
+        "height": 1328
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/30.webp",
+        "fileName": "yönetim katı makam ofis (9)",
+        "width": 2400,
+        "height": 1354
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/31.webp",
+        "fileName": "yönetim katı makam ofis (10)",
+        "width": 2400,
+        "height": 1350
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/32.webp",
+        "fileName": "yönetim katı makam ofis (11)",
+        "width": 2400,
+        "height": 1465
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/33.webp",
+        "fileName": "yönetim katı makam ofis teras (1)",
+        "width": 2400,
+        "height": 1450
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/34.webp",
+        "fileName": "yönetim katı makam ofis teras (2)",
+        "width": 2400,
+        "height": 1421
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/17.webp",
+        "fileName": "toplantı odaları (1)",
+        "width": 2400,
+        "height": 1561
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/18.webp",
+        "fileName": "toplantı odaları (2)",
+        "width": 2400,
+        "height": 1542
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/19.webp",
+        "fileName": "toplantı odaları (3)",
+        "width": 2400,
+        "height": 1505
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/35.webp",
+        "fileName": "yönetim katı makam toplantı (1)",
+        "width": 2400,
+        "height": 1495
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/36.webp",
+        "fileName": "yönetim katı makam toplantı (2)",
+        "width": 2400,
+        "height": 1407
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/12.webp",
+        "fileName": "koridorlar (1)",
+        "width": 2400,
+        "height": 1260
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/13.webp",
+        "fileName": "koridorlar (2)",
+        "width": 2400,
+        "height": 1485
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/14.webp",
+        "fileName": "koridorlar (3)",
+        "width": 2400,
+        "height": 1471
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/15.webp",
+        "fileName": "koridorlar (4)",
+        "width": 2400,
+        "height": 1603
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/16.webp",
+        "fileName": "koridorlar (5)",
+        "width": 2400,
+        "height": 1773
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/05.webp",
+        "fileName": "bodrum kat yemekhane",
+        "width": 2400,
+        "height": 1417
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/01.webp",
+        "fileName": "bodrum kat dinlenme alanı",
+        "width": 2400,
+        "height": 1551
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/02.webp",
+        "fileName": "bodrum kat eğlence (2)",
+        "width": 2400,
+        "height": 1385
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/03.webp",
+        "fileName": "bodrum kat eğlence",
+        "width": 2400,
+        "height": 1377
+      },
+      {
+        "src": "/images/projects/gurbag-genel-merkez-ofisi/04.webp",
+        "fileName": "bodrum kat koridor",
+        "width": 2400,
+        "height": 1395
       }
     ]
   }

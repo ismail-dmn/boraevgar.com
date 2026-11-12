@@ -65,7 +65,8 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
         {visibleProjects.map((project, index) => {
           const preserveOriginalImage =
             project.slug === "commercial-projects-irak-avrocity-projesi" ||
-            project.slug === "commercial-projects-4s-bilisim-teknolojileri";
+            project.slug === "commercial-projects-4s-bilisim-teknolojileri" ||
+            project.slug === "application-site-gurbag-genel-merkez-ofisi";
           const leadImage = project.images[0];
 
           return (

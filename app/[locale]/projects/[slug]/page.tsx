@@ -101,7 +101,8 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
   const relatedService = getServiceById(relatedServiceId);
   const preserveOriginalImages =
     project.slug === "commercial-projects-irak-avrocity-projesi" ||
-    project.slug === "commercial-projects-4s-bilisim-teknolojileri";
+    project.slug === "commercial-projects-4s-bilisim-teknolojileri" ||
+    project.slug === "application-site-gurbag-genel-merkez-ofisi";
   const homeLabel = locale === "tr" ? "Ana sayfa" : "Home";
   const portfolioLabel = locale === "tr" ? "Portfolyo" : "Portfolio";
   const projectBreadcrumb = breadcrumbSchema([
@@ -170,7 +171,7 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
         >
           {project.images.map((image, index) => (
             <figure
-              className={`gallery-item${index === 0 ? " gallery-item-featured" : " gallery-item-secondary"}`}
+              className={`gallery-item${index === 0 ? " gallery-item-featured" : " gallery-item-secondary"}${preserveOriginalImages ? " gallery-item-original" : ""}`}
               key={image.src}
               style={
                 preserveOriginalImages && image.width && image.height

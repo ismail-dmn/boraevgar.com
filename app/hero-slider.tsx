@@ -79,7 +79,7 @@ export function HeroSlider({ locale, slides }: HeroSliderProps) {
       <ProjectImage
         key={slide.project.slug}
         alt={image.alt}
-        className="hero-visual-image"
+        className={`hero-visual-image${slide.project.slug === "application-site-gurbag-genel-merkez-ofisi" ? " hero-visual-image-original" : ""}`}
         fetchPriority="high"
         isPlaceholder={image.isPlaceholder}
         loading="eager"

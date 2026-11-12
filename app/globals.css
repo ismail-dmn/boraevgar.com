@@ -2007,6 +2007,23 @@ h2 em {
   line-height: 1.7;
 }
 
+.hero-visual-image-original {
+  object-fit: contain;
+  object-position: center;
+  animation: none;
+}
+
+.gallery-item-original.gallery-item-secondary {
+  grid-column: span 6;
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .gallery-item-original.gallery-item-secondary {
+    grid-column: auto;
+  }
+}
+
 .editorial-section {
   padding-block: clamp(72px, 10vw, 142px);
   border-bottom: 1px solid var(--line);
