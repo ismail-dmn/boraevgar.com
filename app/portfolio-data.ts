@@ -13,6 +13,16 @@ type ProjectImageRecord = {
   height?: number;
 };
 
+export type ProjectDossierContent = {
+  project: string;
+  location: string;
+  roleScope: string;
+  status: string;
+  description: string;
+};
+
+type LocalizedProjectDossier = Readonly<Record<Locale, ProjectDossierContent>>;
+
 type ProjectRecord = {
   slug: string;
   categoryKey: ProjectCategoryKey;
@@ -20,6 +30,7 @@ type ProjectRecord = {
   sourceFolder: string;
   title: string;
   badge?: Readonly<Record<Locale, string>>;
+  dossier?: LocalizedProjectDossier;
   images: readonly ProjectImageRecord[];
 };
 
@@ -41,13 +52,14 @@ export type PortfolioProject = {
   title: string;
   summary: string;
   badge?: string;
+  dossier?: ProjectDossierContent;
   images: readonly ProjectImage[];
 };
 
 const projectRecords: readonly ProjectRecord[] = weTransferProjectRecords;
 
 const englishProjectTerms: Array<[string, string]> = [
-  ["gürbağ genel merkez ofisi", "gürbağ head office"],
+  ["gürbağ genel merkez ofisi", "Gürbağ Head Office"],
   ["Bora EVGAR concept renderları", "Bora EVGAR concept renders"],
   ["concept poje", "concept project"],
   ["dış cephe", "exterior facade"],
@@ -156,6 +168,7 @@ export function getProjects(locale: Locale): PortfolioProject[] {
       title,
       summary,
       badge: project.badge?.[locale],
+      dossier: project.dossier?.[locale],
       images: project.images.map(({ src, fileName, isPlaceholder, width, height }) => {
         const displayName = normalizeImportedName(translateProjectLabel(fileName, locale), locale);
         const alt =

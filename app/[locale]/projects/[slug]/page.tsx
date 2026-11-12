@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ContactPanel } from "../../../contact-panel";
 import { isLocale, messages, type Locale } from "../../../i18n";
 import { getProject, getProjectSlugs, getProjects } from "../../../portfolio-data";
+import { ProjectDossier } from "../../../project-dossier";
 import { ProjectImage } from "../../../project-image";
 import { SiteFooter } from "../../../site-footer";
 import { SiteHeader } from "../../../site-header";
@@ -160,6 +161,8 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
             <dd>{`${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}`}</dd>
           </div>
         </dl>
+
+        {project.dossier ? <ProjectDossier dossier={project.dossier} locale={locale} /> : null}
 
         <section
           className="project-gallery container"

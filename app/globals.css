@@ -1144,6 +1144,70 @@ h2 em {
   line-height: 1.55;
 }
 
+.project-dossier {
+  margin-bottom: 28px;
+}
+
+.project-dossier-panel {
+  padding: clamp(22px, 3vw, 38px);
+  border: 1px solid rgb(207 205 197 / 72%);
+  background: rgb(247 245 240 / 58%);
+  box-shadow: 0 18px 50px rgb(27 28 26 / 4%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.project-dossier-title {
+  margin: 0;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.project-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px 24px;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.project-dossier-grid > div {
+  min-width: 0;
+}
+
+.project-dossier-grid dt {
+  margin-bottom: 9px;
+  color: var(--muted);
+  font: 9px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.project-dossier-grid dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.project-dossier-description {
+  grid-column: 1 / -1;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.project-dossier-description dd {
+  max-width: 900px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -1686,6 +1750,27 @@ h2 em {
     font-size: 11px;
   }
 
+  .project-dossier {
+    margin-bottom: 20px;
+  }
+
+  .project-dossier-panel {
+    padding: 21px 18px;
+  }
+
+  .project-dossier-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+  }
+
+  .project-dossier-grid dt {
+    font-size: 8px;
+  }
+
+  .project-dossier-grid dd {
+    font-size: 11px;
+  }
+
   .project-gallery {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -1731,6 +1816,10 @@ h2 em {
 }
 
 @media (max-width: 390px) {
+  .project-dossier-grid {
+    grid-template-columns: 1fr;
+  }
+
   .brand-name > span {
     max-width: 118px;
     font-size: 7px;
