@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { studioEmail, studioInstagram, studioLinkedIn, studioPhoneE164, studioPostalAddress } from "../contact-details";
 import { ContactPanel } from "../contact-panel";
+import { HeroSlider } from "../hero-slider";
 import { isLocale, messages, type Locale } from "../i18n";
 import { getProjects } from "../portfolio-data";
 import { ProjectGrid } from "../project-grid";
@@ -64,7 +64,19 @@ export default async function Home({ params }: HomeProps) {
   const locale: Locale = localeParam;
   const copy = messages[locale];
   const projects = getProjects(locale);
-  const featuredProject = projects[0];
+  const gurbagProjectSlug = "application-site-gurbag-genel-merkez-ofisi";
+  const heroProjects = [
+    ...projects.filter((project) => project.slug !== gurbagProjectSlug).slice(0, 1),
+    ...projects.filter((project) => project.slug === gurbagProjectSlug).slice(0, 1),
+    ...projects.filter((project) => project.slug !== gurbagProjectSlug).slice(1, 2),
+  ];
+  const heroSlides = heroProjects.map((project) => ({
+    project,
+    caption:
+      project.slug === gurbagProjectSlug && project.badge
+        ? `${project.title} · ${project.badge}`
+        : `${project.images[0].fileName} · ${project.sourceFolder}`,
+  }));
   const alternateLocale = locale === "tr" ? "en" : "tr";
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -141,29 +153,7 @@ export default async function Home({ params }: HomeProps) {
             </div>
           </div>
 
-          <figure className="hero-visual">
-            <Image
-              alt={featuredProject.images[0].alt}
-              className="hero-visual-image"
-              fill
-              fetchPriority="high"
-              loading="eager"
-              sizes="(max-width: 760px) 100vw, calc(100vw - 72px)"
-              src={featuredProject.images[0].src}
-              unoptimized={featuredProject.images[0].src.endsWith(".gif")}
-            />
-            <figcaption className="hero-visual-caption">
-              <span className="hero-visual-caption-main">
-                <span className="hero-index">01 / {String(projects.length).padStart(2, "0")}</span>
-                <span className="hero-visual-caption-name">
-                  {featuredProject.images[0].fileName} · {featuredProject.sourceFolder}
-                </span>
-              </span>
-              <Link className="hero-visual-link" href={`/${locale}/projects/${featuredProject.slug}`}>
-                {copy.hero.viewProject} <span aria-hidden="true">↗</span>
-              </Link>
-            </figcaption>
-          </figure>
+          <HeroSlider locale={locale} slides={heroSlides} />
         </section>
 
         <section className="studio-intro container" id="studio" aria-labelledby="studio-title">
@@ -211,23 +201,32 @@ export default async function Home({ params }: HomeProps) {
               const relatedService = serviceId ? getServiceById(serviceId) : undefined;
 
               return (
-                <details className="service-item" key={service.title} open={index === 0}>
-                  <summary className="service-trigger">
-                    <span className="service-number">{String(index + 1).padStart(2, "0")}</span>
-                    <h3>{service.title}</h3>
-                    <span className="service-toggle" aria-hidden="true">
-                      +
-                    </span>
-                  </summary>
-                  <p>{service.description}</p>
-                  {relatedService ? (
-                    <p className="service-item-link">
-                      <Link href={servicePath(locale, relatedService[locale].slug)}>
-                        {locale === "tr" ? "Hizmet detayları" : "Service details"} <span aria-hidden="true">↗</span>
+                <div className="service-item-row" key={service.title}>
+                  <details className="service-item" open={index === 0}>
+                    <summary className="service-trigger">
+                      <span className="service-number">{String(index + 1).padStart(2, "0")}</span>
+                      <h3>{service.title}</h3>
+                      <span className="service-toggle" aria-hidden="true">
+                        +
+                      </span>
+                    </summary>
+                    <p>{service.description}</p>
+                    {relatedService ? (
+                      <p className="service-item-link">
+                        <Link href={servicePath(locale, relatedService[locale].slug)}>
+                          {locale === "tr" ? "Hizmet detayları" : "Service details"} <span aria-hidden="true">↗</span>
+                        </Link>
+                      </p>
+                    ) : null}
+                  </details>
+                  {index === 2 ? (
+                    <p className="service-item-project-reference">
+                      <Link href={`/${locale}/projects/application-site-gurbag-genel-merkez-ofisi`}>
+                        {copy.services.projectReference} <span aria-hidden="true">↗</span>
                       </Link>
                     </p>
                   ) : null}
-                </details>
+                </div>
               );
             })}
           </div>

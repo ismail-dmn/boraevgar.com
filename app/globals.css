@@ -375,6 +375,61 @@ h2 em {
 .hero-visual-image {
   object-fit: cover;
   object-position: center 55%;
+  animation: hero-slide-enter 480ms ease both;
+}
+
+@keyframes hero-slide-enter {
+  from {
+    opacity: 0.45;
+    transform: scale(1.012);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-slider-controls {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  gap: 8px;
+}
+
+.hero-slider-control {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgb(207 205 197 / 68%);
+  border-radius: 50%;
+  background: rgb(247 245 240 / 88%);
+  color: var(--ink);
+  font: 14px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.hero-slider-control:hover {
+  transform: translateY(-1px);
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.hero-slider-control:focus-visible {
+  outline: 2px solid var(--warm);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual-image {
+    animation: none;
+  }
 }
 
 .hero-visual::after {
@@ -525,6 +580,18 @@ h2 em {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.85;
+}
+
+.about-project-experience a {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+}
+
+.about-project-experience a:hover {
+  color: var(--warm);
+  text-decoration-color: currentColor;
 }
 
 .work-section {
@@ -792,10 +859,13 @@ h2 em {
   border-top: 1px solid var(--line);
 }
 
+.service-item-row {
+  border-bottom: 1px solid var(--line);
+}
+
 .service-item {
   display: block;
   padding: 0;
-  border-bottom: 1px solid var(--line);
 }
 
 .service-trigger {
@@ -856,6 +926,22 @@ h2 em {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.7;
+}
+
+.service-item-project-reference {
+  margin: -9px clamp(12px, 5vw, 48px) 20px clamp(46px, 9vw, 90px);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.service-item-project-reference a {
+  color: var(--warm);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.service-item-project-reference span {
+  margin-left: 5px;
 }
 
 .contact-section {
@@ -1484,6 +1570,17 @@ h2 em {
     height: min(68svh, 560px);
     min-height: 360px;
     margin-top: 36px;
+  }
+
+  .hero-slider-controls {
+    top: 12px;
+    right: 12px;
+    gap: 6px;
+  }
+
+  .hero-slider-control {
+    width: 34px;
+    height: 34px;
   }
 
   .hero-visual-caption {

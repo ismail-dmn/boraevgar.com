@@ -1,12 +1,14 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 import { useState } from "react";
 
 type ProjectImageProps = {
   alt: string;
   className: string;
+  fetchPriority?: ImageProps["fetchPriority"];
   isPlaceholder?: boolean;
+  loading?: ImageProps["loading"];
   placeholderLabel: string;
   sizes: string;
   src: string;
@@ -16,7 +18,9 @@ type ProjectImageProps = {
 export function ProjectImage({
   alt,
   className,
+  fetchPriority,
   isPlaceholder = false,
+  loading,
   placeholderLabel,
   sizes,
   src,
@@ -36,7 +40,9 @@ export function ProjectImage({
     <Image
       alt={alt}
       className={className}
+      fetchPriority={fetchPriority}
       fill
+      loading={loading}
       onError={() => setFailedSource(src)}
       sizes={sizes}
       src={src}

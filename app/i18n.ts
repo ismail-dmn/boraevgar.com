@@ -26,6 +26,13 @@ export const messages = {
         "Konsept tasarımdan anahtar teslim uygulamaya kadar; evinizi henüz inşa edilmeden kusursuz görsellerle hissettiriyor, milimetrik projelerle şantiyesini ve uygulamasını üstleniyoruz.",
       workLink: "Seçili işlere göz at",
       viewProject: "Projeyi incele",
+      carouselLabel: "Öne çıkan projeler",
+      carouselRoleDescription: "slayt gösterisi",
+      carouselControls: "Öne çıkan proje kontrolleri",
+      previousSlide: "Önceki proje",
+      nextSlide: "Sonraki proje",
+      pauseSlideshow: "Slayt gösterisini duraklat",
+      resumeSlideshow: "Slayt gösterisini sürdür",
     },
     studio: {
       eyebrow: "Bora Evgar Studio",
@@ -65,6 +72,7 @@ export const messages = {
       first: "Tasarımdan",
       emphasis: "anahtar teslime.",
       description: "Her aşamayı tek bir plan ve sorumluluk altında birleştiriyor; tasarımdan şantiyeye kadar süreci birlikte yönetiyoruz.",
+      projectReference: "Saha Referansı: Gürbağ Genel Merkez Ofisi",
       items: [
         {
           title: "Tasarım & Görselleştirme",
@@ -140,6 +148,13 @@ export const messages = {
         "From concept design to turnkey delivery, experience your home before it is built through photorealistic visuals, then see it through precise drawings, site coordination and construction.",
       workLink: "Explore selected work",
       viewProject: "View project",
+      carouselLabel: "Featured projects",
+      carouselRoleDescription: "carousel",
+      carouselControls: "Featured project controls",
+      previousSlide: "Previous project",
+      nextSlide: "Next project",
+      pauseSlideshow: "Pause slideshow",
+      resumeSlideshow: "Resume slideshow",
     },
     studio: {
       eyebrow: "Bora Evgar Studio",
@@ -179,6 +194,7 @@ export const messages = {
       first: "From design",
       emphasis: "to turnkey delivery.",
       description: "Every stage follows one coordinated plan, from the first concept through site delivery.",
+      projectReference: "Site reference: Gürbağ Head Office",
       items: [
         {
           title: "Design & visualization",
