@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContactPanel } from "../../../contact-panel";
 import { isLocale, messages, type Locale } from "../../../i18n";
 import { getProject, getProjectSlugs, getProjects } from "../../../portfolio-data";
+import { ProjectDossier } from "../../../project-dossier";
+import { ProjectImage } from "../../../project-image";
 import { SiteFooter } from "../../../site-footer";
 import { SiteHeader } from "../../../site-header";
 import { absoluteUrl, breadcrumbSchema, localizedAlternates, servicePath } from "../../../seo/paths";
@@ -161,6 +162,8 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
           </div>
         </dl>
 
+        {project.dossier ? <ProjectDossier dossier={project.dossier} locale={locale} /> : null}
+
         <section
           className="project-gallery container"
           aria-label={`${project.title} ${copy.project.gallery}`}
@@ -175,17 +178,18 @@ function ProjectPageContent({ locale, slug }: { locale: Locale; slug: string }) 
                   : undefined
               }
             >
-              <Image
+              <ProjectImage
                 alt={image.alt}
                 className={`gallery-image${preserveOriginalImages ? " gallery-image-original" : ""}`}
-                fill
-                unoptimized={preserveOriginalImages || image.src.endsWith(".gif")}
+                isPlaceholder={image.isPlaceholder}
+                placeholderLabel={copy.work.imagePlaceholder}
                 sizes={
                   index === 0
                     ? "(max-width: 760px) 100vw, calc(100vw - 72px)"
                     : "(max-width: 760px) 100vw, 66vw"
                 }
                 src={image.src}
+                unoptimized={preserveOriginalImages || image.src.endsWith(".gif")}
               />
               <figcaption className="gallery-caption">{image.fileName}</figcaption>
             </figure>

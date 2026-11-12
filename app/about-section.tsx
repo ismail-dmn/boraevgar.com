@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Locale } from "./i18n";
 
 type AboutSectionProps = {
@@ -19,6 +20,8 @@ const aboutCopy = {
       "Mimarlar, iç mimarlar, gayrimenkul geliştiricileri ve tasarım stüdyolarıyla iş birliği içinde çalışırken önceliğim; estetik açıdan güçlü, teknik olarak doğru ve özenle hazırlanmış çözümler üretmek.",
       "Nihai amacım; tasarım vizyonunu, teknik uzmanlığı ve fotogerçekçi görselleştirme hassasiyetini bir araya getirerek mimari fikirleri etkileyici görsel hikâyelere dönüştürmek.",
     ],
+    projectExperience: "Gürbağ Group projelerindeki saha uygulama ve koordinasyon deneyimim, tasarım kararlarını gerçek mekânda hayata geçirme yaklaşımımı güçlendiriyor.",
+    projectLink: "Gürbağ Genel Merkez Ofisi projesini inceleyin",
   },
   en: {
     eyebrow: "About me",
@@ -33,6 +36,8 @@ const aboutCopy = {
       "Whether collaborating with architects, interior designers, developers, and creative studios or working directly with residential and commercial clients, I strive to deliver visually compelling, technically accurate, and thoughtfully executed solutions.",
       "My goal is to bring together design intelligence, visual storytelling, and photorealistic precision—turning architectural ideas into immersive visual narratives that capture the character, atmosphere, and potential of every space.",
     ],
+    projectExperience: "My field and implementation experience across Gürbağ Group projects informs how I translate design decisions into completed spaces.",
+    projectLink: "Explore the Gürbağ Head Office project",
   },
 } as const;
 
@@ -60,6 +65,12 @@ export function AboutSection({ locale }: AboutSectionProps) {
         {copy.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
+        <p className="about-project-experience">
+          {copy.projectExperience} {" "}
+          <Link href={`/${locale}/projects/application-site-gurbag-genel-merkez-ofisi`}>
+            {copy.projectLink} <span aria-hidden="true">↗</span>
+          </Link>
+        </p>
       </div>
     </section>
   );

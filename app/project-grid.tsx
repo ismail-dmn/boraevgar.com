@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { messages, type Locale } from "./i18n";
 import { projectCategoryKeys, type PortfolioProject, type ProjectCategoryKey } from "./portfolio-data";
+import { ProjectImage } from "./project-image";
 
 type ProjectGridProps = {
   locale: Locale;
@@ -18,7 +18,7 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
   const [activeFilter, setActiveFilter] = useState<ProjectFilter>("all");
   const filters: readonly ProjectFilter[] = ["all", ...projectCategoryKeys];
   const visibleProjects = projects.filter(
-    (project) => activeFilter === "all" || project.categoryKey === activeFilter,
+    (project) => activeFilter === "all" || project.filterCategoryKeys.includes(activeFilter),
   );
 
   return (
@@ -35,8 +35,8 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
           role="group"
           aria-label={
             locale === "tr"
-              ? "Projeleri Drive klasörüne göre filtrele"
-              : "Filter projects by Drive folder"
+              ? "Projeleri kategoriye göre filtrele"
+              : "Filter projects by category"
           }
         >
           {filters.map((filter) => {
@@ -71,7 +71,7 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
           return (
             <article className="project-card" key={project.slug}>
               <Link
-                aria-label={`${project.title}, ${project.category}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
+                aria-label={`${project.title}, ${project.category}${project.badge ? `, ${project.badge}` : ""}, ${project.images.length} ${project.images.length === 1 ? copy.work.frame : copy.work.frames}, ${copy.work.viewProject}`}
                 className="project-card-link"
                 href={`/${locale}/projects/${project.slug}`}
               >
@@ -83,14 +83,16 @@ export function ProjectGrid({ locale, projects }: ProjectGridProps) {
                       : undefined
                   }
                 >
-                  <Image
+                  <ProjectImage
                     alt={leadImage.alt}
                     className={`project-card-img${preserveOriginalImage ? " project-card-img-original" : ""}`}
-                    fill
+                    isPlaceholder={leadImage.isPlaceholder}
+                    placeholderLabel={copy.work.imagePlaceholder}
                     sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
                     src={leadImage.src}
                     unoptimized={preserveOriginalImage || leadImage.src.endsWith(".gif")}
                   />
+                  {project.badge ? <span className="project-card-badge">{project.badge}</span> : null}
                   <figcaption className="project-card-overlay">
                     <span className="project-card-number">{String(index + 1).padStart(2, "0")}</span>
                     <span className="project-card-view">

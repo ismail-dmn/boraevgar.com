@@ -1284,5 +1284,39 @@ export const weTransferProjectRecords = [
         "fileName": "yatak odası concept tasarımı (5)"
       }
     ]
+  },
+  {
+    "slug": "application-site-gurbag-genel-merkez-ofisi",
+    "categoryKey": "application-site",
+    "filterCategoryKeys": ["application-site", "commercial-projects"],
+    "sourceFolder": "Gürbağ Genel Merkez Ofisi",
+    "title": "Gürbağ Genel Merkez Ofisi",
+    "badge": {
+      "tr": "Uygulama Süreci Katkısı",
+      "en": "Construction Phase Contribution"
+    },
+    "dossier": {
+      "tr": {
+        "project": "Gürbağ Group Genel Merkez Ofisi",
+        "location": "Ankara",
+        "roleScope": "Uygulama Süreci ve Saha Koordinasyonu Katkısı",
+        "status": "Tamamlandı (Gerçek Mekân Fotoğrafları)",
+        "description": "Gürbağ Group Genel Merkez Ofisi projesinin saha uygulama ve ince işler koordinasyon süreçlerine sağlanan profesyonel katkı kapsamında tamamlanan gerçek mekân uygulamaları."
+      },
+      "en": {
+        "project": "Gürbağ Group Head Office",
+        "location": "Ankara",
+        "roleScope": "Contribution to site implementation and field coordination",
+        "status": "Completed (Photographs of the Actual Space)",
+        "description": "Completed real-space work delivered through professional support for the site implementation and fit-out coordination processes of the Gürbağ Group Head Office project."
+      }
+    },
+    "images": [
+      {
+        "src": "/images/projects/gurbag-merkez-1.webp",
+        "fileName": "Gürbağ Genel Merkez Ofisi",
+        "isPlaceholder": true
+      }
+    ]
   }
 ] as const;
