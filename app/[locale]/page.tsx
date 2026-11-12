@@ -65,17 +65,20 @@ export default async function Home({ params }: HomeProps) {
   const copy = messages[locale];
   const projects = getProjects(locale);
   const gurbagProjectSlug = "application-site-gurbag-genel-merkez-ofisi";
+  const projectsWithCovers = projects.filter((project) => {
+    const firstImage = project.images[0];
+    return Boolean(firstImage?.src) && !firstImage?.isPlaceholder;
+  });
   const heroProjects = [
-    ...projects.filter((project) => project.slug !== gurbagProjectSlug).slice(0, 1),
-    ...projects.filter((project) => project.slug === gurbagProjectSlug).slice(0, 1),
-    ...projects.filter((project) => project.slug !== gurbagProjectSlug).slice(1, 2),
+    ...projectsWithCovers.filter((project) => project.slug === gurbagProjectSlug),
+    ...projectsWithCovers.filter((project) => project.slug !== gurbagProjectSlug),
   ];
   const heroSlides = heroProjects.map((project) => ({
     project,
     caption:
       project.slug === gurbagProjectSlug && project.badge
         ? `${project.title} · ${project.badge}`
-        : `${project.images[0].fileName} · ${project.sourceFolder}`,
+        : `${project.title} · ${project.category}`,
   }));
   const alternateLocale = locale === "tr" ? "en" : "tr";
   const organizationSchema = {
